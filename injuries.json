@@ -1,25 +1,5 @@
 {
-  "debug": [
-    {
-      "designation": "Day-To-Day",
-      "injDate": "20260405",
-      "injReturnDate": "20260407",
-      "playerID": "94914479047",
-      "description": "Apr 5: Herro (personal) won't play in Saturday's game against Washington."
-    },
-    {
-      "designation": "Out",
-      "injDate": "20260405",
-      "injReturnDate": "20260407",
-      "playerID": "94054426027",
-      "description": "Apr 4: The Warriors announced Saturday that Post (foot) will be re-evaluated next week."
-    },
-    {
-      "designation": "Out",
-      "injDate": "20260405",
-      "injReturnDate": "20260407",
-      "playerID": "28468846789",
-      "description": "Apr 4: Simons (wrist) remains out for Sunday's game against Phoenix."
-    }
-  ]
+  "updated_at": "19/04/2026 21:18 UTC",
+  "count": 0,
+  "injuries": []
 }
