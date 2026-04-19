@@ -293,7 +293,9 @@ def main():
     print(f"Total blessés dans l'API : {len(body)}")
     if body:
         print("Exemple premier joueur :")
-        import json
         print(json.dumps(body[0], indent=2))
     with open("injuries.json", "w", encoding="utf-8") as f:
         json.dump({"debug": body[:3]}, f, ensure_ascii=False, indent=2)
+
+if __name__ == "__main__":
+    main()
