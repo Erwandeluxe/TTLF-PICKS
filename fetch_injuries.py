@@ -290,28 +290,10 @@ def main():
     print("Fetching injury list...")
     data = fetch_injuries()
     body = data.get("body", [])
-    injuries = []
-    for entry in body:
-        player_id = str(entry.get("nbaComID") or entry.get("playerID") or "")
-        if player_id not in PLAYER_MAP:
-            continue
-        info = PLAYER_MAP[player_id]
-        injuries.append({
-            "id": player_id,
-            "name": info["name"],
-            "team": info["team"],
-            "status": entry.get("injuryStatus", entry.get("status", "?")),
-            "description": entry.get("injuryDescription", entry.get("description", "")),
-            "return_date": entry.get("injuryReturnDate", entry.get("expectedReturn", "")),
-        })
-    output = {
-        "updated_at": datetime.utcnow().strftime("%d/%m/%Y %H:%M UTC"),
-        "count": len(injuries),
-        "injuries": injuries
-    }
+    print(f"Total blessés dans l'API : {len(body)}")
+    if body:
+        print("Exemple premier joueur :")
+        import json
+        print(json.dumps(body[0], indent=2))
     with open("injuries.json", "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
-    print(f"Done. {len(injuries)} blessé(s) dans notre liste.")
-
-if __name__ == "__main__":
-    main()
+        json.dump({"debug": body[:3]}, f, ensure_ascii=False, indent=2)
