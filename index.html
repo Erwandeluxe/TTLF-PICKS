@@ -1,89 +1,67 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>TTFL Picks</title>
 <style>
-  :root {
-    --bg: #f5f7fb; --card: #fff; --line: #d9e0ea; --text: #1f2937;
-    --muted: #6b7280; --primary: #0f766e; --primary-2: #115e59;
-    --ok: #dcfce7; --warn: #fef3c7; --err: #fee2e2; --radius: 14px;
-  }
-  *, *::before, *::after { box-sizing: border-box; }
-  body { margin: 0; font-family: Arial, sans-serif; color: var(--text); background: var(--bg); padding: 16px; }
+  :root{--bg:#f5f7fb;--card:#fff;--line:#d9e0ea;--text:#1f2937;--muted:#6b7280;--primary:#0f766e;--primary-2:#115e59;--ok:#dcfce7;--warn:#fef3c7;--err:#fee2e2;--radius:14px}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Arial,sans-serif;color:var(--text);background:var(--bg);padding:16px}
 
-  #splashScreen { display: flex; align-items: center; justify-content: center; min-height: 100vh; background: var(--bg); }
-  .splash-box { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 48px 36px; max-width: 380px; width: 100%; box-shadow: 0 4px 24px rgba(0,0,0,.07); text-align: center; }
-  .splash-box h1 { margin: 0 0 8px; font-size: 28px; }
-  .splash-box p { color: var(--muted); font-size: 14px; margin: 0 0 32px; line-height: 1.6; }
-  .splash-box button { width: 100%; min-height: 48px; background: var(--primary); color: #fff; border: 0; border-radius: 10px; font-size: 16px; font-weight: 700; cursor: pointer; transition: background .15s; }
-  .splash-box button:hover { background: var(--primary-2); }
+  /* SPLASH */
+  #splashScreen{display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--bg)}
+  .splash-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:48px 36px;max-width:380px;width:100%;box-shadow:0 4px 24px rgba(0,0,0,.07);text-align:center}
+  .splash-box h1{margin:0 0 8px;font-size:28px}
+  .splash-box p{color:var(--muted);font-size:14px;margin:0 0 32px;line-height:1.6}
+  .splash-box button{width:100%;min-height:48px;background:var(--primary);color:#fff;border:0;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;transition:background .15s}
+  .splash-box button:hover{background:var(--primary-2)}
 
-  #app { display: none; }
-  h1 { margin: 0 0 4px; font-size: 26px; }
-  .sub { color: var(--muted); margin-bottom: 18px; font-size: 14px; }
+  /* APP */
+  #app{display:none}
+  h1{margin:0 0 4px;font-size:26px}
+  .sub{color:var(--muted);margin-bottom:18px;font-size:14px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+  .card h2{margin:0 0 14px;font-size:18px}
+  .field{margin-bottom:12px}
+  label{display:block;font-weight:700;margin-bottom:5px;font-size:13px}
+  select{width:100%;min-height:44px;padding:10px 12px;border:1px solid #c7d2de;border-radius:10px;font-size:15px;background:#fff}
+  .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+  button{min-height:44px;padding:10px 16px;border:0;border-radius:10px;background:var(--primary);color:#fff;font-size:14px;font-weight:700;cursor:pointer;transition:background .15s}
+  button:hover{background:var(--primary-2)}
+  .ghost{background:#fff;color:var(--text);border:1px solid var(--line)}
+  .ghost:hover{background:#f8fafc}
+  .status{margin-top:12px;padding:10px 12px;border-radius:10px;font-size:14px;display:none}
+  .status.ok{background:var(--ok);display:block}
+  .status.err{background:var(--err);display:block}
 
-  .tabs { display: flex; gap: 8px; margin-bottom: 20px; border-bottom: 2px solid var(--line); padding-bottom: 0; }
-  .tab-btn { background: none; border: none; border-bottom: 3px solid transparent; margin-bottom: -2px; padding: 10px 18px; font-size: 15px; font-weight: 700; color: var(--muted); cursor: pointer; transition: color .15s, border-color .15s; border-radius: 0; }
-  .tab-btn:hover { color: var(--primary); }
-  .tab-btn.active { color: var(--primary); border-bottom-color: var(--primary); }
-  .tab-pane { display: none; }
-  .tab-pane.active { display: block; }
+  /* TABLEAU DÉTAIL */
+  .toolbar{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;margin-bottom:12px;align-items:end}
+  .toolbar button{width:100%}
+  .table-wrap{max-height:60vh;overflow:auto;border:1px solid var(--line);border-radius:10px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
+  th{background:#f8fafc;position:sticky;top:0;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);z-index:1}
+  .team-badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;white-space:nowrap}
+  .pick-pill{display:inline-block;padding:2px 8px;border-radius:999px;background:var(--warn);font-size:11px;font-weight:700}
+  .small{font-size:12px;color:var(--muted);margin-top:8px}
+  .loader{text-align:center;padding:30px;color:var(--muted);font-size:14px}
 
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,.04); }
-  .card h2 { margin: 0 0 14px; font-size: 18px; }
-  .field { margin-bottom: 12px; }
-  label { display: block; font-weight: 700; margin-bottom: 5px; font-size: 13px; }
-  select { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid #c7d2de; border-radius: 10px; font-size: 15px; background: #fff; }
-  .btns { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
-  button { min-height: 44px; padding: 10px 16px; border: 0; border-radius: 10px; background: var(--primary); color: #fff; font-size: 14px; font-weight: 700; cursor: pointer; transition: background .15s; }
-  button:hover { background: var(--primary-2); }
-  .ghost { background: #fff; color: var(--text); border: 1px solid var(--line); }
-  .ghost:hover { background: #f8fafc; }
-  .status { margin-top: 12px; padding: 10px 12px; border-radius: 10px; font-size: 14px; display: none; }
-  .status.ok { background: var(--ok); display: block; }
-  .status.err { background: var(--err); display: block; }
-  .toolbar { display: grid; grid-template-columns: 1fr 1fr auto; gap: 10px; margin-bottom: 12px; align-items: end; }
-  .toolbar button { width: 100%; }
-  .table-wrap { max-height: 60vh; overflow: auto; border: 1px solid var(--line); border-radius: 10px; }
-  table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  th, td { text-align: left; padding: 9px 8px; border-bottom: 1px solid var(--line); vertical-align: middle; }
-  th { background: #f8fafc; position: sticky; top: 0; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); z-index: 1; }
-  .team-badge { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; white-space: nowrap; }
-  .pick-pill { display: inline-block; padding: 2px 8px; border-radius: 999px; background: var(--warn); font-size: 11px; font-weight: 700; }
-  .small { font-size: 12px; color: var(--muted); margin-top: 8px; }
-  .loader { text-align: center; padding: 30px; color: var(--muted); font-size: 14px; }
-  .recap-section { margin-top: 20px; }
-  .recap-section h2 { font-size: 18px; margin: 0 0 12px; }
-  .recap-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; }
-  .recap-table { border-collapse: collapse; font-size: 12px; min-width: 100%; }
-  .recap-table th { background: #f8fafc; padding: 8px 10px; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); white-space: nowrap; position: sticky; top: 0; z-index: 2; }
-  .recap-table th.member-col { position: sticky; left: 0; z-index: 3; background: #f8fafc; }
-  .recap-table td { padding: 7px 10px; border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); vertical-align: middle; white-space: nowrap; }
-  .recap-table td.member-cell { font-weight: 700; font-size: 12px; position: sticky; left: 0; background: #fff; z-index: 1; border-right: 2px solid var(--line); }
-  .recap-table tr:last-child td { border-bottom: none; }
-  .player-tag { display: inline-block; padding: 3px 8px; border-radius: 6px; font-size: 11px; font-weight: 700; white-space: nowrap; }
-  .empty-cell { color: #d1d5db; font-size: 18px; text-align: center; }
+  /* TABLEAU RÉCAP CROISÉ */
+  .recap-section{margin-top:20px}
+  .recap-section h2{font-size:18px;margin:0 0 12px}
+  .recap-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+  .recap-table{border-collapse:collapse;font-size:12px;min-width:100%}
+  .recap-table th{background:#f8fafc;padding:8px 10px;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);white-space:nowrap;position:sticky;top:0;z-index:2}
+  .recap-table th.member-col{position:sticky;left:0;z-index:3;background:#f8fafc}
+  .recap-table td{padding:7px 10px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);vertical-align:middle;white-space:nowrap}
+  .recap-table td.member-cell{font-weight:700;font-size:12px;position:sticky;left:0;background:#fff;z-index:1;border-right:2px solid var(--line)}
+  .recap-table tr:last-child td{border-bottom:none}
+  .player-tag{display:inline-block;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:700;white-space:nowrap}
+  .empty-cell{color:#d1d5db;font-size:18px;text-align:center}
 
-  .injury-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; flex-wrap: wrap; gap: 8px; }
-  .injury-updated { font-size: 12px; color: var(--muted); }
-  .injury-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; }
-  .injury-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  .injury-table th { background: #f8fafc; padding: 9px 10px; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); position: sticky; top: 0; }
-  .injury-table td { padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: middle; }
-  .injury-table tr:last-child td { border-bottom: none; }
-  .badge-dtd { background: #fef3c7; color: #92400e; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; white-space: nowrap; }
-  .badge-out { background: #fee2e2; color: #991b1b; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; white-space: nowrap; }
-  .badge-prob { background: #dcfce7; color: #166534; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; white-space: nowrap; }
-  .badge-other { background: #e5e7eb; color: #374151; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; white-space: nowrap; }
-  .injury-desc { font-size: 12px; color: var(--muted); max-width: 340px; white-space: normal; }
-  .no-injuries { text-align: center; padding: 40px; color: var(--muted); font-size: 14px; }
-
-  @media (max-width: 800px) {
-    .grid, .toolbar { grid-template-columns: 1fr; }
-  }
+  @media(max-width:800px){.grid,.toolbar{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -102,27 +80,60 @@
   <h1>🏀 TTFL Picks</h1>
   <div class="sub">Saisie et visualisation des picks par date</div>
 
-  <div class="tabs">
-    <button class="tab-btn active" onclick="switchTab('picks', this)">🗓 Picks</button>
-    <button class="tab-btn" onclick="switchTab('injuries', this)">🚑 Injury Report</button>
-  </div>
+  <div class="grid">
+    <!-- SAISIE -->
+    <section class="card">
+      <h2>Enregistrer un pick</h2>
+      <div class="field"><label>Personne</label>
+        <select id="member">
+          <option value="">Choisir un pseudo</option>
+          <option>ARNOKNICKS</option><option>BRAINLESSD0G</option><option>CAPTAINCLEM69</option>
+          <option>ERWAN</option><option>ERWAN2LUX</option><option>MOEPMOEP19</option>
+          <option>THEOFFSWITCH</option><option>THIBDEF</option><option>VALDO3</option><option>VVR3535</option>
+        </select>
+      </div>
+      <div class="field"><label>Pick / Date</label>
+        <select id="round">
+          <option value="">Choisir une date</option>
+          <option value="R01-001">R01-001 | 18/04/2026</option><option value="R01-002">R01-002 | 19/04/2026</option>
+          <option value="R01-003">R01-003 | 20/04/2026</option><option value="R01-004">R01-004 | 21/04/2026</option>
+          <option value="R01-005">R01-005 | 22/04/2026</option><option value="R01-006">R01-006 | 23/04/2026</option>
+          <option value="R01-007">R01-007 | 24/04/2026</option><option value="R01-008">R01-008 | 25/04/2026</option>
+          <option value="R01-009">R01-009 | 26/04/2026</option><option value="R01-010">R01-010 | 27/04/2026</option>
+          <option value="R01-011">R01-011 | 28/04/2026</option><option value="R01-012">R01-012 | 29/04/2026</option>
+          <option value="R01-013">R01-013 | 30/04/2026</option><option value="R01-014">R01-014 | 01/05/2026</option>
+          <option value="R01-015">R01-015 | 02/05/2026</option><option value="R01-016">R01-016 | 03/05/2026</option>
+        </select>
+      </div>
+      <div class="field"><label>Équipe</label>
+        <select id="team">
+          <option value="">Choisir une équipe</option>
+          <option>ATLANTA HAWKS</option><option>BOSTON CELTICS</option><option>CLEVELAND CAVALIERS</option>
+          <option>DENVER NUGGETS</option><option>DETROIT PISTONS</option><option>HOUSTON ROCKETS</option>
+          <option>LOS ANGELES LAKERS</option><option>MINNESOTA TIMBERWOLVES</option><option>NEW YORK KNICKS</option>
+          <option>OKLAHOMA CITY THUNDER</option><option>ORLANDO MAGIC</option><option>PHILADELPHIA 76ERS</option>
+          <option>PHOENIX SUNS</option><option>PORTLAND TRAIL BLAZERS</option><option>SAN ANTONIO SPURS</option>
+          <option>TORONTO RAPTORS</option>
+        </select>
+      </div>
+      <div class="field"><label>Joueur</label>
+        <select id="player"><option value="">— Choisis d'abord une équipe —</option></select>
+      </div>
+      <div class="btns">
+        <button id="saveBtn">✅ Enregistrer</button>
+        <button id="deleteBtn" class="ghost">🗑 Supprimer ce pick</button>
+        <button id="reloadBtn" class="ghost">🔄 Actualiser</button>
+      </div>
+      <div id="status" class="status"></div>
+    </section>
 
-  <!-- ONGLET PICKS -->
-  <div id="tab-picks" class="tab-pane active">
-    <div class="grid">
-      <section class="card">
-        <h2>Enregistrer un pick</h2>
-        <div class="field"><label>Personne</label>
-          <select id="member">
-            <option value="">Choisir un pseudo</option>
-            <option>ARNOKNICKS</option><option>BRAINLESSD0G</option><option>CAPTAINCLEM69</option>
-            <option>ERWAN</option><option>ERWAN2LUX</option><option>MOEPMOEP19</option>
-            <option>THEOFFSWITCH</option><option>THIBDEF</option><option>VALDO3</option><option>VVR3535</option>
-          </select>
-        </div>
-        <div class="field"><label>Pick / Date</label>
-          <select id="round">
-            <option value="">Choisir une date</option>
+    <!-- LISTE DÉTAILLÉE -->
+    <section class="card">
+      <h2>Tous les picks</h2>
+      <div class="toolbar">
+        <div><label>Filtre date</label>
+          <select id="filterRound">
+            <option value="">Toutes les dates</option>
             <option value="R01-001">R01-001 | 18/04/2026</option><option value="R01-002">R01-002 | 19/04/2026</option>
             <option value="R01-003">R01-003 | 20/04/2026</option><option value="R01-004">R01-004 | 21/04/2026</option>
             <option value="R01-005">R01-005 | 22/04/2026</option><option value="R01-006">R01-006 | 23/04/2026</option>
@@ -133,151 +144,89 @@
             <option value="R01-015">R01-015 | 02/05/2026</option><option value="R01-016">R01-016 | 03/05/2026</option>
           </select>
         </div>
-        <div class="field"><label>Équipe</label>
-          <select id="team" onchange="updatePlayersList()">
-            <option value="">Choisir une équipe</option>
-            <option>ATLANTA HAWKS</option><option>BOSTON CELTICS</option><option>CLEVELAND CAVALIERS</option>
-            <option>DENVER NUGGETS</option><option>DETROIT PISTONS</option><option>HOUSTON ROCKETS</option>
-            <option>LOS ANGELES LAKERS</option><option>MINNESOTA TIMBERWOLVES</option><option>NEW YORK KNICKS</option>
-            <option>OKLAHOMA CITY THUNDER</option><option>ORLANDO MAGIC</option><option>PHILADELPHIA 76ERS</option>
-            <option>PHOENIX SUNS</option><option>PORTLAND TRAIL BLAZERS</option><option>SAN ANTONIO SPURS</option>
-            <option>TORONTO RAPTORS</option>
+        <div><label>Filtre personne</label>
+          <select id="filterMember">
+            <option value="">Toutes les personnes</option>
+            <option>ARNOKNICKS</option><option>BRAINLESSD0G</option><option>CAPTAINCLEM69</option>
+            <option>ERWAN</option><option>ERWAN2LUX</option><option>MOEPMOEP19</option>
+            <option>THEOFFSWITCH</option><option>THIBDEF</option><option>VALDO3</option><option>VVR3535</option>
           </select>
         </div>
-        <div class="field"><label>Joueur</label>
-          <select id="player"><option value="">— Choisis d'abord une équipe —</option></select>
-        </div>
-        <div class="btns">
-          <button id="saveBtn">✅ Enregistrer</button>
-          <button id="deleteBtn" class="ghost">🗑 Supprimer ce pick</button>
-          <button id="reloadBtn" class="ghost">🔄 Actualiser</button>
-        </div>
-        <div id="status" class="status"></div>
-      </section>
-
-      <section class="card">
-        <h2>Tous les picks</h2>
-        <div class="toolbar">
-          <div><label>Filtre date</label>
-            <select id="filterRound">
-              <option value="">Toutes les dates</option>
-              <option value="R01-001">R01-001 | 18/04/2026</option><option value="R01-002">R01-002 | 19/04/2026</option>
-              <option value="R01-003">R01-003 | 20/04/2026</option><option value="R01-004">R01-004 | 21/04/2026</option>
-              <option value="R01-005">R01-005 | 22/04/2026</option><option value="R01-006">R01-006 | 23/04/2026</option>
-              <option value="R01-007">R01-007 | 24/04/2026</option><option value="R01-008">R01-008 | 25/04/2026</option>
-              <option value="R01-009">R01-009 | 26/04/2026</option><option value="R01-010">R01-010 | 27/04/2026</option>
-              <option value="R01-011">R01-011 | 28/04/2026</option><option value="R01-012">R01-012 | 29/04/2026</option>
-              <option value="R01-013">R01-013 | 30/04/2026</option><option value="R01-014">R01-014 | 01/05/2026</option>
-              <option value="R01-015">R01-015 | 02/05/2026</option><option value="R01-016">R01-016 | 03/05/2026</option>
-            </select>
-          </div>
-          <div><label>Filtre personne</label>
-            <select id="filterMember">
-              <option value="">Toutes les personnes</option>
-              <option>ARNOKNICKS</option><option>BRAINLESSD0G</option><option>CAPTAINCLEM69</option>
-              <option>ERWAN</option><option>ERWAN2LUX</option><option>MOEPMOEP19</option>
-              <option>THEOFFSWITCH</option><option>THIBDEF</option><option>VALDO3</option><option>VVR3535</option>
-            </select>
-          </div>
-          <div><label>&nbsp;</label><button id="resetBtn" class="ghost">Reset</button></div>
-        </div>
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>Date</th><th>Pick</th><th>Personne</th><th>Équipe</th><th>Joueur</th></tr></thead>
-            <tbody id="rows"><tr><td colspan="5" class="loader">Chargement…</td></tr></tbody>
-          </table>
-        </div>
-        <div class="small" id="count"></div>
-      </section>
-    </div>
-
-    <div class="recap-section card" style="margin-top:20px">
-      <h2>📊 Récapitulatif des picks</h2>
-      <div class="recap-wrap">
-        <table class="recap-table">
-          <thead id="recapHead"></thead>
-          <tbody id="recapBody"><tr><td colspan="2" class="loader">Chargement…</td></tr></tbody>
+        <div><label>&nbsp;</label><button id="resetBtn" class="ghost">Reset</button></div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Date</th><th>Pick</th><th>Personne</th><th>Équipe</th><th>Joueur</th></tr></thead>
+          <tbody id="rows"><tr><td colspan="5" class="loader">Chargement…</td></tr></tbody>
         </table>
       </div>
-    </div>
+      <div class="small" id="count"></div>
+    </section>
   </div>
 
-  <!-- ONGLET INJURY REPORT -->
-  <div id="tab-injuries" class="tab-pane">
-    <div class="card">
-      <div class="injury-header">
-        <h2 style="margin:0">🚑 Injury Report</h2>
-        <span class="injury-updated" id="injuryUpdated">Chargement…</span>
-      </div>
-      <div class="injury-table-wrap">
-        <table class="injury-table">
-          <thead>
-            <tr><th>Joueur</th><th>Équipe</th><th>Statut</th><th>Retour estimé</th><th>Détail</th></tr>
-          </thead>
-          <tbody id="injuryRows"><tr><td colspan="5" class="loader">Chargement…</td></tr></tbody>
-        </table>
-      </div>
+  <!-- TABLEAU RÉCAP CROISÉ -->
+  <div class="recap-section card" style="margin-top:20px">
+    <h2>📊 Récapitulatif des picks</h2>
+    <div class="recap-wrap">
+      <table class="recap-table">
+        <thead id="recapHead"></thead>
+        <tbody id="recapBody"><tr><td colspan="2" class="loader">Chargement…</td></tr></tbody>
+      </table>
     </div>
   </div>
-
 </div>
 
 <script>
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwYVm1fpy2aliWrGYC9z4ykN5GiseeV6G38pBrGn6s3N-po9YJS6dNRJJ1jraFG8exec';
-const INJURIES_URL = 'https://raw.githubusercontent.com/Erwandeluxe/TTLF-PICKS/main/injuries.json';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwYVm1fp_y2aliWr_GYC9z4ykN5GiseeV6G38pBrGn6s3N-po9YJS_6dNRJJ1jraFG8/exec';
 
 const MEMBERS = ['ARNOKNICKS','BRAINLESSD0G','CAPTAINCLEM69','ERWAN','ERWAN2LUX','MOEPMOEP19','THEOFFSWITCH','THIBDEF','VALDO3','VVR3535'];
-const ROUNDS_MAP = {'R01-001':'1804','R01-002':'1904','R01-003':'2004','R01-004':'2104','R01-005':'2204','R01-006':'2304','R01-007':'2404','R01-008':'2504','R01-009':'2604','R01-010':'2704','R01-011':'2804','R01-012':'2904','R01-013':'3004','R01-014':'0105','R01-015':'0205','R01-016':'0305'};
+
+const ROUNDS_MAP = {
+  'R01-001':'18/04','R01-002':'19/04','R01-003':'20/04','R01-004':'21/04',
+  'R01-005':'22/04','R01-006':'23/04','R01-007':'24/04','R01-008':'25/04',
+  'R01-009':'26/04','R01-010':'27/04','R01-011':'28/04','R01-012':'29/04',
+  'R01-013':'30/04','R01-014':'01/05','R01-015':'02/05','R01-016':'03/05'
+};
 const ROUNDS_ORDER = Object.keys(ROUNDS_MAP);
-const ROUNDS_FULL = {'R01-001':'18/04/2026','R01-002':'19/04/2026','R01-003':'20/04/2026','R01-004':'21/04/2026','R01-005':'22/04/2026','R01-006':'23/04/2026','R01-007':'24/04/2026','R01-008':'25/04/2026','R01-009':'26/04/2026','R01-010':'27/04/2026','R01-011':'28/04/2026','R01-012':'29/04/2026','R01-013':'30/04/2026','R01-014':'01/05/2026','R01-015':'02/05/2026','R01-016':'03/05/2026'};
 
-const TEAM_COLORS = {'ATLANTA HAWKS':['#C8102E','#ffffff'],'BOSTON CELTICS':['#007A33','#ffffff'],'CLEVELAND CAVALIERS':['#860038','#ffffff'],'DENVER NUGGETS':['#0E2240','#FEC524'],'DETROIT PISTONS':['#C8102E','#ffffff'],'HOUSTON ROCKETS':['#CE1141','#ffffff'],'LOS ANGELES LAKERS':['#552583','#FDB927'],'MINNESOTA TIMBERWOLVES':['#0C2340','#236192'],'NEW YORK KNICKS':['#006BB6','#F58426'],'OKLAHOMA CITY THUNDER':['#007AC1','#EF3B24'],'ORLANDO MAGIC':['#0077C0','#ffffff'],'PHILADELPHIA 76ERS':['#006BB6','#ffffff'],'PHOENIX SUNS':['#1D1160','#E56020'],'PORTLAND TRAIL BLAZERS':['#E03A3E','#ffffff'],'SAN ANTONIO SPURS':['#C4CED4','#000000'],'TORONTO RAPTORS':['#CE1141','#ffffff']};
+const ROUNDS_FULL = {
+  'R01-001':'18/04/2026','R01-002':'19/04/2026','R01-003':'20/04/2026','R01-004':'21/04/2026',
+  'R01-005':'22/04/2026','R01-006':'23/04/2026','R01-007':'24/04/2026','R01-008':'25/04/2026',
+  'R01-009':'26/04/2026','R01-010':'27/04/2026','R01-011':'28/04/2026','R01-012':'29/04/2026',
+  'R01-013':'30/04/2026','R01-014':'01/05/2026','R01-015':'02/05/2026','R01-016':'03/05/2026'
+};
 
-const PLAYERS = {'ATLANTA HAWKS':['ASA NEWELL','BUDDY HIELD','CHRISTIAN KOLOKO','CJ MCCOLLUM','COREY KISPERT','DYSON DANIELS','GABE VINCENT','GEORGES NIANG','JALEN JOHNSON','JOCK LANDALE','JONATHAN KUMINGA','KEATON WALLACE','MOUHAMED GUEYE','NICKEIL ALEXANDER-WALKER','ONYEKA OKONGWU','RAYJ DENNIS','TONY BRADLEY','ZACCHARIE RISACHER'],'BOSTON CELTICS':['AMARI WILLIAMS','BAYLOR SCHEIERMAN','DERRICK WHITE','HUGO GONZALEZ','JAYLEN BROWN','JAYSON TATUM','JOHN TONJE','JORDAN WALSH','LUKA GARZA','MAX SHULGA','NEEMIAS QUETA','NIKOLA VUCEVIC','PAYTON PRITCHARD','RON HARPER JR.','SAM HAUSER'],'CLEVELAND CAVALIERS':['CRAIG PORTER JR.','DEAN WADE','DENNIS SCHRODER','DONOVAN MITCHELL','EVAN MOBLEY','JAMES HARDEN','JARRETT ALLEN','JAYLON TYSON','KEON ELLIS','LARRY NANCE JR.','MAX STRUS','NAE\'QWAN TOMLIN','RILEY MINIX','SAM MERRILL','THOMAS BRYANT','TYRESE PROCTOR'],'DENVER NUGGETS':['AARON GORDON','BRUCE BROWN','CAMERON JOHNSON','CHRISTIAN BRAUN','CURTIS JONES','DARON HOLMES II','JAMAL MURRAY','JALEN PICKETT','JONAS VALANCIUNAS','JULIAN STRAWTHER','KJ SIMPSON','NIKOLA JOKIC','PEYTON WATSON','SPENCER JONES','TIM HARDAWAY JR.','TYUS JONES','ZEKE NNAJI'],'DETROIT PISTONS':['AUSAR THOMPSON','CADE CUNNINGHAM','CARIS LEVERT','CHAZ LANIER','DANISS JENKINS','DUNCAN ROBINSON','ISAAC JONES','ISAIAH STEWART','JALEN DUREN','JAVONTE GREEN','KEVIN HUERTER','MARCUS SASSER','PAUL REED','RONALD HOLLAND II','TOBIAS HARRIS','TOLU SMITH','WENDELL MOORE JR.'],'HOUSTON ROCKETS':['AARON HOLIDAY','ALPEREN SENGUN','AMEN THOMPSON','CLINT CAPELA','DORIAN FINNEY-SMITH','FRED VANVLEET','ISAIAH CRAWFORD','JABARI SMITH JR.','JAE\'SEAN TATE','JD DAVISON','JEFF GREEN','JOSH OKOGIE','KEVIN DURANT','REED SHEPPARD','STEVEN ADAMS','TARI EASON'],'LOS ANGELES LAKERS':['ADOU THIERO','AUSTIN REAVES','BRONNY JAMES','CHRIS MANON','DALTON KNECHT','DEANDRE AYTON','JAKE LARAVIA','JARRED VANDERBILT','JAXSON HAYES','LEBRON JAMES','LUKA DONCIC','LUKE KENNARD','MARCUS SMART','MAXI KLEBER','NICK SMITH JR.','RUI HACHIMURA'],'MINNESOTA TIMBERWOLVES':['ANTHONY EDWARDS','AYO DOSUNMU','BONES HYLAND','DONTE DIVINCENZO','ENRIQUE FREEMAN','JADEN MCDANIELS','JAYLEN CLARK','JOAN BERINGER','JOE INGLES','JULIAN PHILLIPS','JULIUS RANDLE','KYLE ANDERSON','MIKE CONLEY','NAZ REID','ROCCO ZIKARSKY','RUDY GOBERT','TERRENCE SHANNON JR.'],'NEW YORK KNICKS':['ARIEL HUKPORTI','JALEN BRUNSON','JEREMY SOCHAN','JOSE ALVARADO','JOSH HART','JORDAN CLARKSON','KARL-ANTHONY TOWNS','KEVIN MCCULLAR JR.','LANDRY SHAMET','MIKAL BRIDGES','MILES MCBRIDE','MITCHELL ROBINSON','MOHAMED DIAWARA','OG ANUNOBY','PACOME DADIET','TREY JEMISON III','TYLER KOLEK'],'OKLAHOMA CITY THUNDER':['AARON WIGGINS','AJAY MITCHELL','ALEX CARUSO','BRANDEN CARLSON','BROOKS BARNHIZER','CASON WALLACE','CHET HOLMGREN','ISAIAH HARTENSTEIN','ISAIAH JOE','JALEN WILLIAMS','JARED MCCAIN','JAYLIN WILLIAMS','KENRICH WILLIAMS','LUGUENTZ DORT','NIKOLA TOPIC','SHAI GILGEOUS-ALEXANDER','THOMAS SORBER'],'ORLANDO MAGIC':['ANTHONY BLACK','COLIN CASTLETON','DESMOND BANE','FRANZ WAGNER','GOGA BITADZE','JAMAL CAIN','JASE RICHARDSON','JALEN SUGGS','JEVON CARTER','JETT HOWARD','JONATHAN ISAAC','KEVON HARRIS','MORITZ WAGNER','NOAH PENDA','PAOLO BANCHERO','TRISTAN DA SILVA','WENDELL CARTER JR.'],'PHILADELPHIA 76ERS':['ADEM BONA','ANDRE DRUMMOND','DALEN TERRY','DOMINICK BARLOW','JABARI WALKER','JOEL EMBIID','JOHNI BROOME','JUSTIN EDWARDS','KELLY OUBRE JR.','KYLE LOWRY','PAUL GEORGE','QUENTIN GRIMES','TRENDON WATFORD','TYRESE MARTIN','TYRESE MAXEY','VJ EDGECOMBE'],'PHOENIX SUNS':['AMIR COFFEY','CJ HUNTLEY','COLLIN GILLESPIE','DEVIN BOOKER','DILLON BROOKS','GRAYSON ALLEN','HAYWOOD HIGHSMITH','ISAIAH LIVERS','JALEN GREEN','JORDAN GOODWIN','KHAMAN MALUACH','KOBY BREA','MARK WILLIAMS','OSO IGHODARO','RASHEER FLEMING','ROYCE O\'NEALE','RYAN DUNN'],'PORTLAND TRAIL BLAZERS':['BLAKE WESLEY','CALEB LOVE','CHRIS YOUNGBLOOD','DAMIAN LILLARD','DENI AVDIJA','DONOVAN CLINGAN','JERAMI GRANT','JRUE HOLIDAY','KRIS MURRAY','MATISSE THYBULLE','ROBERT WILLIAMS III','SCOOT HENDERSON','SHAEDON SHARPE','SIDY CISSOKO','TOUMANI CAMARA','VIT KREJCI','YANG HANSEN'],'SAN ANTONIO SPURS':['BISMACK BIYOMBO','CARTER BRYANT','DE\'AARON FOX','DAVID JONES GARCIA','DEVIN VASSELL','DYLAN HARPER','EMANUEL MILLER','HARRISON BARNES','HARRISON INGRAM','JULIAN CHAMPAGNIE','JORDAN MCLAUGHLIN','KELDON JOHNSON','KELLY OLYNYK','LINDY WATERS III','LUKE KORNET','MASON PLUMLEE','STEPHON CASTLE','VICTOR WEMBANYAMA'],'TORONTO RAPTORS':['A.J. LAWSON','ALIJAH MARTIN','BRANDON INGRAM','CHUCKY HEPBURN','COLLIN MURRAY-BOYLES','GARRETT TEMPLE','GRADEY DICK','IMMANUEL QUICKLEY','JA\'KOBE WALTER','JAKOB POELTL','JAMAL SHEAD','JAMISON BATTLE','JONATHAN MOGBO','RJ BARRETT','SANDRO MAMUKELASHVILI','SCOTTIE BARNES','TRAYCE JACKSON-DAVIS']};
+const TEAM_COLORS = {
+  'ATLANTA HAWKS':['#C8102E','#ffffff'],'BOSTON CELTICS':['#007A33','#ffffff'],
+  'CLEVELAND CAVALIERS':['#860038','#ffffff'],'DENVER NUGGETS':['#0E2240','#FEC524'],
+  'DETROIT PISTONS':['#C8102E','#ffffff'],'HOUSTON ROCKETS':['#CE1141','#ffffff'],
+  'LOS ANGELES LAKERS':['#552583','#FDB927'],'MINNESOTA TIMBERWOLVES':['#0C2340','#236192'],
+  'NEW YORK KNICKS':['#006BB6','#F58426'],'OKLAHOMA CITY THUNDER':['#007AC1','#EF3B24'],
+  'ORLANDO MAGIC':['#0077C0','#ffffff'],'PHILADELPHIA 76ERS':['#006BB6','#ffffff'],
+  'PHOENIX SUNS':['#1D1160','#E56020'],'PORTLAND TRAIL BLAZERS':['#E03A3E','#ffffff'],
+  'SAN ANTONIO SPURS':['#C4CED4','#000000'],'TORONTO RAPTORS':['#CE1141','#ffffff'],
+};
 
-let allPicks = [];
+const PLAYERS = {
+  'ATLANTA HAWKS':['ASA NEWELL','BUDDY HIELD','CHRISTIAN KOLOKO','CJ MCCOLLUM','COREY KISPERT','DYSON DANIELS','GABE VINCENT','GEORGES NIANG','JALEN JOHNSON','JOCK LANDALE','JONATHAN KUMINGA','KEATON WALLACE','MOUHAMED GUEYE','NICKEIL ALEXANDER-WALKER','ONYEKA OKONGWU','RAYJ DENNIS','TONY BRADLEY','ZACCHARIE RISACHER'],
+  'BOSTON CELTICS':['AMARI WILLIAMS','BAYLOR SCHEIERMAN','DERRICK WHITE','HUGO GONZÁLEZ','JAYLEN BROWN','JAYSON TATUM','JOHN TONJE','JORDAN WALSH','LUKA GARZA','MAX SHULGA','NEEMIAS QUETA','NIKOLA VUČEVIĆ','PAYTON PRITCHARD','RON HARPER JR.','SAM HAUSER'],
+  'CLEVELAND CAVALIERS':['CRAIG PORTER JR.','DEAN WADE','DENNIS SCHRÖDER','DONOVAN MITCHELL','EVAN MOBLEY','JAMES HARDEN','JARRETT ALLEN','JAYLON TYSON','KEON ELLIS','LARRY NANCE JR.','MAX STRUS',"NAE'QWAN TOMLIN",'RILEY MINIX','SAM MERRILL','THOMAS BRYANT','TYRESE PROCTOR'],
+  'DENVER NUGGETS':['AARON GORDON','BRUCE BROWN','CAMERON JOHNSON','CHRISTIAN BRAUN','CURTIS JONES','DARON HOLMES II','JAMAL MURRAY','JALEN PICKETT','JONAS VALANČIŪNAS','JULIAN STRAWTHER','KJ SIMPSON','NIKOLA JOKIĆ','PEYTON WATSON','SPENCER JONES','TIM HARDAWAY JR.','TYUS JONES','ZEKE NNAJI'],
+  'DETROIT PISTONS':['AUSAR THOMPSON','CADE CUNNINGHAM','CARIS LEVERT','CHAZ LANIER','DANISS JENKINS','DUNCAN ROBINSON','ISAAC JONES','ISAIAH STEWART','JALEN DUREN','JAVONTE GREEN','KEVIN HUERTER','MARCUS SASSER','PAUL REED','RONALD HOLLAND II','TOBIAS HARRIS','TOLU SMITH','WENDELL MOORE JR.'],
+  'HOUSTON ROCKETS':['AARON HOLIDAY','ALPEREN SENGUN','AMEN THOMPSON','CLINT CAPELA','DORIAN FINNEY-SMITH','FRED VANVLEET','ISAIAH CRAWFORD','JABARI SMITH JR.',"JAE'SEAN TATE",'JD DAVISON','JEFF GREEN','JOSH OKOGIE','KEVIN DURANT','REED SHEPPARD','STEVEN ADAMS','TARI EASON'],
+  'LOS ANGELES LAKERS':['ADOU THIERO','AUSTIN REAVES','BRONNY JAMES','CHRIS MAÑON','DALTON KNECHT','DEANDRE AYTON','JAKE LARAVIA','JARRED VANDERBILT','JAXSON HAYES','LEBRON JAMES','LUKA DONČIĆ','LUKE KENNARD','MARCUS SMART','MAXI KLEBER','NICK SMITH JR.','RUI HACHIMURA'],
+  'MINNESOTA TIMBERWOLVES':['ANTHONY EDWARDS','AYO DOSUNMU','BONES HYLAND','DONTE DIVINCENZO','ENRIQUE FREEMAN','JADEN MCDANIELS','JAYLEN CLARK','JOAN BERINGER','JOE INGLES','JULIAN PHILLIPS','JULIUS RANDLE','KYLE ANDERSON','MIKE CONLEY','NAZ REID','ROCCO ZIKARSKY','RUDY GOBERT','TERRENCE SHANNON JR.'],
+  'NEW YORK KNICKS':['ARIEL HUKPORTI','JALEN BRUNSON','JEREMY SOCHAN','JOSE ALVARADO','JOSH HART','JORDAN CLARKSON','KARL-ANTHONY TOWNS','KEVIN MCCULLAR JR.','LANDRY SHAMET','MIKAL BRIDGES','MILES MCBRIDE','MITCHELL ROBINSON','MOHAMED DIAWARA','OG ANUNOBY','PACÔME DADIET','TREY JEMISON III','TYLER KOLEK'],
+  'OKLAHOMA CITY THUNDER':['AARON WIGGINS','AJAY MITCHELL','ALEX CARUSO','BRANDEN CARLSON','BROOKS BARNHIZER','CASON WALLACE','CHET HOLMGREN','ISAIAH HARTENSTEIN','ISAIAH JOE','JALEN WILLIAMS','JARED MCCAIN','JAYLIN WILLIAMS','KENRICH WILLIAMS','LUGUENTZ DORT','NIKOLA TOPIĆ','SHAI GILGEOUS-ALEXANDER','THOMAS SORBER'],
+  'ORLANDO MAGIC':['ANTHONY BLACK','COLIN CASTLETON','DESMOND BANE','FRANZ WAGNER','GOGA BITADZE','JAMAL CAIN','JASE RICHARDSON','JALEN SUGGS','JEVON CARTER','JETT HOWARD','JONATHAN ISAAC','KEVON HARRIS','MORITZ WAGNER','NOAH PENDA','PAOLO BANCHERO','TRISTAN DA SILVA','WENDELL CARTER JR.'],
+  'PHILADELPHIA 76ERS':['ADEM BONA','ANDRE DRUMMOND','DALEN TERRY','DOMINICK BARLOW','JABARI WALKER','JOEL EMBIID','JOHNI BROOME','JUSTIN EDWARDS','KELLY OUBRE JR.','KYLE LOWRY','PAUL GEORGE','QUENTIN GRIMES','TRENDON WATFORD','TYRESE MARTIN','TYRESE MAXEY','VJ EDGECOMBE'],
+  'PHOENIX SUNS':['AMIR COFFEY','CJ HUNTLEY','COLLIN GILLESPIE','DEVIN BOOKER','DILLON BROOKS','GRAYSON ALLEN','HAYWOOD HIGHSMITH','ISAIAH LIVERS','JALEN GREEN','JORDAN GOODWIN','KHAMAN MALUACH','KOBY BREA','MARK WILLIAMS','OSO IGHODARO','RASHEER FLEMING',"ROYCE O'NEALE",'RYAN DUNN'],
+  'PORTLAND TRAIL BLAZERS':['BLAKE WESLEY','CALEB LOVE','CHRIS YOUNGBLOOD','DAMIAN LILLARD','DENI AVDIJA','DONOVAN CLINGAN','JERAMI GRANT','JRUE HOLIDAY','KRIS MURRAY','MATISSE THYBULLE','ROBERT WILLIAMS III','SCOOT HENDERSON','SHAEDON SHARPE','SIDY CISSOKO','TOUMANI CAMARA','VÍT KREJČÍ','YANG HANSEN'],
+  'SAN ANTONIO SPURS':['BISMACK BIYOMBO','CARTER BRYANT',"DE'AARON FOX",'DAVID JONES GARCIA','DEVIN VASSELL','DYLAN HARPER','EMANUEL MILLER','HARRISON BARNES','HARRISON INGRAM','JULIAN CHAMPAGNIE','JORDAN MCLAUGHLIN','KELDON JOHNSON','KELLY OLYNYK','LINDY WATERS III','LUKE KORNET','MASON PLUMLEE','STEPHON CASTLE','VICTOR WEMBANYAMA'],
+  'TORONTO RAPTORS':['A.J. LAWSON','ALIJAH MARTIN','BRANDON INGRAM','CHUCKY HEPBURN','COLLIN MURRAY-BOYLES','GARRETT TEMPLE','GRADEY DICK','IMMANUEL QUICKLEY',"JA'KOBE WALTER",'JAKOB POELTL','JAMAL SHEAD','JAMISON BATTLE','JONATHAN MOGBO','RJ BARRETT','SANDRO MAMUKELASHVILI','SCOTTIE BARNES','TRAYCE JACKSON-DAVIS']
+};
 
-function switchTab(name, btn) {
-  document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('tab-' + name).classList.add('active');
-  btn.classList.add('active');
-  if (name === 'injuries') loadInjuries();
-}
-
-async function loadInjuries() {
-  const tbody = document.getElementById('injuryRows');
-  tbody.innerHTML = '<tr><td colspan="5" class="loader">Chargement…</td></tr>';
-  try {
-    const res = await fetch(INJURIES_URL + '?t=' + Date.now());
-    const data = await res.json();
-    document.getElementById('injuryUpdated').textContent = 'Mis à jour : ' + (data.updated_at || '—');
-    if (!data.injuries || data.injuries.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="5" class="no-injuries">✅ Aucun blessé dans votre liste actuellement.</td></tr>';
-      return;
-    }
-    tbody.innerHTML = data.injuries.map(p => {
-      const status = p.status || '?';
-      let badgeClass = 'badge-other';
-      if (/out/i.test(status)) badgeClass = 'badge-out';
-      else if (/day.to.day/i.test(status)) badgeClass = 'badge-dtd';
-      else if (/probable/i.test(status)) badgeClass = 'badge-prob';
-      const team = (p.team || '').toUpperCase();
-      const colors = TEAM_COLORS[team] || ['#6b7280','#fff'];
-      const teamBadge = team ? `<span class="team-badge" style="background:${colors[0]};color:${colors[1]}">${team}</span>` : '—';
-      return `<tr>
-        <td><strong>${p.name}</strong></td>
-        <td>${teamBadge}</td>
-        <td><span class="${badgeClass}">${status}</span></td>
-        <td>${p.return_date || '—'}</td>
-        <td class="injury-desc">${p.description || '—'}</td>
-      </tr>`;
-    }).join('');
-  } catch(e) {
-    tbody.innerHTML = '<tr><td colspan="5" style="color:#dc2626;padding:20px">Impossible de charger les données.</td></tr>';
-  }
-}
-
+// Splash → App
 function enterApp() {
   document.getElementById('splashScreen').style.display = 'none';
   document.getElementById('app').style.display = 'block';
@@ -286,7 +235,7 @@ function enterApp() {
 
 function formatDate(d) {
   if (!d) return '';
-  if (/\d{2}\/\d{2}\/\d{4}/.test(d)) {
+  if (/^\d{2}\/\d{2}\/\d{4}$/.test(d)) {
     const [day, month, year] = d.split('/');
     const months = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
     return `${parseInt(day)} ${months[parseInt(month)-1]} ${year}`;
@@ -313,42 +262,70 @@ function playerTag(player, team) {
 
 function setStatus(msg, type) {
   const el = document.getElementById('status');
-  el.textContent = msg; el.className = 'status ' + type;
-  if (type === 'ok') setTimeout(() => { el.className = 'status'; }, 2500);
+  el.textContent = msg;
+  el.className = 'status ' + type;
+  if (type === 'ok') setTimeout(() => el.className = 'status', 2500);
 }
 
 function updatePlayersList() {
   const team = document.getElementById('team').value;
-  const sel = document.getElementById('player');
-  if (!team) { sel.innerHTML = '<option value="">— Choisis d\'abord une équipe —</option>'; return; }
+  const sel  = document.getElementById('player');
+  if (!team) { sel.innerHTML = "<option value=''>— Choisis d'abord une équipe —</option>"; return; }
   const list = (PLAYERS[team] || []).sort((a,b) => a.localeCompare(b,'fr'));
-  sel.innerHTML = '<option value="">Choisir un joueur</option>' + list.map(p => `<option>${p}</option>`).join('');
+  sel.innerHTML = "<option value=''>Choisir un joueur</option>";
+  list.forEach(p => { const o = document.createElement('option'); o.value = o.textContent = p; sel.appendChild(o); });
 }
+
+let allPicks = [];
 
 function renderTable() {
   const fr = document.getElementById('filterRound').value;
   const fm = document.getElementById('filterMember').value;
   let data = allPicks.filter(x => (!fr || x.round === fr) && (!fm || x.member === fm));
-  data.sort((a,b) => ROUNDS_ORDER.indexOf(a.round) - ROUNDS_ORDER.indexOf(b.round) || a.member.localeCompare(b.member,'fr'));
+  data.sort((a,b) => (ROUNDS_ORDER.indexOf(a.round) - ROUNDS_ORDER.indexOf(b.round)) || a.member.localeCompare(b.member,'fr'));
   const tbody = document.getElementById('rows');
-  tbody.innerHTML = !data.length
-    ? '<tr><td colspan="5" style="color:#6b7280;padding:20px">Aucun pick pour ce filtre.</td></tr>'
-    : data.map(x => `<tr><td>${formatDate(x.date)}</td><td><span class="pick-pill">${x.round}</span></td><td><strong>${x.member}</strong></td><td>${teamBadge(x.team)}</td><td>${x.player}</td></tr>`).join('');
-  document.getElementById('count').textContent = `${data.length} picks affichés sur ${allPicks.length} total`;
+  if (!data.length) {
+    tbody.innerHTML = '<tr><td colspan="5" style="color:#6b7280;padding:20px">Aucun pick pour ce filtre.</td></tr>';
+  } else {
+    tbody.innerHTML = data.map(x =>
+      `<tr>
+        <td>${formatDate(x.date)}</td>
+        <td><span class="pick-pill">${x.round}</span></td>
+        <td><strong>${x.member}</strong></td>
+        <td>${teamBadge(x.team)}</td>
+        <td>${x.player}</td>
+      </tr>`
+    ).join('');
+  }
+  document.getElementById('count').textContent = `${data.length} pick(s) affiché(s) sur ${allPicks.length} total`;
 }
 
 function renderRecap() {
+  // Déterminer les rounds qui ont au moins 1 pick
   const usedRounds = ROUNDS_ORDER.filter(r => allPicks.some(p => p.round === r));
+
+  // Header
   const head = document.getElementById('recapHead');
-  head.innerHTML = `<tr><th class="member-col">Joueur</th>${usedRounds.map(r => `<th>${r}<br><span style="font-weight:400;font-size:10px">${ROUNDS_MAP[r]}</span></th>`).join('')}</tr>`;
+  head.innerHTML = '<tr><th class="member-col">Joueur</th>' +
+    usedRounds.map(r => `<th>${r}<br><span style="font-weight:400;font-size:10px">${ROUNDS_MAP[r]}</span></th>`).join('') +
+    '</tr>';
+
+  // Body : une ligne par membre
   const body = document.getElementById('recapBody');
-  if (!usedRounds.length) { body.innerHTML = '<tr><td colspan="2" style="color:#6b7280;padding:20px">Aucun pick enregistré.</td></tr>'; return; }
+  if (!usedRounds.length) {
+    body.innerHTML = '<tr><td colspan="2" style="color:#6b7280;padding:20px">Aucun pick enregistré.</td></tr>';
+    return;
+  }
+
+  // Index picks : member+round → pick
   const idx = {};
-  allPicks.forEach(p => { idx[p.member] = idx[p.member] || {}; idx[p.member][p.round] = p; });
+  allPicks.forEach(p => { idx[p.member + '|' + p.round] = p; });
+
   body.innerHTML = MEMBERS.map(m => {
     const cells = usedRounds.map(r => {
-      const p = idx[m]?.[r];
-      return p ? `<td>${playerTag(p.player, p.team)}</td>` : '<td class="empty-cell">·</td>';
+      const p = idx[m + '|' + r];
+      if (!p) return `<td class="empty-cell">–</td>`;
+      return `<td>${playerTag(p.player, p.team)}</td>`;
     }).join('');
     return `<tr><td class="member-cell">${m}</td>${cells}</tr>`;
   }).join('');
@@ -358,19 +335,19 @@ async function loadPicks() {
   document.getElementById('rows').innerHTML = '<tr><td colspan="5" class="loader">Chargement…</td></tr>';
   document.getElementById('recapBody').innerHTML = '<tr><td colspan="2" class="loader">Chargement…</td></tr>';
   try {
-    const res = await fetch(SCRIPT_URL + '?action=data', { cache: 'no-store', redirect: 'follow' });
+    const res  = await fetch(SCRIPT_URL + '?action=data', { cache: 'no-store' });
     const json = await res.json();
-    allPicks = json.picks;
-    renderTable(); renderRecap();
+    allPicks = json.picks || [];
+    renderTable();
+    renderRecap();
   } catch(e) {
-    document.getElementById('rows').innerHTML = '<tr><td colspan="5" style="color:#dc2626;padding:20px">Impossible de charger les données.</td></tr>';
+    document.getElementById('rows').innerHTML = '<tr><td colspan="5" style="color:#dc2626;padding:20px">❌ Impossible de charger les données.</td></tr>';
   }
 }
 
 async function post(action, payload) {
   const res = await fetch(SCRIPT_URL, {
     method: 'POST',
-    redirect: 'follow',
     headers: { 'Content-Type': 'text/plain;charset=utf-8' },
     body: JSON.stringify({ action, payload })
   });
@@ -380,30 +357,39 @@ async function post(action, payload) {
 document.getElementById('team').addEventListener('change', updatePlayersList);
 document.getElementById('filterRound').addEventListener('change', renderTable);
 document.getElementById('filterMember').addEventListener('change', renderTable);
-document.getElementById('resetBtn').addEventListener('click', () => { document.getElementById('filterRound').value = ''; document.getElementById('filterMember').value = ''; renderTable(); });
+document.getElementById('resetBtn').addEventListener('click', () => {
+  document.getElementById('filterRound').value = '';
+  document.getElementById('filterMember').value = '';
+  renderTable();
+});
 
 document.getElementById('saveBtn').addEventListener('click', async () => {
   const member = document.getElementById('member').value;
-  const round = document.getElementById('round').value;
-  const team = document.getElementById('team').value;
+  const round  = document.getElementById('round').value;
+  const team   = document.getElementById('team').value;
   const player = document.getElementById('player').value;
   if (!member || !round || !team || !player) { setStatus('Complète les 4 champs.', 'err'); return; }
   setStatus('Enregistrement…', 'ok');
   const out = await post('savePick', { member, round, date: ROUNDS_FULL[round], team, player });
   if (out.error) { setStatus('Erreur : ' + out.error, 'err'); return; }
-  await loadPicks(); setStatus('Pick enregistré !', 'ok');
+  await loadPicks();
+  setStatus('✅ Pick enregistré !', 'ok');
 });
 
 document.getElementById('deleteBtn').addEventListener('click', async () => {
   const member = document.getElementById('member').value;
-  const round = document.getElementById('round').value;
+  const round  = document.getElementById('round').value;
   if (!member || !round) { setStatus('Choisis une personne et une date.', 'err'); return; }
   const out = await post('deletePick', { member, round });
   if (out.error) { setStatus('Erreur : ' + out.error, 'err'); return; }
-  await loadPicks(); setStatus('Pick supprimé.', 'ok');
+  await loadPicks();
+  setStatus('🗑 Pick supprimé.', 'ok');
 });
 
-document.getElementById('reloadBtn').addEventListener('click', async () => { await loadPicks(); setStatus('Données actualisées.', 'ok'); });
+document.getElementById('reloadBtn').addEventListener('click', async () => {
+  await loadPicks();
+  setStatus('🔄 Données actualisées.', 'ok');
+});
 </script>
 </body>
 </html>
