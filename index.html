@@ -13,7 +13,6 @@
   *, *::before, *::after { box-sizing: border-box; }
   body { margin: 0; font-family: Arial, sans-serif; color: var(--text); background: var(--bg); padding: 16px; }
 
-  /* SPLASH */
   #splashScreen { display: flex; align-items: center; justify-content: center; min-height: 100vh; background: var(--bg); }
   .splash-box { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 48px 36px; max-width: 380px; width: 100%; box-shadow: 0 4px 24px rgba(0,0,0,.07); text-align: center; }
   .splash-box h1 { margin: 0 0 8px; font-size: 28px; }
@@ -21,12 +20,10 @@
   .splash-box button { width: 100%; min-height: 48px; background: var(--primary); color: #fff; border: 0; border-radius: 10px; font-size: 16px; font-weight: 700; cursor: pointer; transition: background .15s; }
   .splash-box button:hover { background: var(--primary-2); }
 
-  /* APP */
   #app { display: none; }
   h1 { margin: 0 0 4px; font-size: 26px; }
   .sub { color: var(--muted); margin-bottom: 18px; font-size: 14px; }
 
-  /* TABS */
   .tabs { display: flex; gap: 8px; margin-bottom: 20px; border-bottom: 2px solid var(--line); padding-bottom: 0; }
   .tab-btn { background: none; border: none; border-bottom: 3px solid transparent; margin-bottom: -2px; padding: 10px 18px; font-size: 15px; font-weight: 700; color: var(--muted); cursor: pointer; transition: color .15s, border-color .15s; border-radius: 0; }
   .tab-btn:hover { color: var(--primary); }
@@ -34,7 +31,6 @@
   .tab-pane { display: none; }
   .tab-pane.active { display: block; }
 
-  /* PICKS */
   .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,.04); }
   .card h2 { margin: 0 0 14px; font-size: 18px; }
@@ -71,7 +67,6 @@
   .player-tag { display: inline-block; padding: 3px 8px; border-radius: 6px; font-size: 11px; font-weight: 700; white-space: nowrap; }
   .empty-cell { color: #d1d5db; font-size: 18px; text-align: center; }
 
-  /* INJURY REPORT */
   .injury-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; flex-wrap: wrap; gap: 8px; }
   .injury-updated { font-size: 12px; color: var(--muted); }
   .injury-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; }
@@ -107,7 +102,6 @@
   <h1>🏀 TTFL Picks</h1>
   <div class="sub">Saisie et visualisation des picks par date</div>
 
-  <!-- ONGLETS -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('picks', this)">🗓 Picks</button>
     <button class="tab-btn" onclick="switchTab('injuries', this)">🚑 Injury Report</button>
@@ -116,7 +110,6 @@
   <!-- ONGLET PICKS -->
   <div id="tab-picks" class="tab-pane active">
     <div class="grid">
-      <!-- SAISIE -->
       <section class="card">
         <h2>Enregistrer un pick</h2>
         <div class="field"><label>Personne</label>
@@ -162,7 +155,6 @@
         <div id="status" class="status"></div>
       </section>
 
-      <!-- LISTE DÉTAILLÉE -->
       <section class="card">
         <h2>Tous les picks</h2>
         <div class="toolbar">
@@ -199,7 +191,6 @@
       </section>
     </div>
 
-    <!-- RÉCAP CROISÉ -->
     <div class="recap-section card" style="margin-top:20px">
       <h2>📊 Récapitulatif des picks</h2>
       <div class="recap-wrap">
@@ -221,13 +212,7 @@
       <div class="injury-table-wrap">
         <table class="injury-table">
           <thead>
-            <tr>
-              <th>Joueur</th>
-              <th>Équipe</th>
-              <th>Statut</th>
-              <th>Retour estimé</th>
-              <th>Détail</th>
-            </tr>
+            <tr><th>Joueur</th><th>Équipe</th><th>Statut</th><th>Retour estimé</th><th>Détail</th></tr>
           </thead>
           <tbody id="injuryRows"><tr><td colspan="5" class="loader">Chargement…</td></tr></tbody>
         </table>
@@ -235,7 +220,7 @@
     </div>
   </div>
 
-</div><!-- /app -->
+</div>
 
 <script>
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwYVm1fpy2aliWrGYC9z4ykN5GiseeV6G38pBrGn6s3N-po9YJS6dNRJJ1jraFG8exec';
@@ -252,7 +237,6 @@ const PLAYERS = {'ATLANTA HAWKS':['ASA NEWELL','BUDDY HIELD','CHRISTIAN KOLOKO',
 
 let allPicks = [];
 
-// --- TABS ---
 function switchTab(name, btn) {
   document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -261,7 +245,6 @@ function switchTab(name, btn) {
   if (name === 'injuries') loadInjuries();
 }
 
-// --- INJURIES ---
 async function loadInjuries() {
   const tbody = document.getElementById('injuryRows');
   tbody.innerHTML = '<tr><td colspan="5" class="loader">Chargement…</td></tr>';
@@ -295,7 +278,6 @@ async function loadInjuries() {
   }
 }
 
-// --- SPLASH / APP ---
 function enterApp() {
   document.getElementById('splashScreen').style.display = 'none';
   document.getElementById('app').style.display = 'block';
@@ -376,7 +358,7 @@ async function loadPicks() {
   document.getElementById('rows').innerHTML = '<tr><td colspan="5" class="loader">Chargement…</td></tr>';
   document.getElementById('recapBody').innerHTML = '<tr><td colspan="2" class="loader">Chargement…</td></tr>';
   try {
-    const res = await fetch(SCRIPT_URL + '?action=data', { cache: 'no-store' });
+    const res = await fetch(SCRIPT_URL + '?action=data', { cache: 'no-store', redirect: 'follow' });
     const json = await res.json();
     allPicks = json.picks;
     renderTable(); renderRecap();
@@ -386,7 +368,12 @@ async function loadPicks() {
 }
 
 async function post(action, payload) {
-  const res = await fetch(SCRIPT_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ action, payload }) });
+  const res = await fetch(SCRIPT_URL, {
+    method: 'POST',
+    redirect: 'follow',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify({ action, payload })
+  });
   return await res.json();
 }
 
