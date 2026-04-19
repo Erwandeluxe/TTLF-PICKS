@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>TTFL Picks</title>
+<style>
+  :root{--bg:#f5f7fb;--card:#fff;--line:#d9e0ea;--text:#1f2937;--muted:#6b7280;--primary:#0f766e;--primary-2:#115e59;--ok:#dcfce7;--warn:#fef3c7;--err:#fee2e2;--radius:14px}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Arial,sans-serif;color:var(--text);background:var(--bg);padding:16px}
+  h1{margin:0 0 4px;font-size:26px}
+  .sub{color:var(--muted);margin-bottom:18px;font-size:14px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+  .card h2{margin:0 0 14px;font-size:18px}
+  .field{margin-bottom:12px}
+  label{display:block;font-weight:700;margin-bottom:5px;font-size:13px}
+  select{width:100%;min-height:44px;padding:10px 12px;border:1px solid #c7d2de;border-radius:10px;font-size:15px;background:#fff}
+  .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+  button{min-height:44px;padding:10px 16px;border:0;border-radius:10px;background:var(--primary);color:#fff;font-size:14px;font-weight:700;cursor:pointer;transition:background .15s}
+  button:hover{background:var(--primary-2)}
+  .ghost{background:#fff;color:var(--text);border:1px solid var(--line)}
+  .ghost:hover{background:#f8fafc}
+  .status{margin-top:12px;padding:10px 12px;border-radius:10px;font-size:14px;display:none}
+  .status.ok{background:var(--ok);display:block}
+  .status.err{background:var(--err);display:block}
+  .toolbar{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;margin-bottom:12px;align-items:end}
+  .toolbar button{width:100%}
+  .table-wrap{max-height:60vh;overflow:auto;border:1px solid var(--line);border-radius:10px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
+  th{background:#f8fafc;position:sticky;top:0;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .pill{display:inline-block;padding:2px 8px;border-radius:999px;background:var(--warn);font-size:11px;font-weight:700}
+  .small{font-size:12px;color:var(--muted);margin-top:8px}
+  .loader{text-align:center;padding:30px;color:var(--muted);font-size:14px}
+  .setup-box{background:#fffbeb;border:1px solid #fcd34d;border-radius:10px;padding:16px;margin-bottom:18px;font-size:13px}
+  .setup-box strong{display:block;margin-bottom:4px;font-size:14px}
+  .setup-box code{background:#fef3c7;padding:2px 6px;border-radius:4px;font-size:12px;word-break:break-all}
+  @media(max-width:800px){.grid,.toolbar{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<h1>🏀 TTFL Picks</h1>
+<div class="sub">Saisie et visualisation des picks par date</div>
+
+<div class="setup-box" id="setupBox">
+  <strong>⚙️ Configuration requise (une seule fois)</strong>
+  Remplace <code>COLLE_ICI_TON_URL_APPS_SCRIPT</code> dans le code par l'URL de ton Apps Script.<br>
+  <span style="color:#6b7280">→ Voir le guide joint pour créer le script en 5 min.</span>
+</div>
+
+<div class="grid">
+  <section class="card">
+    <h2>Enregistrer un pick</h2>
+    <div class="field">
+      <label>Personne</label>
+      <select id="member">
+        <option value="">Choisir un pseudo</option>
+        <option>ARNOKNICKS</option><option>BRAINLESSD0G</option><option>CAPTAINCLEM69</option>
+        <option>ERWAN</option><option>ERWAN2LUX</option><option>MOEPMOEP19</option>
+        <option>THEOFFSWITCH</option><option>THIBDEF</option><option>VALDO3</option><option>VVR3535</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Pick / Date</label>
+      <select id="round">
+        <option value="">Choisir une date</option>
+        <option value="R01-001">R01-001 | 18/04/2026</option>
+        <option value="R01-002">R01-002 | 19/04/2026</option>
+        <option value="R01-003">R01-003 | 20/04/2026</option>
+        <option value="R01-004">R01-004 | 21/04/2026</option>
+        <option value="R01-005">R01-005 | 22/04/2026</option>
+        <option value="R01-006">R01-006 | 23/04/2026</option>
+        <option value="R01-007">R01-007 | 24/04/2026</option>
+        <option value="R01-008">R01-008 | 25/04/2026</option>
+        <option value="R01-009">R01-009 | 26/04/2026</option>
+        <option value="R01-010">R01-010 | 27/04/2026</option>
+        <option value="R01-011">R01-011 | 28/04/2026</option>
+        <option value="R01-012">R01-012 | 29/04/2026</option>
+        <option value="R01-013">R01-013 | 30/04/2026</option>
+        <option value="R01-014">R01-014 | 01/05/2026</option>
+        <option value="R01-015">R01-015 | 02/05/2026</option>
+        <option value="R01-016">R01-016 | 03/05/2026</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Équipe</label>
+      <select id="team">
+        <option value="">Choisir une équipe</option>
+        <option>ATLANTA HAWKS</option><option>BOSTON CELTICS</option>
+        <option>CLEVELAND CAVALIERS</option><option>DENVER NUGGETS</option>
+        <option>DETROIT PISTONS</option><option>HOUSTON ROCKETS</option>
+        <option>LOS ANGELES LAKERS</option><option>MINNESOTA TIMBERWOLVES</option>
+        <option>NEW YORK KNICKS</option><option>OKLAHOMA CITY THUNDER</option>
+        <option>ORLANDO MAGIC</option><option>PHILADELPHIA 76ERS</option>
+        <option>PHOENIX SUNS</option><option>PORTLAND TRAIL BLAZERS</option>
+        <option>SAN ANTONIO SPURS</option><option>TORONTO RAPTORS</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Joueur</label>
+      <select id="player"><option value="">— Choisis d'abord une équipe —</option></select>
+    </div>
+    <div class="btns">
+      <button id="saveBtn">✅ Enregistrer</button>
+      <button id="deleteBtn" class="ghost">🗑 Supprimer ce pick</button>
+      <button id="reloadBtn" class="ghost">🔄 Actualiser</button>
+    </div>
+    <div id="status" class="status"></div>
+  </section>
+
+  <section class="card">
+    <h2>Tous les picks</h2>
+    <div class="toolbar">
+      <div>
+        <label>Filtre date</label>
+        <select id="filterRound">
+          <option value="">Toutes les dates</option>
+          <option value="R01-001">R01-001 | 18/04/2026</option>
+          <option value="R01-002">R01-002 | 19/04/2026</option>
+          <option value="R01-003">R01-003 | 20/04/2026</option>
+          <option value="R01-004">R01-004 | 21/04/2026</option>
+          <option value="R01-005">R01-005 | 22/04/2026</option>
+          <option value="R01-006">R01-006 | 23/04/2026</option>
+          <option value="R01-007">R01-007 | 24/04/2026</option>
+          <option value="R01-008">R01-008 | 25/04/2026</option>
+          <option value="R01-009">R01-009 | 26/04/2026</option>
+          <option value="R01-010">R01-010 | 27/04/2026</option>
+          <option value="R01-011">R01-011 | 28/04/2026</option>
+          <option value="R01-012">R01-012 | 29/04/2026</option>
+          <option value="R01-013">R01-013 | 30/04/2026</option>
+          <option value="R01-014">R01-014 | 01/05/2026</option>
+          <option value="R01-015">R01-015 | 02/05/2026</option>
+          <option value="R01-016">R01-016 | 03/05/2026</option>
+        </select>
+      </div>
+      <div>
+        <label>Filtre personne</label>
+        <select id="filterMember">
+          <option value="">Toutes les personnes</option>
+          <option>ARNOKNICKS</option><option>BRAINLESSD0G</option><option>CAPTAINCLEM69</option>
+          <option>ERWAN</option><option>ERWAN2LUX</option><option>MOEPMOEP19</option>
+          <option>THEOFFSWITCH</option><option>THIBDEF</option><option>VALDO3</option><option>VVR3535</option>
+        </select>
+      </div>
+      <div><label>&nbsp;</label><button id="resetBtn" class="ghost">Reset</button></div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Date</th><th>Pick</th><th>Personne</th><th>Équipe</th><th>Joueur</th></tr></thead>
+        <tbody id="rows"><tr><td colspan="5" class="loader">Chargement…</td></tr></tbody>
+      </table>
+    </div>
+    <div class="small" id="count"></div>
+  </section>
+</div>
+
+<script>
+// ============================================================
+// ⚙️  REMPLACE CETTE URL PAR TON URL APPS SCRIPT
+// ============================================================
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwYVm1fp_y2aliWr_GYC9z4ykN5GiseeV6G38pBrGn6s3N-po9YJS_6dNRJJ1jraFG8/exec';
+// ============================================================
+
+const ROUNDS_MAP = {
+  'R01-001':'18/04/2026','R01-002':'19/04/2026','R01-003':'20/04/2026',
+  'R01-004':'21/04/2026','R01-005':'22/04/2026','R01-006':'23/04/2026',
+  'R01-007':'24/04/2026','R01-008':'25/04/2026','R01-009':'26/04/2026',
+  'R01-010':'27/04/2026','R01-011':'28/04/2026','R01-012':'29/04/2026',
+  'R01-013':'30/04/2026','R01-014':'01/05/2026','R01-015':'02/05/2026',
+  'R01-016':'03/05/2026'
+};
+
+const ROUNDS_ORDER = Object.keys(ROUNDS_MAP);
+
+const PLAYERS = {
+  'ATLANTA HAWKS':['BUDDY HIELD','CHRISTIAN KOLOKO','CJ MCCOLLUM','COREY KISPERT','DYSON DANIELS','GABE VINCENT','GEORGES NIANG','JALEN JOHNSON','JOCK LANDALE','JONATHAN KUMINGA','KEATON WALLACE','MOUHAMED GUEYE','NICKEIL ALEXANDER-WALKER','ONYEKA OKONGWU','RAYJ DENNIS','TONY BRADLEY','ZACCHARIE RISACHER','ASA NEWELL'],
+  'BOSTON CELTICS':['AMARI WILLIAMS','BAYLOR SCHEIERMAN','DERRICK WHITE','HUGO GONZÁLEZ','JAYLEN BROWN','JAYSON TATUM','JOHN TONJE','JORDAN WALSH','LUKA GARZA','MAX SHULGA','NEEMIAS QUETA','NIKOLA VUČEVIĆ','PAYTON PRITCHARD','RON HARPER JR.','SAM HAUSER'],
+  'CLEVELAND CAVALIERS':['CRAIG PORTER JR.','DEAN WADE','DENNIS SCHRÖDER','DONOVAN MITCHELL','EVAN MOBLEY','JAMES HARDEN','JARRETT ALLEN','JAYLON TYSON','KEON ELLIS',"NAE'QWAN TOMLIN",'LARRY NANCE JR.','MAX STRUS','RILEY MINIX','SAM MERRILL','THOMAS BRYANT','TYRESE PROCTOR'],
+  'DENVER NUGGETS':['AARON GORDON','CHRISTIAN BRAUN','BRUCE BROWN','CAMERON JOHNSON','CURTIS JONES','DARON HOLMES II','JAMAL MURRAY','JALEN PICKETT','JONAS VALANČIŪNAS','JULIAN STRAWTHER','KJ SIMPSON','NIKOLA JOKIĆ','PEYTON WATSON','SPENCER JONES','TIM HARDAWAY JR.','TYUS JONES','ZEKE NNAJI'],
+  'DETROIT PISTONS':['AUSAR THOMPSON','CADE CUNNINGHAM','CARIS LEVERT','CHAZ LANIER','DANISS JENKINS','DUNCAN ROBINSON','ISAAC JONES','ISAIAH STEWART','JALEN DUREN','JAVONTE GREEN','KEVIN HUERTER','MARCUS SASSER','PAUL REED','RONALD HOLLAND II','TOBIAS HARRIS','TOLU SMITH','WENDELL MOORE JR.'],
+  'HOUSTON ROCKETS':["JAE'SEAN TATE",'AARON HOLIDAY','ALPEREN SENGUN','AMEN THOMPSON','CLINT CAPELA','DORIAN FINNEY-SMITH','FRED VANVLEET','ISAIAH CRAWFORD','JABARI SMITH JR.','JD DAVISON','JEFF GREEN','JOSH OKOGIE','KEVIN DURANT','REED SHEPPARD','STEVEN ADAMS','TARI EASON'],
+  'LOS ANGELES LAKERS':['ADOU THIERO','AUSTIN REAVES','BRONNY JAMES','CHRIS MAÑON','DALTON KNECHT','DEANDRE AYTON','JAKE LARAVIA','JARRED VANDERBILT','JAXSON HAYES','LEBRON JAMES','LUKA DONČIĆ','LUKE KENNARD','MARCUS SMART','MAXI KLEBER','NICK SMITH JR.','RUI HACHIMURA'],
+  'MINNESOTA TIMBERWOLVES':['ANTHONY EDWARDS','AYO DOSUNMU','BONES HYLAND','DONTE DIVINCENZO','ENRIQUE FREEMAN','JADEN MCDANIELS','JAYLEN CLARK','JOAN BERINGER','JOE INGLES','JULIUS RANDLE','KYLE ANDERSON','MIKE CONLEY','NAZ REID','ROCCO ZIKARSKY','RUDY GOBERT','TERRENCE SHANNON JR.','JULIAN PHILLIPS'],
+  'NEW YORK KNICKS':['ARIEL HUKPORTI','JALEN BRUNSON','JEREMY SOCHAN','JOSE ALVARADO','JOSH HART','KARL-ANTHONY TOWNS','KEVIN MCCULLAR JR.','LANDRY SHAMET','MILES MCBRIDE','MIKAL BRIDGES','MITCHELL ROBINSON','MOHAMED DIAWARA','OG ANUNOBY','PACÔME DADIET','TREY JEMISON III','TYLER KOLEK','JORDAN CLARKSON'],
+  'OKLAHOMA CITY THUNDER':['AARON WIGGINS','AJAY MITCHELL','ALEX CARUSO','BRANDEN CARLSON','BROOKS BARNHIZER','CASON WALLACE','CHET HOLMGREN','ISAIAH HARTENSTEIN','ISAIAH JOE','JALEN WILLIAMS','JARED MCCAIN','JAYLIN WILLIAMS','KENRICH WILLIAMS','LUGUENTZ DORT','NIKOLA TOPIĆ','SHAI GILGEOUS-ALEXANDER','THOMAS SORBER'],
+  'ORLANDO MAGIC':['ANTHONY BLACK','COLIN CASTLETON','DESMOND BANE','FRANZ WAGNER','GOGA BITADZE','JAMAL CAIN','JASE RICHARDSON','JALEN SUGGS','JEVON CARTER','JETT HOWARD','JONATHAN ISAAC','KEVON HARRIS','MORITZ WAGNER','NOAH PENDA','PAOLO BANCHERO','TRISTAN DA SILVA','WENDELL CARTER JR.'],
+  'PHILADELPHIA 76ERS':['ADEM BONA','ANDRE DRUMMOND','DOMINICK BARLOW','DALEN TERRY','JABARI WALKER','JOEL EMBIID','JOHNI BROOME','JUSTIN EDWARDS','KELLY OUBRE JR.','KYLE LOWRY','PAUL GEORGE','QUENTIN GRIMES','TRENDON WATFORD','TYRESE MARTIN','TYRESE MAXEY','VJ EDGECOMBE'],
+  'PHOENIX SUNS':['AMIR COFFEY','COLLIN GILLESPIE','DEVIN BOOKER','DILLON BROOKS','GRAYSON ALLEN','HAYWOOD HIGHSMITH','ISAIAH LIVERS','JALEN GREEN','JORDAN GOODWIN','KHAMAN MALUACH','KOBY BREA','CJ HUNTLEY','MARK WILLIAMS','OSO IGHODARO','RASHEER FLEMING','ROYCE O'NEALE','RYAN DUNN'],
+  'PORTLAND TRAIL BLAZERS':['BLAKE WESLEY','CALEB LOVE','CHRIS YOUNGBLOOD','DAMIAN LILLARD','DENI AVDIJA','DONOVAN CLINGAN','JERAMI GRANT','JRUE HOLIDAY','KRIS MURRAY','MATISSE THYBULLE','ROBERT WILLIAMS III','SCOOT HENDERSON','SHAEDON SHARPE','SIDY CISSOKO','TOUMANI CAMARA','VÍT KREJČÍ','YANG HANSEN'],
+  'SAN ANTONIO SPURS':['BISMACK BIYOMBO','CARTER BRYANT','DE'AARON FOX','DEVIN VASSELL','DYLAN HARPER','DAVID JONES GARCIA','EMANUEL MILLER','HARRISON BARNES','HARRISON INGRAM','JULIAN CHAMPAGNIE','KELDON JOHNSON','JORDAN MCLAUGHLIN','KELLY OLYNYK','LINDY WATERS III','LUKE KORNET','MASON PLUMLEE','STEPHON CASTLE','VICTOR WEMBANYAMA'],
+  'TORONTO RAPTORS':['A.J. LAWSON','ALIJAH MARTIN','BRANDON INGRAM','CHUCKY HEPBURN','COLLIN MURRAY-BOYLES','GARRETT TEMPLE','GRADEY DICK',"JA'KOBE WALTER",'JAKOB POELTL','JAMISON BATTLE','JAMAL SHEAD','JONATHAN MOGBO','IMMANUEL QUICKLEY','RJ BARRETT','SANDRO MAMUKELASHVILI','SCOTTIE BARNES','TRAYCE JACKSON-DAVIS']
+};
+
+let allPicks = [];
+
+// ---- UI helpers ----
+function setStatus(msg, type) {
+  const el = document.getElementById('status');
+  el.textContent = msg;
+  el.className = 'status ' + type;
+  if (type === 'ok') setTimeout(() => el.className = 'status', 2500);
+}
+
+function updatePlayersList() {
+  const team = document.getElementById('team').value;
+  const sel = document.getElementById('player');
+  sel.innerHTML = '';
+  if (!team) { sel.innerHTML = '<option value="">— Choisis d'abord une équipe —</option>'; return; }
+  const list = (PLAYERS[team] || []).sort((a,b) => a.localeCompare(b,'fr'));
+  sel.innerHTML = '<option value="">Choisir un joueur</option>';
+  list.forEach(p => { const o = document.createElement('option'); o.value = o.textContent = p; sel.appendChild(o); });
+}
+
+function renderTable() {
+  const fr = document.getElementById('filterRound').value;
+  const fm = document.getElementById('filterMember').value;
+  let data = allPicks.filter(x => (!fr || x.round === fr) && (!fm || x.member === fm));
+  data.sort((a,b) => (ROUNDS_ORDER.indexOf(a.round) - ROUNDS_ORDER.indexOf(b.round)) || a.member.localeCompare(b.member,'fr'));
+  const tbody = document.getElementById('rows');
+  if (!data.length) {
+    tbody.innerHTML = '<tr><td colspan="5" style="color:#6b7280;padding:20px">Aucun pick pour ce filtre.</td></tr>';
+  } else {
+    tbody.innerHTML = data.map(x => `<tr><td>${x.date}</td><td><span class="pill">${x.round}</span></td><td><strong>${x.member}</strong></td><td>${x.team}</td><td>${x.player}</td></tr>`).join('');
+  }
+  document.getElementById('count').textContent = `${data.length} pick(s) affiché(s) sur ${allPicks.length} total`;
+}
+
+// ---- API calls ----
+async function loadPicks() {
+  document.getElementById('rows').innerHTML = '<tr><td colspan="5" class="loader">Chargement…</td></tr>';
+  try {
+    const res = await fetch(SCRIPT_URL + '?action=data', { cache: 'no-store' });
+    const json = await res.json();
+    allPicks = json.picks || [];
+    renderTable();
+  } catch(e) {
+    document.getElementById('rows').innerHTML = '<tr><td colspan="5" style="color:#dc2626;padding:20px">❌ Impossible de charger les données. Vérifie l'URL du script.</td></tr>';
+  }
+}
+
+async function post(action, payload) {
+  const res = await fetch(SCRIPT_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify({ action, payload })
+  });
+  return await res.json();
+}
+
+// ---- Events ----
+document.getElementById('team').addEventListener('change', updatePlayersList);
+document.getElementById('filterRound').addEventListener('change', renderTable);
+document.getElementById('filterMember').addEventListener('change', renderTable);
+document.getElementById('resetBtn').addEventListener('click', () => {
+  document.getElementById('filterRound').value = '';
+  document.getElementById('filterMember').value = '';
+  renderTable();
+});
+
+document.getElementById('saveBtn').addEventListener('click', async () => {
+  const member = document.getElementById('member').value;
+  const round  = document.getElementById('round').value;
+  const team   = document.getElementById('team').value;
+  const player = document.getElementById('player').value;
+  if (!member || !round || !team || !player) { setStatus('Complète les 4 champs.', 'err'); return; }
+  setStatus('Enregistrement…', 'ok');
+  const out = await post('savePick', { member, round, date: ROUNDS_MAP[round], team, player });
+  if (out.error) { setStatus('Erreur : ' + out.error, 'err'); return; }
+  await loadPicks();
+  setStatus('✅ Pick enregistré !', 'ok');
+});
+
+document.getElementById('deleteBtn').addEventListener('click', async () => {
+  const member = document.getElementById('member').value;
+  const round  = document.getElementById('round').value;
+  if (!member || !round) { setStatus('Choisis une personne et une date.', 'err'); return; }
+  const out = await post('deletePick', { member, round });
+  if (out.error) { setStatus('Erreur : ' + out.error, 'err'); return; }
+  await loadPicks();
+  setStatus('🗑 Pick supprimé.', 'ok');
+});
+
+document.getElementById('reloadBtn').addEventListener('click', async () => {
+  await loadPicks();
+  setStatus('🔄 Données actualisées.', 'ok');
+});
+
+// ---- Init ----
+if (SCRIPT_URL === 'COLLE_ICI_TON_URL_APPS_SCRIPT') {
+  document.getElementById('rows').innerHTML = '<tr><td colspan="5" style="color:#92400e;padding:20px">⚠️ Configure d'abord l'URL du script Apps Script dans le code (voir encadré jaune).</td></tr>';
+} else {
+  document.getElementById('setupBox').style.display = 'none';
+  loadPicks();
+}
+</script>
+</body>
+</html>
