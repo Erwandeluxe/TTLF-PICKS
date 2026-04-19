@@ -8,7 +8,6 @@
   :root{--bg:#f5f7fb;--card:#fff;--line:#d9e0ea;--text:#1f2937;--muted:#6b7280;--primary:#0f766e;--primary-2:#115e59;--ok:#dcfce7;--warn:#fef3c7;--err:#fee2e2;--radius:14px}
   *{box-sizing:border-box}
   body{margin:0;font-family:Arial,sans-serif;color:var(--text);background:var(--bg);padding:16px}
-  /* LOGIN */
   #loginScreen{display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--bg)}
   .login-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:36px 32px;max-width:360px;width:100%;box-shadow:0 4px 24px rgba(0,0,0,.07);text-align:center}
   .login-box h1{margin:0 0 6px;font-size:24px}
@@ -17,7 +16,6 @@
   .login-box button{width:100%;min-height:44px;background:var(--primary);color:#fff;border:0;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer}
   .login-box button:hover{background:var(--primary-2)}
   .login-err{color:#dc2626;font-size:13px;margin-top:8px;display:none}
-  /* APP */
   #app{display:none}
   h1{margin:0 0 4px;font-size:26px}
   .sub{color:var(--muted);margin-bottom:18px;font-size:14px}
@@ -41,7 +39,8 @@
   table{width:100%;border-collapse:collapse;font-size:13px}
   th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
   th{background:#f8fafc;position:sticky;top:0;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
-  .pill{display:inline-block;padding:2px 8px;border-radius:999px;background:var(--warn);font-size:11px;font-weight:700}
+  .team-badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;white-space:nowrap}
+  .pick-pill{display:inline-block;padding:2px 8px;border-radius:999px;background:var(--warn);font-size:11px;font-weight:700}
   .small{font-size:12px;color:var(--muted);margin-top:8px}
   .loader{text-align:center;padding:30px;color:var(--muted);font-size:14px}
   @media(max-width:800px){.grid,.toolbar{grid-template-columns:1fr}}
@@ -49,7 +48,6 @@
 </head>
 <body>
 
-<!-- ÉCRAN DE CONNEXION -->
 <div id="loginScreen">
   <div class="login-box">
     <h1>🏀 TTFL Picks</h1>
@@ -60,16 +58,13 @@
   </div>
 </div>
 
-<!-- APPLICATION -->
 <div id="app">
   <h1>🏀 TTFL Picks</h1>
   <div class="sub">Saisie et visualisation des picks par date</div>
-
   <div class="grid">
     <section class="card">
       <h2>Enregistrer un pick</h2>
-      <div class="field">
-        <label>Personne</label>
+      <div class="field"><label>Personne</label>
         <select id="member">
           <option value="">Choisir un pseudo</option>
           <option>ARNOKNICKS</option><option>BRAINLESSD0G</option><option>CAPTAINCLEM69</option>
@@ -77,44 +72,31 @@
           <option>THEOFFSWITCH</option><option>THIBDEF</option><option>VALDO3</option><option>VVR3535</option>
         </select>
       </div>
-      <div class="field">
-        <label>Pick / Date</label>
+      <div class="field"><label>Pick / Date</label>
         <select id="round">
           <option value="">Choisir une date</option>
-          <option value="R01-001">R01-001 | 18/04/2026</option>
-          <option value="R01-002">R01-002 | 19/04/2026</option>
-          <option value="R01-003">R01-003 | 20/04/2026</option>
-          <option value="R01-004">R01-004 | 21/04/2026</option>
-          <option value="R01-005">R01-005 | 22/04/2026</option>
-          <option value="R01-006">R01-006 | 23/04/2026</option>
-          <option value="R01-007">R01-007 | 24/04/2026</option>
-          <option value="R01-008">R01-008 | 25/04/2026</option>
-          <option value="R01-009">R01-009 | 26/04/2026</option>
-          <option value="R01-010">R01-010 | 27/04/2026</option>
-          <option value="R01-011">R01-011 | 28/04/2026</option>
-          <option value="R01-012">R01-012 | 29/04/2026</option>
-          <option value="R01-013">R01-013 | 30/04/2026</option>
-          <option value="R01-014">R01-014 | 01/05/2026</option>
-          <option value="R01-015">R01-015 | 02/05/2026</option>
-          <option value="R01-016">R01-016 | 03/05/2026</option>
+          <option value="R01-001">R01-001 | 18/04/2026</option><option value="R01-002">R01-002 | 19/04/2026</option>
+          <option value="R01-003">R01-003 | 20/04/2026</option><option value="R01-004">R01-004 | 21/04/2026</option>
+          <option value="R01-005">R01-005 | 22/04/2026</option><option value="R01-006">R01-006 | 23/04/2026</option>
+          <option value="R01-007">R01-007 | 24/04/2026</option><option value="R01-008">R01-008 | 25/04/2026</option>
+          <option value="R01-009">R01-009 | 26/04/2026</option><option value="R01-010">R01-010 | 27/04/2026</option>
+          <option value="R01-011">R01-011 | 28/04/2026</option><option value="R01-012">R01-012 | 29/04/2026</option>
+          <option value="R01-013">R01-013 | 30/04/2026</option><option value="R01-014">R01-014 | 01/05/2026</option>
+          <option value="R01-015">R01-015 | 02/05/2026</option><option value="R01-016">R01-016 | 03/05/2026</option>
         </select>
       </div>
-      <div class="field">
-        <label>Équipe</label>
+      <div class="field"><label>Équipe</label>
         <select id="team">
           <option value="">Choisir une équipe</option>
-          <option>ATLANTA HAWKS</option><option>BOSTON CELTICS</option>
-          <option>CLEVELAND CAVALIERS</option><option>DENVER NUGGETS</option>
-          <option>DETROIT PISTONS</option><option>HOUSTON ROCKETS</option>
-          <option>LOS ANGELES LAKERS</option><option>MINNESOTA TIMBERWOLVES</option>
-          <option>NEW YORK KNICKS</option><option>OKLAHOMA CITY THUNDER</option>
-          <option>ORLANDO MAGIC</option><option>PHILADELPHIA 76ERS</option>
-          <option>PHOENIX SUNS</option><option>PORTLAND TRAIL BLAZERS</option>
-          <option>SAN ANTONIO SPURS</option><option>TORONTO RAPTORS</option>
+          <option>ATLANTA HAWKS</option><option>BOSTON CELTICS</option><option>CLEVELAND CAVALIERS</option>
+          <option>DENVER NUGGETS</option><option>DETROIT PISTONS</option><option>HOUSTON ROCKETS</option>
+          <option>LOS ANGELES LAKERS</option><option>MINNESOTA TIMBERWOLVES</option><option>NEW YORK KNICKS</option>
+          <option>OKLAHOMA CITY THUNDER</option><option>ORLANDO MAGIC</option><option>PHILADELPHIA 76ERS</option>
+          <option>PHOENIX SUNS</option><option>PORTLAND TRAIL BLAZERS</option><option>SAN ANTONIO SPURS</option>
+          <option>TORONTO RAPTORS</option>
         </select>
       </div>
-      <div class="field">
-        <label>Joueur</label>
+      <div class="field"><label>Joueur</label>
         <select id="player"><option value="">— Choisis d'abord une équipe —</option></select>
       </div>
       <div class="btns">
@@ -128,30 +110,20 @@
     <section class="card">
       <h2>Tous les picks</h2>
       <div class="toolbar">
-        <div>
-          <label>Filtre date</label>
+        <div><label>Filtre date</label>
           <select id="filterRound">
             <option value="">Toutes les dates</option>
-            <option value="R01-001">R01-001 | 18/04/2026</option>
-            <option value="R01-002">R01-002 | 19/04/2026</option>
-            <option value="R01-003">R01-003 | 20/04/2026</option>
-            <option value="R01-004">R01-004 | 21/04/2026</option>
-            <option value="R01-005">R01-005 | 22/04/2026</option>
-            <option value="R01-006">R01-006 | 23/04/2026</option>
-            <option value="R01-007">R01-007 | 24/04/2026</option>
-            <option value="R01-008">R01-008 | 25/04/2026</option>
-            <option value="R01-009">R01-009 | 26/04/2026</option>
-            <option value="R01-010">R01-010 | 27/04/2026</option>
-            <option value="R01-011">R01-011 | 28/04/2026</option>
-            <option value="R01-012">R01-012 | 29/04/2026</option>
-            <option value="R01-013">R01-013 | 30/04/2026</option>
-            <option value="R01-014">R01-014 | 01/05/2026</option>
-            <option value="R01-015">R01-015 | 02/05/2026</option>
-            <option value="R01-016">R01-016 | 03/05/2026</option>
+            <option value="R01-001">R01-001 | 18/04/2026</option><option value="R01-002">R01-002 | 19/04/2026</option>
+            <option value="R01-003">R01-003 | 20/04/2026</option><option value="R01-004">R01-004 | 21/04/2026</option>
+            <option value="R01-005">R01-005 | 22/04/2026</option><option value="R01-006">R01-006 | 23/04/2026</option>
+            <option value="R01-007">R01-007 | 24/04/2026</option><option value="R01-008">R01-008 | 25/04/2026</option>
+            <option value="R01-009">R01-009 | 26/04/2026</option><option value="R01-010">R01-010 | 27/04/2026</option>
+            <option value="R01-011">R01-011 | 28/04/2026</option><option value="R01-012">R01-012 | 29/04/2026</option>
+            <option value="R01-013">R01-013 | 30/04/2026</option><option value="R01-014">R01-014 | 01/05/2026</option>
+            <option value="R01-015">R01-015 | 02/05/2026</option><option value="R01-016">R01-016 | 03/05/2026</option>
           </select>
         </div>
-        <div>
-          <label>Filtre personne</label>
+        <div><label>Filtre personne</label>
           <select id="filterMember">
             <option value="">Toutes les personnes</option>
             <option>ARNOKNICKS</option><option>BRAINLESSD0G</option><option>CAPTAINCLEM69</option>
@@ -174,15 +146,33 @@
 
 <script>
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwYVm1fp_y2aliWr_GYC9z4ykN5GiseeV6G38pBrGn6s3N-po9YJS_6dNRJJ1jraFG8/exec';
-const PASSWORD   = 'GenouxKC';
+const PASSWORD   = 'TTFL';
+
+// Couleurs officielles NBA : [background, textColor]
+const TEAM_COLORS = {
+  'ATLANTA HAWKS':            ['#C8102E','#ffffff'],
+  'BOSTON CELTICS':           ['#007A33','#ffffff'],
+  'CLEVELAND CAVALIERS':      ['#860038','#ffffff'],
+  'DENVER NUGGETS':           ['#0E2240','#FEC524'],
+  'DETROIT PISTONS':          ['#C8102E','#ffffff'],
+  'HOUSTON ROCKETS':          ['#CE1141','#ffffff'],
+  'LOS ANGELES LAKERS':       ['#552583','#FDB927'],
+  'MINNESOTA TIMBERWOLVES':   ['#0C2340','#236192'],
+  'NEW YORK KNICKS':          ['#006BB6','#F58426'],
+  'OKLAHOMA CITY THUNDER':    ['#007AC1','#EF3B24'],
+  'ORLANDO MAGIC':            ['#0077C0','#ffffff'],
+  'PHILADELPHIA 76ERS':       ['#006BB6','#ffffff'],
+  'PHOENIX SUNS':             ['#1D1160','#E56020'],
+  'PORTLAND TRAIL BLAZERS':   ['#E03A3E','#ffffff'],
+  'SAN ANTONIO SPURS':        ['#C4CED4','#000000'],
+  'TORONTO RAPTORS':          ['#CE1141','#ffffff'],
+};
 
 const ROUNDS_MAP = {
-  'R01-001':'18/04/2026','R01-002':'19/04/2026','R01-003':'20/04/2026',
-  'R01-004':'21/04/2026','R01-005':'22/04/2026','R01-006':'23/04/2026',
-  'R01-007':'24/04/2026','R01-008':'25/04/2026','R01-009':'26/04/2026',
-  'R01-010':'27/04/2026','R01-011':'28/04/2026','R01-012':'29/04/2026',
-  'R01-013':'30/04/2026','R01-014':'01/05/2026','R01-015':'02/05/2026',
-  'R01-016':'03/05/2026'
+  'R01-001':'18/04/2026','R01-002':'19/04/2026','R01-003':'20/04/2026','R01-004':'21/04/2026',
+  'R01-005':'22/04/2026','R01-006':'23/04/2026','R01-007':'24/04/2026','R01-008':'25/04/2026',
+  'R01-009':'26/04/2026','R01-010':'27/04/2026','R01-011':'28/04/2026','R01-012':'29/04/2026',
+  'R01-013':'30/04/2026','R01-014':'01/05/2026','R01-015':'02/05/2026','R01-016':'03/05/2026'
 };
 const ROUNDS_ORDER = Object.keys(ROUNDS_MAP);
 
@@ -197,7 +187,7 @@ const PLAYERS = {
   'MINNESOTA TIMBERWOLVES':['ANTHONY EDWARDS','AYO DOSUNMU','BONES HYLAND','DONTE DIVINCENZO','ENRIQUE FREEMAN','JADEN MCDANIELS','JAYLEN CLARK','JOAN BERINGER','JOE INGLES','JULIAN PHILLIPS','JULIUS RANDLE','KYLE ANDERSON','MIKE CONLEY','NAZ REID','ROCCO ZIKARSKY','RUDY GOBERT','TERRENCE SHANNON JR.'],
   'NEW YORK KNICKS':['ARIEL HUKPORTI','JALEN BRUNSON','JEREMY SOCHAN','JOSE ALVARADO','JOSH HART','JORDAN CLARKSON','KARL-ANTHONY TOWNS','KEVIN MCCULLAR JR.','LANDRY SHAMET','MIKAL BRIDGES','MILES MCBRIDE','MITCHELL ROBINSON','MOHAMED DIAWARA','OG ANUNOBY','PACÔME DADIET','TREY JEMISON III','TYLER KOLEK'],
   'OKLAHOMA CITY THUNDER':['AARON WIGGINS','AJAY MITCHELL','ALEX CARUSO','BRANDEN CARLSON','BROOKS BARNHIZER','CASON WALLACE','CHET HOLMGREN','ISAIAH HARTENSTEIN','ISAIAH JOE','JALEN WILLIAMS','JARED MCCAIN','JAYLIN WILLIAMS','KENRICH WILLIAMS','LUGUENTZ DORT','NIKOLA TOPIĆ','SHAI GILGEOUS-ALEXANDER','THOMAS SORBER'],
-  'ORLANDO MAGIC':['ANTHONY BLACK','COLIN CASTLETON','DESMOND BANE','FRANZ WAGNER','GOGA BITADZE','JAMAL CAIN',"JASE RICHARDSON",'JALEN SUGGS','JEVON CARTER','JETT HOWARD','JONATHAN ISAAC','KEVON HARRIS','MORITZ WAGNER','NOAH PENDA','PAOLO BANCHERO','TRISTAN DA SILVA','WENDELL CARTER JR.'],
+  'ORLANDO MAGIC':['ANTHONY BLACK','COLIN CASTLETON','DESMOND BANE','FRANZ WAGNER','GOGA BITADZE','JAMAL CAIN','JASE RICHARDSON','JALEN SUGGS','JEVON CARTER','JETT HOWARD','JONATHAN ISAAC','KEVON HARRIS','MORITZ WAGNER','NOAH PENDA','PAOLO BANCHERO','TRISTAN DA SILVA','WENDELL CARTER JR.'],
   'PHILADELPHIA 76ERS':['ADEM BONA','ANDRE DRUMMOND','DALEN TERRY','DOMINICK BARLOW','JABARI WALKER','JOEL EMBIID','JOHNI BROOME','JUSTIN EDWARDS','KELLY OUBRE JR.','KYLE LOWRY','PAUL GEORGE','QUENTIN GRIMES','TRENDON WATFORD','TYRESE MARTIN','TYRESE MAXEY','VJ EDGECOMBE'],
   'PHOENIX SUNS':['AMIR COFFEY','CJ HUNTLEY','COLLIN GILLESPIE','DEVIN BOOKER','DILLON BROOKS','GRAYSON ALLEN','HAYWOOD HIGHSMITH','ISAIAH LIVERS','JALEN GREEN','JORDAN GOODWIN','KHAMAN MALUACH','KOBY BREA','MARK WILLIAMS','OSO IGHODARO','RASHEER FLEMING',"ROYCE O'NEALE",'RYAN DUNN'],
   'PORTLAND TRAIL BLAZERS':['BLAKE WESLEY','CALEB LOVE','CHRIS YOUNGBLOOD','DAMIAN LILLARD','DENI AVDIJA','DONOVAN CLINGAN','JERAMI GRANT','JRUE HOLIDAY','KRIS MURRAY','MATISSE THYBULLE','ROBERT WILLIAMS III','SCOOT HENDERSON','SHAEDON SHARPE','SIDY CISSOKO','TOUMANI CAMARA','VÍT KREJČÍ','YANG HANSEN'],
@@ -205,7 +195,11 @@ const PLAYERS = {
   'TORONTO RAPTORS':['A.J. LAWSON','ALIJAH MARTIN','BRANDON INGRAM','CHUCKY HEPBURN','COLLIN MURRAY-BOYLES','GARRETT TEMPLE','GRADEY DICK','IMMANUEL QUICKLEY',"JA'KOBE WALTER",'JAKOB POELTL','JAMAL SHEAD','JAMISON BATTLE','JONATHAN MOGBO','RJ BARRETT','SANDRO MAMUKELASHVILI','SCOTTIE BARNES','TRAYCE JACKSON-DAVIS']
 };
 
-// ---- LOGIN ----
+function teamBadge(team) {
+  const c = TEAM_COLORS[team] || ['#6b7280','#fff'];
+  return `<span class="team-badge" style="background:${c[0]};color:${c[1]}">${team}</span>`;
+}
+
 function checkPwd() {
   const val = document.getElementById('pwdInput').value;
   const err = document.getElementById('loginErr');
@@ -219,7 +213,6 @@ function checkPwd() {
   }
 }
 
-// ---- UI ----
 function setStatus(msg, type) {
   const el = document.getElementById('status');
   el.textContent = msg;
@@ -248,13 +241,18 @@ function renderTable() {
     tbody.innerHTML = '<tr><td colspan="5" style="color:#6b7280;padding:20px">Aucun pick pour ce filtre.</td></tr>';
   } else {
     tbody.innerHTML = data.map(x =>
-      `<tr><td>${x.date}</td><td><span class="pill">${x.round}</span></td><td><strong>${x.member}</strong></td><td>${x.team}</td><td>${x.player}</td></tr>`
+      `<tr>
+        <td>${x.date}</td>
+        <td><span class="pick-pill">${x.round}</span></td>
+        <td><strong>${x.member}</strong></td>
+        <td>${teamBadge(x.team)}</td>
+        <td>${x.player}</td>
+      </tr>`
     ).join('');
   }
   document.getElementById('count').textContent = `${data.length} pick(s) affiché(s) sur ${allPicks.length} total`;
 }
 
-// ---- API ----
 async function loadPicks() {
   document.getElementById('rows').innerHTML = '<tr><td colspan="5" class="loader">Chargement…</td></tr>';
   try {
@@ -263,7 +261,7 @@ async function loadPicks() {
     allPicks = json.picks || [];
     renderTable();
   } catch(e) {
-    document.getElementById('rows').innerHTML = '<tr><td colspan="5" style="color:#dc2626;padding:20px">❌ Impossible de charger les données. Vérifie le script Apps Script.</td></tr>';
+    document.getElementById('rows').innerHTML = '<tr><td colspan="5" style="color:#dc2626;padding:20px">❌ Impossible de charger les données.</td></tr>';
   }
 }
 
@@ -276,7 +274,6 @@ async function post(action, payload) {
   return await res.json();
 }
 
-// ---- Events ----
 document.getElementById('team').addEventListener('change', updatePlayersList);
 document.getElementById('filterRound').addEventListener('change', renderTable);
 document.getElementById('filterMember').addEventListener('change', renderTable);
