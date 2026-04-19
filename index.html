@@ -8,14 +8,16 @@
   :root{--bg:#f5f7fb;--card:#fff;--line:#d9e0ea;--text:#1f2937;--muted:#6b7280;--primary:#0f766e;--primary-2:#115e59;--ok:#dcfce7;--warn:#fef3c7;--err:#fee2e2;--radius:14px}
   *{box-sizing:border-box}
   body{margin:0;font-family:Arial,sans-serif;color:var(--text);background:var(--bg);padding:16px}
-  #loginScreen{display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--bg)}
-  .login-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:36px 32px;max-width:360px;width:100%;box-shadow:0 4px 24px rgba(0,0,0,.07);text-align:center}
-  .login-box h1{margin:0 0 6px;font-size:24px}
-  .login-box p{color:var(--muted);font-size:14px;margin:0 0 24px}
-  .login-box input{width:100%;min-height:44px;padding:10px 14px;border:1px solid #c7d2de;border-radius:10px;font-size:16px;margin-bottom:12px}
-  .login-box button{width:100%;min-height:44px;background:var(--primary);color:#fff;border:0;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer}
-  .login-box button:hover{background:var(--primary-2)}
-  .login-err{color:#dc2626;font-size:13px;margin-top:8px;display:none}
+
+  /* SPLASH */
+  #splashScreen{display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--bg)}
+  .splash-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:48px 36px;max-width:380px;width:100%;box-shadow:0 4px 24px rgba(0,0,0,.07);text-align:center}
+  .splash-box h1{margin:0 0 8px;font-size:28px}
+  .splash-box p{color:var(--muted);font-size:14px;margin:0 0 32px;line-height:1.6}
+  .splash-box button{width:100%;min-height:48px;background:var(--primary);color:#fff;border:0;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;transition:background .15s}
+  .splash-box button:hover{background:var(--primary-2)}
+
+  /* APP */
   #app{display:none}
   h1{margin:0 0 4px;font-size:26px}
   .sub{color:var(--muted);margin-bottom:18px;font-size:14px}
@@ -33,35 +35,53 @@
   .status{margin-top:12px;padding:10px 12px;border-radius:10px;font-size:14px;display:none}
   .status.ok{background:var(--ok);display:block}
   .status.err{background:var(--err);display:block}
+
+  /* TABLEAU DÉTAIL */
   .toolbar{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;margin-bottom:12px;align-items:end}
   .toolbar button{width:100%}
   .table-wrap{max-height:60vh;overflow:auto;border:1px solid var(--line);border-radius:10px}
   table{width:100%;border-collapse:collapse;font-size:13px}
   th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
-  th{background:#f8fafc;position:sticky;top:0;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  th{background:#f8fafc;position:sticky;top:0;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);z-index:1}
   .team-badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;white-space:nowrap}
   .pick-pill{display:inline-block;padding:2px 8px;border-radius:999px;background:var(--warn);font-size:11px;font-weight:700}
   .small{font-size:12px;color:var(--muted);margin-top:8px}
   .loader{text-align:center;padding:30px;color:var(--muted);font-size:14px}
+
+  /* TABLEAU RÉCAP CROISÉ */
+  .recap-section{margin-top:20px}
+  .recap-section h2{font-size:18px;margin:0 0 12px}
+  .recap-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+  .recap-table{border-collapse:collapse;font-size:12px;min-width:100%}
+  .recap-table th{background:#f8fafc;padding:8px 10px;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);white-space:nowrap;position:sticky;top:0;z-index:2}
+  .recap-table th.member-col{position:sticky;left:0;z-index:3;background:#f8fafc}
+  .recap-table td{padding:7px 10px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);vertical-align:middle;white-space:nowrap}
+  .recap-table td.member-cell{font-weight:700;font-size:12px;position:sticky;left:0;background:#fff;z-index:1;border-right:2px solid var(--line)}
+  .recap-table tr:last-child td{border-bottom:none}
+  .player-tag{display:inline-block;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:700;white-space:nowrap}
+  .empty-cell{color:#d1d5db;font-size:18px;text-align:center}
+
   @media(max-width:800px){.grid,.toolbar{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
-<div id="loginScreen">
-  <div class="login-box">
+<!-- SPLASH -->
+<div id="splashScreen">
+  <div class="splash-box">
     <h1>🏀 TTFL Picks</h1>
-    <p>Accès réservé aux membres</p>
-    <input type="password" id="pwdInput" placeholder="Mot de passe" onkeydown="if(event.key==='Enter')checkPwd()"/>
-    <button onclick="checkPwd()">Accéder</button>
-    <div class="login-err" id="loginErr">Mot de passe incorrect.</div>
+    <p>Bienvenue sur l'outil de suivi des picks TTFL Playoffs 2026.<br>Réservé aux membres de l'équipe.</p>
+    <button onclick="enterApp()">Accéder →</button>
   </div>
 </div>
 
+<!-- APP -->
 <div id="app">
   <h1>🏀 TTFL Picks</h1>
   <div class="sub">Saisie et visualisation des picks par date</div>
+
   <div class="grid">
+    <!-- SAISIE -->
     <section class="card">
       <h2>Enregistrer un pick</h2>
       <div class="field"><label>Personne</label>
@@ -107,6 +127,7 @@
       <div id="status" class="status"></div>
     </section>
 
+    <!-- LISTE DÉTAILLÉE -->
     <section class="card">
       <h2>Tous les picks</h2>
       <div class="toolbar">
@@ -142,39 +163,49 @@
       <div class="small" id="count"></div>
     </section>
   </div>
+
+  <!-- TABLEAU RÉCAP CROISÉ -->
+  <div class="recap-section card" style="margin-top:20px">
+    <h2>📊 Récapitulatif des picks</h2>
+    <div class="recap-wrap">
+      <table class="recap-table">
+        <thead id="recapHead"></thead>
+        <tbody id="recapBody"><tr><td colspan="2" class="loader">Chargement…</td></tr></tbody>
+      </table>
+    </div>
+  </div>
 </div>
 
 <script>
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwYVm1fp_y2aliWr_GYC9z4ykN5GiseeV6G38pBrGn6s3N-po9YJS_6dNRJJ1jraFG8/exec';
-const PASSWORD   = 'TTFL';
 
-// Couleurs officielles NBA : [background, textColor]
-const TEAM_COLORS = {
-  'ATLANTA HAWKS':            ['#C8102E','#ffffff'],
-  'BOSTON CELTICS':           ['#007A33','#ffffff'],
-  'CLEVELAND CAVALIERS':      ['#860038','#ffffff'],
-  'DENVER NUGGETS':           ['#0E2240','#FEC524'],
-  'DETROIT PISTONS':          ['#C8102E','#ffffff'],
-  'HOUSTON ROCKETS':          ['#CE1141','#ffffff'],
-  'LOS ANGELES LAKERS':       ['#552583','#FDB927'],
-  'MINNESOTA TIMBERWOLVES':   ['#0C2340','#236192'],
-  'NEW YORK KNICKS':          ['#006BB6','#F58426'],
-  'OKLAHOMA CITY THUNDER':    ['#007AC1','#EF3B24'],
-  'ORLANDO MAGIC':            ['#0077C0','#ffffff'],
-  'PHILADELPHIA 76ERS':       ['#006BB6','#ffffff'],
-  'PHOENIX SUNS':             ['#1D1160','#E56020'],
-  'PORTLAND TRAIL BLAZERS':   ['#E03A3E','#ffffff'],
-  'SAN ANTONIO SPURS':        ['#C4CED4','#000000'],
-  'TORONTO RAPTORS':          ['#CE1141','#ffffff'],
-};
+const MEMBERS = ['ARNOKNICKS','BRAINLESSD0G','CAPTAINCLEM69','ERWAN','ERWAN2LUX','MOEPMOEP19','THEOFFSWITCH','THIBDEF','VALDO3','VVR3535'];
 
 const ROUNDS_MAP = {
+  'R01-001':'18/04','R01-002':'19/04','R01-003':'20/04','R01-004':'21/04',
+  'R01-005':'22/04','R01-006':'23/04','R01-007':'24/04','R01-008':'25/04',
+  'R01-009':'26/04','R01-010':'27/04','R01-011':'28/04','R01-012':'29/04',
+  'R01-013':'30/04','R01-014':'01/05','R01-015':'02/05','R01-016':'03/05'
+};
+const ROUNDS_ORDER = Object.keys(ROUNDS_MAP);
+
+const ROUNDS_FULL = {
   'R01-001':'18/04/2026','R01-002':'19/04/2026','R01-003':'20/04/2026','R01-004':'21/04/2026',
   'R01-005':'22/04/2026','R01-006':'23/04/2026','R01-007':'24/04/2026','R01-008':'25/04/2026',
   'R01-009':'26/04/2026','R01-010':'27/04/2026','R01-011':'28/04/2026','R01-012':'29/04/2026',
   'R01-013':'30/04/2026','R01-014':'01/05/2026','R01-015':'02/05/2026','R01-016':'03/05/2026'
 };
-const ROUNDS_ORDER = Object.keys(ROUNDS_MAP);
+
+const TEAM_COLORS = {
+  'ATLANTA HAWKS':['#C8102E','#ffffff'],'BOSTON CELTICS':['#007A33','#ffffff'],
+  'CLEVELAND CAVALIERS':['#860038','#ffffff'],'DENVER NUGGETS':['#0E2240','#FEC524'],
+  'DETROIT PISTONS':['#C8102E','#ffffff'],'HOUSTON ROCKETS':['#CE1141','#ffffff'],
+  'LOS ANGELES LAKERS':['#552583','#FDB927'],'MINNESOTA TIMBERWOLVES':['#0C2340','#236192'],
+  'NEW YORK KNICKS':['#006BB6','#F58426'],'OKLAHOMA CITY THUNDER':['#007AC1','#EF3B24'],
+  'ORLANDO MAGIC':['#0077C0','#ffffff'],'PHILADELPHIA 76ERS':['#006BB6','#ffffff'],
+  'PHOENIX SUNS':['#1D1160','#E56020'],'PORTLAND TRAIL BLAZERS':['#E03A3E','#ffffff'],
+  'SAN ANTONIO SPURS':['#C4CED4','#000000'],'TORONTO RAPTORS':['#CE1141','#ffffff'],
+};
 
 const PLAYERS = {
   'ATLANTA HAWKS':['ASA NEWELL','BUDDY HIELD','CHRISTIAN KOLOKO','CJ MCCOLLUM','COREY KISPERT','DYSON DANIELS','GABE VINCENT','GEORGES NIANG','JALEN JOHNSON','JOCK LANDALE','JONATHAN KUMINGA','KEATON WALLACE','MOUHAMED GUEYE','NICKEIL ALEXANDER-WALKER','ONYEKA OKONGWU','RAYJ DENNIS','TONY BRADLEY','ZACCHARIE RISACHER'],
@@ -195,15 +226,20 @@ const PLAYERS = {
   'TORONTO RAPTORS':['A.J. LAWSON','ALIJAH MARTIN','BRANDON INGRAM','CHUCKY HEPBURN','COLLIN MURRAY-BOYLES','GARRETT TEMPLE','GRADEY DICK','IMMANUEL QUICKLEY',"JA'KOBE WALTER",'JAKOB POELTL','JAMAL SHEAD','JAMISON BATTLE','JONATHAN MOGBO','RJ BARRETT','SANDRO MAMUKELASHVILI','SCOTTIE BARNES','TRAYCE JACKSON-DAVIS']
 };
 
+// Splash → App
+function enterApp() {
+  document.getElementById('splashScreen').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  loadPicks();
+}
+
 function formatDate(d) {
   if (!d) return '';
-  // Already formatted like "19/04/2026"
   if (/^\d{2}\/\d{2}\/\d{4}$/.test(d)) {
     const [day, month, year] = d.split('/');
     const months = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
     return `${parseInt(day)} ${months[parseInt(month)-1]} ${year}`;
   }
-  // Ugly Date string from Google Sheets
   try {
     const dt = new Date(d);
     if (!isNaN(dt)) {
@@ -219,17 +255,9 @@ function teamBadge(team) {
   return `<span class="team-badge" style="background:${c[0]};color:${c[1]}">${team}</span>`;
 }
 
-function checkPwd() {
-  const val = document.getElementById('pwdInput').value;
-  const err = document.getElementById('loginErr');
-  if (val === PASSWORD) {
-    document.getElementById('loginScreen').style.display = 'none';
-    document.getElementById('app').style.display = 'block';
-    loadPicks();
-  } else {
-    err.style.display = 'block';
-    document.getElementById('pwdInput').value = '';
-  }
+function playerTag(player, team) {
+  const c = TEAM_COLORS[team] || ['#6b7280','#fff'];
+  return `<span class="player-tag" style="background:${c[0]};color:${c[1]}">${player}</span>`;
 }
 
 function setStatus(msg, type) {
@@ -272,13 +300,46 @@ function renderTable() {
   document.getElementById('count').textContent = `${data.length} pick(s) affiché(s) sur ${allPicks.length} total`;
 }
 
+function renderRecap() {
+  // Déterminer les rounds qui ont au moins 1 pick
+  const usedRounds = ROUNDS_ORDER.filter(r => allPicks.some(p => p.round === r));
+
+  // Header
+  const head = document.getElementById('recapHead');
+  head.innerHTML = '<tr><th class="member-col">Joueur</th>' +
+    usedRounds.map(r => `<th>${r}<br><span style="font-weight:400;font-size:10px">${ROUNDS_MAP[r]}</span></th>`).join('') +
+    '</tr>';
+
+  // Body : une ligne par membre
+  const body = document.getElementById('recapBody');
+  if (!usedRounds.length) {
+    body.innerHTML = '<tr><td colspan="2" style="color:#6b7280;padding:20px">Aucun pick enregistré.</td></tr>';
+    return;
+  }
+
+  // Index picks : member+round → pick
+  const idx = {};
+  allPicks.forEach(p => { idx[p.member + '|' + p.round] = p; });
+
+  body.innerHTML = MEMBERS.map(m => {
+    const cells = usedRounds.map(r => {
+      const p = idx[m + '|' + r];
+      if (!p) return `<td class="empty-cell">–</td>`;
+      return `<td>${playerTag(p.player, p.team)}</td>`;
+    }).join('');
+    return `<tr><td class="member-cell">${m}</td>${cells}</tr>`;
+  }).join('');
+}
+
 async function loadPicks() {
   document.getElementById('rows').innerHTML = '<tr><td colspan="5" class="loader">Chargement…</td></tr>';
+  document.getElementById('recapBody').innerHTML = '<tr><td colspan="2" class="loader">Chargement…</td></tr>';
   try {
     const res  = await fetch(SCRIPT_URL + '?action=data', { cache: 'no-store' });
     const json = await res.json();
     allPicks = json.picks || [];
     renderTable();
+    renderRecap();
   } catch(e) {
     document.getElementById('rows').innerHTML = '<tr><td colspan="5" style="color:#dc2626;padding:20px">❌ Impossible de charger les données.</td></tr>';
   }
@@ -309,7 +370,7 @@ document.getElementById('saveBtn').addEventListener('click', async () => {
   const player = document.getElementById('player').value;
   if (!member || !round || !team || !player) { setStatus('Complète les 4 champs.', 'err'); return; }
   setStatus('Enregistrement…', 'ok');
-  const out = await post('savePick', { member, round, date: ROUNDS_MAP[round], team, player });
+  const out = await post('savePick', { member, round, date: ROUNDS_FULL[round], team, player });
   if (out.error) { setStatus('Erreur : ' + out.error, 'err'); return; }
   await loadPicks();
   setStatus('✅ Pick enregistré !', 'ok');
