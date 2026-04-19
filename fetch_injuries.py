@@ -22,14 +22,13 @@ def fetch_injuries():
 
 def main():
     mapping = load_mapping()
-    # Inverser : playerID → nom TTLF
     id_to_name = {info["playerID"]: name for name, info in mapping.items()}
 
     print("Fetching injury list...")
     body = fetch_injuries()
     print(f"Total blessés dans l'API : {len(body)}")
 
-    injuries = []
+    seen = {}
     for entry in body:
         pid = entry.get("playerID", "")
         if pid not in id_to_name:
@@ -38,14 +37,17 @@ def main():
         ret = entry.get("injReturnDate", "")
         if ret and len(ret) == 8:
             ret = f"{ret[6:8]}/{ret[4:6]}/{ret[0:4]}"
-        injuries.append({
-            "name": ttlf_name,
-            "team": entry.get("team", ""),
-            "status": entry.get("designation", "?"),
-            "description": entry.get("description", ""),
-            "return_date": ret,
-        })
-        print(f"  → {ttlf_name} ({entry.get('designation','?')})")
+        if ttlf_name not in seen:
+            seen[ttlf_name] = {
+                "name": ttlf_name,
+                "team": entry.get("team", ""),
+                "status": entry.get("designation", "?"),
+                "description": entry.get("description", ""),
+                "return_date": ret,
+            }
+            print(f"  → {ttlf_name} ({entry.get('designation','?')})")
+
+    injuries = list(seen.values())
 
     output = {
         "updated_at": datetime.utcnow().strftime("%d/%m/%Y %H:%M UTC"),
