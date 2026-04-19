@@ -195,6 +195,25 @@ const PLAYERS = {
   'TORONTO RAPTORS':['A.J. LAWSON','ALIJAH MARTIN','BRANDON INGRAM','CHUCKY HEPBURN','COLLIN MURRAY-BOYLES','GARRETT TEMPLE','GRADEY DICK','IMMANUEL QUICKLEY',"JA'KOBE WALTER",'JAKOB POELTL','JAMAL SHEAD','JAMISON BATTLE','JONATHAN MOGBO','RJ BARRETT','SANDRO MAMUKELASHVILI','SCOTTIE BARNES','TRAYCE JACKSON-DAVIS']
 };
 
+function formatDate(d) {
+  if (!d) return '';
+  // Already formatted like "19/04/2026"
+  if (/^\d{2}\/\d{2}\/\d{4}$/.test(d)) {
+    const [day, month, year] = d.split('/');
+    const months = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
+    return `${parseInt(day)} ${months[parseInt(month)-1]} ${year}`;
+  }
+  // Ugly Date string from Google Sheets
+  try {
+    const dt = new Date(d);
+    if (!isNaN(dt)) {
+      const months = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
+      return `${dt.getDate()} ${months[dt.getMonth()]} ${dt.getFullYear()}`;
+    }
+  } catch(e) {}
+  return d;
+}
+
 function teamBadge(team) {
   const c = TEAM_COLORS[team] || ['#6b7280','#fff'];
   return `<span class="team-badge" style="background:${c[0]};color:${c[1]}">${team}</span>`;
@@ -242,7 +261,7 @@ function renderTable() {
   } else {
     tbody.innerHTML = data.map(x =>
       `<tr>
-        <td>${x.date}</td>
+        <td>${formatDate(x.date)}</td>
         <td><span class="pick-pill">${x.round}</span></td>
         <td><strong>${x.member}</strong></td>
         <td>${teamBadge(x.team)}</td>
