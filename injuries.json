@@ -1,5 +1,104 @@
 {
-  "updated_at": "19/04/2026 21:22 UTC",
-  "count": 0,
-  "injuries": []
+  "updated_at": "19/04/2026 21:32 UTC",
+  "count": 14,
+  "injuries": [
+    {
+      "name": "Franz Wagner",
+      "team": "",
+      "status": "Day-To-Day",
+      "description": "Apr 6: Wagner (rest) is out for Monday against the Pistons.",
+      "return_date": "08/04/2026"
+    },
+    {
+      "name": "James Harden",
+      "team": "",
+      "status": "Day-To-Day",
+      "description": "Apr 6: Harden (personal) is out for Monday's game against the Grizzlies.",
+      "return_date": "08/04/2026"
+    },
+    {
+      "name": "Franz Wagner",
+      "team": "",
+      "status": "Day-To-Day",
+      "description": "Apr 6: Wagner (rest) is out for Monday against the Pistons.",
+      "return_date": "08/04/2026"
+    },
+    {
+      "name": "James Harden",
+      "team": "",
+      "status": "Day-To-Day",
+      "description": "Apr 6: Harden (personal) is out for Monday's game against the Grizzlies.",
+      "return_date": "08/04/2026"
+    },
+    {
+      "name": "Franz Wagner",
+      "team": "",
+      "status": "Day-To-Day",
+      "description": "Apr 8: Wagner exited to the locker room in the third quarter of Wednesday's game against the Timberwolves due to an apparent left knee injury, Jason Beede of the Orlando Sentinel reports.",
+      "return_date": "08/04/2026"
+    },
+    {
+      "name": "Matisse Thybulle",
+      "team": "",
+      "status": "Day-To-Day",
+      "description": "Apr 11: Thybulle (ankle) is probable for Sunday's game against the Kings.",
+      "return_date": "12/04/2026"
+    },
+    {
+      "name": "Dyson Daniels",
+      "team": "",
+      "status": "Day-To-Day",
+      "description": "Apr 11: Daniels is listed as questionable for Sunday's regular-season finale against the Heat due to a left great toe sprain.",
+      "return_date": "12/04/2026"
+    },
+    {
+      "name": "Matisse Thybulle",
+      "team": "",
+      "status": "Day-To-Day",
+      "description": "Apr 11: Thybulle (ankle) is probable for Sunday's game against the Kings.",
+      "return_date": "12/04/2026"
+    },
+    {
+      "name": "Dyson Daniels",
+      "team": "",
+      "status": "Day-To-Day",
+      "description": "Apr 11: Daniels is listed as questionable for Sunday's regular-season finale against the Heat due to a left great toe sprain.",
+      "return_date": "12/04/2026"
+    },
+    {
+      "name": "Dyson Daniels",
+      "team": "",
+      "status": "Day-To-Day",
+      "description": "Apr 12: Daniels (toe) has been ruled out for Sunday's regular-season finale against the Heat.",
+      "return_date": "18/04/2026"
+    },
+    {
+      "name": "Dyson Daniels",
+      "team": "",
+      "status": "Day-To-Day",
+      "description": "Apr 12: Daniels (toe) has been ruled out for Sunday's regular-season finale against the Heat.",
+      "return_date": "18/04/2026"
+    },
+    {
+      "name": "Dyson Daniels",
+      "team": "",
+      "status": "Day-To-Day",
+      "description": "Apr 12: Daniels (toe) has been ruled out for Sunday's regular-season finale against the Heat.",
+      "return_date": "18/04/2026"
+    },
+    {
+      "name": "Dyson Daniels",
+      "team": "",
+      "status": "Day-To-Day",
+      "description": "Apr 12: Daniels (toe) has been ruled out for Sunday's regular-season finale against the Heat.",
+      "return_date": "18/04/2026"
+    },
+    {
+      "name": "Dyson Daniels",
+      "team": "",
+      "status": "Day-To-Day",
+      "description": "Apr 12: Daniels (toe) has been ruled out for Sunday's regular-season finale against the Heat.",
+      "return_date": "18/04/2026"
+    }
+  ]
 }
