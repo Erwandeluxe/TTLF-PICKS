@@ -1,0 +1,1350 @@
+{
+  "Nickeil Alexander-Walker": {
+    "playerID": "28198607869",
+    "team": "ATL",
+    "teamID": "1"
+  },
+  "Tony Bradley": {
+    "playerID": "28128676399",
+    "team": "ATL",
+    "teamID": "1"
+  },
+  "Dyson Daniels": {
+    "playerID": "940747982639",
+    "team": "ATL",
+    "teamID": "1"
+  },
+  "RayJ Dennis": {
+    "playerID": "94554266027",
+    "team": "ATL",
+    "teamID": "1"
+  },
+  "Mouhamed Gueye": {
+    "playerID": "943649135539",
+    "team": "ATL",
+    "teamID": "1"
+  },
+  "Buddy Hield": {
+    "playerID": "28038998249",
+    "team": "ATL",
+    "teamID": "1"
+  },
+  "Jalen Johnson": {
+    "playerID": "94334276527",
+    "team": "ATL",
+    "teamID": "1"
+  },
+  "Corey Kispert": {
+    "playerID": "28048809869",
+    "team": "ATL",
+    "teamID": "1"
+  },
+  "Christian Koloko": {
+    "playerID": "94454426027",
+    "team": "ATL",
+    "teamID": "1"
+  },
+  "Jonathan Kuminga": {
+    "playerID": "945449094339",
+    "team": "ATL",
+    "teamID": "1"
+  },
+  "Jock Landale": {
+    "playerID": "28108169129",
+    "team": "ATL",
+    "teamID": "1"
+  },
+  "CJ McCollum": {
+    "playerID": "28168235349",
+    "team": "ATL",
+    "teamID": "1"
+  },
+  "Asa Newell": {
+    "playerID": "941141681189",
+    "team": "ATL",
+    "teamID": "1"
+  },
+  "Georges Niang": {
+    "playerID": "28428786249",
+    "team": "MEM",
+    "teamID": "15"
+  },
+  "Onyeka Okongwu": {
+    "playerID": "94054452027",
+    "team": "ATL",
+    "teamID": "1"
+  },
+  "Zaccharie Risacher": {
+    "playerID": "943541715989",
+    "team": "ATL",
+    "teamID": "1"
+  },
+  "Gabe Vincent": {
+    "playerID": "28828385129",
+    "team": "ATL",
+    "teamID": "1"
+  },
+  "Keaton Wallace": {
+    "playerID": "28688877869",
+    "team": "ATL",
+    "teamID": "1"
+  },
+  "Jaylen Brown": {
+    "playerID": "28138379499",
+    "team": "BOS",
+    "teamID": "2"
+  },
+  "Luka Garza": {
+    "playerID": "28948619869",
+    "team": "BOS",
+    "teamID": "2"
+  },
+  "Ron Harper Jr.": {
+    "playerID": "94624472047",
+    "team": "BOS",
+    "teamID": "2"
+  },
+  "Sam Hauser": {
+    "playerID": "28298596399",
+    "team": "BOS",
+    "teamID": "2"
+  },
+  "Payton Pritchard": {
+    "playerID": "28058676399",
+    "team": "BOS",
+    "teamID": "2"
+  },
+  "Neemias Queta": {
+    "playerID": "28928862047",
+    "team": "BOS",
+    "teamID": "2"
+  },
+  "Baylor Scheierman": {
+    "playerID": "94244482027",
+    "team": "BOS",
+    "teamID": "2"
+  },
+  "Max Shulga": {
+    "playerID": "94744955527",
+    "team": "BOS",
+    "teamID": "2"
+  },
+  "Jayson Tatum": {
+    "playerID": "28628646399",
+    "team": "BOS",
+    "teamID": "2"
+  },
+  "John Tonje": {
+    "playerID": "94634212027",
+    "team": "BOS",
+    "teamID": "2"
+  },
+  "Nikola Vucevic": {
+    "playerID": "28268405032",
+    "team": "BOS",
+    "teamID": "2"
+  },
+  "Jordan Walsh": {
+    "playerID": "942740191869",
+    "team": "BOS",
+    "teamID": "2"
+  },
+  "Derrick White": {
+    "playerID": "28478050069",
+    "team": "BOS",
+    "teamID": "2"
+  },
+  "Amari Williams": {
+    "playerID": "94464915527",
+    "team": "BOS",
+    "teamID": "2"
+  },
+  "Jarrett Allen": {
+    "playerID": "28578616399",
+    "team": "CLE",
+    "teamID": "6"
+  },
+  "Thomas Bryant": {
+    "playerID": "28268539499",
+    "team": "CLE",
+    "teamID": "6"
+  },
+  "Keon Ellis": {
+    "playerID": "94144465527",
+    "team": "CLE",
+    "teamID": "6"
+  },
+  "James Harden": {
+    "playerID": "28116891632",
+    "team": "CLE",
+    "teamID": "6"
+  },
+  "Sam Merrill": {
+    "playerID": "28628336399",
+    "team": "CLE",
+    "teamID": "6"
+  },
+  "Riley Minix": {
+    "playerID": "943644807989",
+    "team": "CLE",
+    "teamID": "6"
+  },
+  "Donovan Mitchell": {
+    "playerID": "28438359069",
+    "team": "CLE",
+    "teamID": "6"
+  },
+  "Evan Mobley": {
+    "playerID": "94454226527",
+    "team": "CLE",
+    "teamID": "6"
+  },
+  "Larry Nance Jr.": {
+    "playerID": "28538771482",
+    "team": "CLE",
+    "teamID": "6"
+  },
+  "Craig Porter Jr.": {
+    "playerID": "94294405527",
+    "team": "CLE",
+    "teamID": "6"
+  },
+  "Tyrese Proctor": {
+    "playerID": "941740901869",
+    "team": "CLE",
+    "teamID": "6"
+  },
+  "Dennis Schroder": {
+    "playerID": "28948755349",
+    "team": "CLE",
+    "teamID": "6"
+  },
+  "Max Strus": {
+    "playerID": "28748346399",
+    "team": "CLE",
+    "teamID": "6"
+  },
+  "Nae'Qwan Tomlin": {
+    "playerID": "942044011869",
+    "team": "CLE",
+    "teamID": "6"
+  },
+  "Jaylon Tyson": {
+    "playerID": "948349355539",
+    "team": "CLE",
+    "teamID": "6"
+  },
+  "Dean Wade": {
+    "playerID": "28178359499",
+    "team": "CLE",
+    "teamID": "6"
+  },
+  "Christian Braun": {
+    "playerID": "94534209027",
+    "team": "DEN",
+    "teamID": "8"
+  },
+  "Bruce Brown": {
+    "playerID": "28328326789",
+    "team": "DEN",
+    "teamID": "8"
+  },
+  "Aaron Gordon": {
+    "playerID": "28978111729",
+    "team": "DEN",
+    "teamID": "8"
+  },
+  "Tim Hardaway Jr.": {
+    "playerID": "28958935349",
+    "team": "DEN",
+    "teamID": "8"
+  },
+  "DaRon Holmes II": {
+    "playerID": "948949135539",
+    "team": "DEN",
+    "teamID": "8"
+  },
+  "Cameron Johnson": {
+    "playerID": "28958359129",
+    "team": "DEN",
+    "teamID": "8"
+  },
+  "Nikola Jokic": {
+    "playerID": "28908111729",
+    "team": "DEN",
+    "teamID": "8"
+  },
+  "Curtis Jones": {
+    "playerID": "946642835539",
+    "team": "DEN",
+    "teamID": "8"
+  },
+  "Spencer Jones": {
+    "playerID": "94894432027",
+    "team": "DEN",
+    "teamID": "8"
+  },
+  "Tyus Jones": {
+    "playerID": "28358379129",
+    "team": "DEN",
+    "teamID": "8"
+  },
+  "Jamal Murray": {
+    "playerID": "28918559499",
+    "team": "DEN",
+    "teamID": "8"
+  },
+  "Zeke Nnaji": {
+    "playerID": "94614226027",
+    "team": "DEN",
+    "teamID": "8"
+  },
+  "Jalen Pickett": {
+    "playerID": "28128832047",
+    "team": "DEN",
+    "teamID": "8"
+  },
+  "KJ Simpson": {
+    "playerID": "947849615539",
+    "team": "DEN",
+    "teamID": "8"
+  },
+  "Julian Strawther": {
+    "playerID": "94034935527",
+    "team": "DEN",
+    "teamID": "8"
+  },
+  "Jonas Valanciunas": {
+    "playerID": "28098922762",
+    "team": "DEN",
+    "teamID": "8"
+  },
+  "Peyton Watson": {
+    "playerID": "943749285539",
+    "team": "DEN",
+    "teamID": "8"
+  },
+  "Cade Cunningham": {
+    "playerID": "94804285527",
+    "team": "DET",
+    "teamID": "9"
+  },
+  "Jalen Duren": {
+    "playerID": "940347735539",
+    "team": "DET",
+    "teamID": "9"
+  },
+  "Javonte Green": {
+    "playerID": "28548765927",
+    "team": "DET",
+    "teamID": "9"
+  },
+  "Tobias Harris": {
+    "playerID": "28478964652",
+    "team": "DET",
+    "teamID": "9"
+  },
+  "Kevin Huerter": {
+    "playerID": "28598696399",
+    "team": "DET",
+    "teamID": "9"
+  },
+  "Daniss Jenkins": {
+    "playerID": "94974272027",
+    "team": "DET",
+    "teamID": "9"
+  },
+  "Isaac Jones": {
+    "playerID": "945444231869",
+    "team": "DET",
+    "teamID": "9"
+  },
+  "Chaz Lanier": {
+    "playerID": "94024206527",
+    "team": "DET",
+    "teamID": "9"
+  },
+  "Caris LeVert": {
+    "playerID": "28838048249",
+    "team": "DET",
+    "teamID": "9"
+  },
+  "Wendell Moore Jr.": {
+    "playerID": "94534299027",
+    "team": "DET",
+    "teamID": "9"
+  },
+  "Paul Reed": {
+    "playerID": "28908899869",
+    "team": "DET",
+    "teamID": "9"
+  },
+  "Duncan Robinson": {
+    "playerID": "28688014329",
+    "team": "DET",
+    "teamID": "9"
+  },
+  "Marcus Sasser": {
+    "playerID": "94474449027",
+    "team": "DET",
+    "teamID": "9"
+  },
+  "Tolu Smith": {
+    "playerID": "94404402047",
+    "team": "DET",
+    "teamID": "9"
+  },
+  "Isaiah Stewart": {
+    "playerID": "94744229027",
+    "team": "DET",
+    "teamID": "9"
+  },
+  "Ausar Thompson": {
+    "playerID": "940047414489",
+    "team": "DET",
+    "teamID": "9"
+  },
+  "Steven Adams": {
+    "playerID": "28018735349",
+    "team": "HOU",
+    "teamID": "11"
+  },
+  "Clint Capela": {
+    "playerID": "28218011729",
+    "team": "HOU",
+    "teamID": "11"
+  },
+  "Isaiah Crawford": {
+    "playerID": "94764232027",
+    "team": "HOU",
+    "teamID": "11"
+  },
+  "JD Davison": {
+    "playerID": "946749465539",
+    "team": "HOU",
+    "teamID": "11"
+  },
+  "Kevin Durant": {
+    "playerID": "28336662792",
+    "team": "HOU",
+    "teamID": "11"
+  },
+  "Tari Eason": {
+    "playerID": "94224226527",
+    "team": "HOU",
+    "teamID": "11"
+  },
+  "Dorian Finney-Smith": {
+    "playerID": "28748746099",
+    "team": "HOU",
+    "teamID": "11"
+  },
+  "Jeff Green": {
+    "playerID": "28756362792",
+    "team": "HOU",
+    "teamID": "11"
+  },
+  "Aaron Holiday": {
+    "playerID": "28598307499",
+    "team": "HOU",
+    "teamID": "11"
+  },
+  "Josh Okogie": {
+    "playerID": "28468646399",
+    "team": "HOU",
+    "teamID": "11"
+  },
+  "Alperen Sengun": {
+    "playerID": "940649430339",
+    "team": "HOU",
+    "teamID": "11"
+  },
+  "Reed Sheppard": {
+    "playerID": "946240227989",
+    "team": "HOU",
+    "teamID": "11"
+  },
+  "Jae'Sean Tate": {
+    "playerID": "28278159129",
+    "team": "HOU",
+    "teamID": "11"
+  },
+  "Amen Thompson": {
+    "playerID": "948047414489",
+    "team": "HOU",
+    "teamID": "11"
+  },
+  "Fred VanVleet": {
+    "playerID": "28738039199",
+    "team": "HOU",
+    "teamID": "11"
+  },
+  "Deandre Ayton": {
+    "playerID": "28288682869",
+    "team": "LAL",
+    "teamID": "14"
+  },
+  "Luka Doncic": {
+    "playerID": "28398804489",
+    "team": "LAL",
+    "teamID": "14"
+  },
+  "Rui Hachimura": {
+    "playerID": "28968646399",
+    "team": "LAL",
+    "teamID": "14"
+  },
+  "Jaxson Hayes": {
+    "playerID": "94944402047",
+    "team": "LAL",
+    "teamID": "14"
+  },
+  "Bronny James": {
+    "playerID": "946740307989",
+    "team": "LAL",
+    "teamID": "14"
+  },
+  "LeBron James": {
+    "playerID": "2871601440",
+    "team": "LAL",
+    "teamID": "14"
+  },
+  "Luke Kennard": {
+    "playerID": "28238359069",
+    "team": "LAL",
+    "teamID": "14"
+  },
+  "Maxi Kleber": {
+    "playerID": "28148908169",
+    "team": "LAL",
+    "teamID": "14"
+  },
+  "Dalton Knecht": {
+    "playerID": "942342335539",
+    "team": "LAL",
+    "teamID": "14"
+  },
+  "Jake LaRavia": {
+    "playerID": "94364229027",
+    "team": "LAL",
+    "teamID": "14"
+  },
+  "Chris Manon": {
+    "playerID": "948742035539",
+    "team": "LAL",
+    "teamID": "14"
+  },
+  "Austin Reaves": {
+    "playerID": "28268636399",
+    "team": "LAL",
+    "teamID": "14"
+  },
+  "Marcus Smart": {
+    "playerID": "28738011729",
+    "team": "LAL",
+    "teamID": "14"
+  },
+  "Nick Smith Jr.": {
+    "playerID": "942740271869",
+    "team": "LAL",
+    "teamID": "14"
+  },
+  "Adou Thiero": {
+    "playerID": "942240431869",
+    "team": "LAL",
+    "teamID": "14"
+  },
+  "Jarred Vanderbilt": {
+    "playerID": "28608819869",
+    "team": "LAL",
+    "teamID": "14"
+  },
+  "Kyle Anderson": {
+    "playerID": "28128711729",
+    "team": "MIN",
+    "teamID": "18"
+  },
+  "Joan Beringer": {
+    "playerID": "945843618389",
+    "team": "MIN",
+    "teamID": "18"
+  },
+  "Jaylen Clark": {
+    "playerID": "94244296527",
+    "team": "MIN",
+    "teamID": "18"
+  },
+  "Mike Conley": {
+    "playerID": "28236562792",
+    "team": "MIN",
+    "teamID": "18"
+  },
+  "Donte DiVincenzo": {
+    "playerID": "28828517499",
+    "team": "MIN",
+    "teamID": "18"
+  },
+  "Ayo Dosunmu": {
+    "playerID": "94814419047",
+    "team": "MIN",
+    "teamID": "18"
+  },
+  "Anthony Edwards": {
+    "playerID": "94344202027",
+    "team": "MIN",
+    "teamID": "18"
+  },
+  "Enrique Freeman": {
+    "playerID": "94114408027",
+    "team": "MIN",
+    "teamID": "18"
+  },
+  "Rudy Gobert": {
+    "playerID": "28838935349",
+    "team": "MIN",
+    "teamID": "18"
+  },
+  "Bones Hyland": {
+    "playerID": "94684499027",
+    "team": "MIN",
+    "teamID": "18"
+  },
+  "Joe Ingles": {
+    "playerID": "28806501129",
+    "team": "MIN",
+    "teamID": "18"
+  },
+  "Jaden McDaniels": {
+    "playerID": "94484429027",
+    "team": "MIN",
+    "teamID": "18"
+  },
+  "Julian Phillips": {
+    "playerID": "941447431869",
+    "team": "MIN",
+    "teamID": "18"
+  },
+  "Julius Randle": {
+    "playerID": "28438011729",
+    "team": "MIN",
+    "teamID": "18"
+  },
+  "Naz Reid": {
+    "playerID": "28858866027",
+    "team": "MIN",
+    "teamID": "18"
+  },
+  "Terrence Shannon Jr.": {
+    "playerID": "94944409027",
+    "team": "MIN",
+    "teamID": "18"
+  },
+  "Rocco Zikarsky": {
+    "playerID": "947943859589",
+    "team": "MIN",
+    "teamID": "18"
+  },
+  "Jose Alvarado": {
+    "playerID": "28188679869",
+    "team": "NY",
+    "teamID": "20"
+  },
+  "OG Anunoby": {
+    "playerID": "28978550069",
+    "team": "NY",
+    "teamID": "20"
+  },
+  "Mikal Bridges": {
+    "playerID": "28318347129",
+    "team": "NY",
+    "teamID": "20"
+  },
+  "Jalen Brunson": {
+    "playerID": "28528317499",
+    "team": "NY",
+    "teamID": "20"
+  },
+  "Jordan Clarkson": {
+    "playerID": "28798911729",
+    "team": "NY",
+    "teamID": "20"
+  },
+  "Pacome Dadiet": {
+    "playerID": "942141385789",
+    "team": "NY",
+    "teamID": "20"
+  },
+  "Mohamed Diawara": {
+    "playerID": "948841921589",
+    "team": "NY",
+    "teamID": "20"
+  },
+  "Josh Hart": {
+    "playerID": "28788121429",
+    "team": "NY",
+    "teamID": "20"
+  },
+  "Ariel Hukporti": {
+    "playerID": "940149561339",
+    "team": "NY",
+    "teamID": "20"
+  },
+  "Tyler Kolek": {
+    "playerID": "948942620139",
+    "team": "NY",
+    "teamID": "20"
+  },
+  "Miles McBride": {
+    "playerID": "94894482027",
+    "team": "NY",
+    "teamID": "20"
+  },
+  "Kevin McCullar Jr.": {
+    "playerID": "94444269647",
+    "team": "NY",
+    "teamID": "20"
+  },
+  "Mitchell Robinson": {
+    "playerID": "28838607869",
+    "team": "NY",
+    "teamID": "20"
+  },
+  "Landry Shamet": {
+    "playerID": "28168517499",
+    "team": "NY",
+    "teamID": "20"
+  },
+  "Jeremy Sochan": {
+    "playerID": "942647035539",
+    "team": "NY",
+    "teamID": "20"
+  },
+  "Karl-Anthony Towns": {
+    "playerID": "28278119129",
+    "team": "NY",
+    "teamID": "20"
+  },
+  "Brooks Barnhizer": {
+    "playerID": "944649935539",
+    "team": "OKC",
+    "teamID": "21"
+  },
+  "Branden Carlson": {
+    "playerID": "28748872027",
+    "team": "OKC",
+    "teamID": "21"
+  },
+  "Alex Caruso": {
+    "playerID": "28868008399",
+    "team": "OKC",
+    "teamID": "21"
+  },
+  "Luguentz Dort": {
+    "playerID": "28358802047",
+    "team": "OKC",
+    "teamID": "21"
+  },
+  "Shai Gilgeous-Alexander": {
+    "playerID": "28778646789",
+    "team": "OKC",
+    "teamID": "21"
+  },
+  "Isaiah Hartenstein": {
+    "playerID": "28338669069",
+    "team": "OKC",
+    "teamID": "21"
+  },
+  "Chet Holmgren": {
+    "playerID": "940949535539",
+    "team": "OKC",
+    "teamID": "21"
+  },
+  "Isaiah Joe": {
+    "playerID": "28468852047",
+    "team": "OKC",
+    "teamID": "21"
+  },
+  "Jared McCain": {
+    "playerID": "949340777989",
+    "team": "OKC",
+    "teamID": "21"
+  },
+  "Ajay Mitchell": {
+    "playerID": "942949535539",
+    "team": "OKC",
+    "teamID": "21"
+  },
+  "Thomas Sorber": {
+    "playerID": "949041431189",
+    "team": "OKC",
+    "teamID": "21"
+  },
+  "Nikola Topic": {
+    "playerID": "941541715989",
+    "team": "OKC",
+    "teamID": "21"
+  },
+  "Cason Wallace": {
+    "playerID": "946247671869",
+    "team": "OKC",
+    "teamID": "21"
+  },
+  "Aaron Wiggins": {
+    "playerID": "28288809047",
+    "team": "OKC",
+    "teamID": "21"
+  },
+  "Jalen Williams": {
+    "playerID": "94624262027",
+    "team": "OKC",
+    "teamID": "21"
+  },
+  "Jaylin Williams": {
+    "playerID": "94114905527",
+    "team": "OKC",
+    "teamID": "21"
+  },
+  "Kenrich Williams": {
+    "playerID": "28798089129",
+    "team": "OKC",
+    "teamID": "21"
+  },
+  "Paolo Banchero": {
+    "playerID": "947149815539",
+    "team": "ORL",
+    "teamID": "22"
+  },
+  "Desmond Bane": {
+    "playerID": "28328616399",
+    "team": "ORL",
+    "teamID": "22"
+  },
+  "Goga Bitadze": {
+    "playerID": "28878866227",
+    "team": "ORL",
+    "teamID": "22"
+  },
+  "Anthony Black": {
+    "playerID": "949540311869",
+    "team": "ORL",
+    "teamID": "22"
+  },
+  "Jamal Cain": {
+    "playerID": "28408839869",
+    "team": "ORL",
+    "teamID": "22"
+  },
+  "Jevon Carter": {
+    "playerID": "28968147129",
+    "team": "ORL",
+    "teamID": "22"
+  },
+  "Wendell Carter Jr.": {
+    "playerID": "28438899869",
+    "team": "ORL",
+    "teamID": "22"
+  },
+  "Colin Castleton": {
+    "playerID": "94214452047",
+    "team": "ORL",
+    "teamID": "22"
+  },
+  "Kevon Harris": {
+    "playerID": "28528571179",
+    "team": "HOU",
+    "teamID": "11"
+  },
+  "Jett Howard": {
+    "playerID": "944047111869",
+    "team": "ORL",
+    "teamID": "22"
+  },
+  "Jonathan Isaac": {
+    "playerID": "28128550069",
+    "team": "ORL",
+    "teamID": "22"
+  },
+  "Noah Penda": {
+    "playerID": "946341233389",
+    "team": "ORL",
+    "teamID": "22"
+  },
+  "Jase Richardson": {
+    "playerID": "946241651189",
+    "team": "ORL",
+    "teamID": "22"
+  },
+  "Jalen Suggs": {
+    "playerID": "94424205527",
+    "team": "ORL",
+    "teamID": "22"
+  },
+  "Franz Wagner": {
+    "playerID": "94614279027",
+    "team": "ORL",
+    "teamID": "22"
+  },
+  "Tristan da Silva": {
+    "playerID": "94364276527",
+    "team": "ORL",
+    "teamID": "22"
+  },
+  "Adem Bona": {
+    "playerID": "947747521869",
+    "team": "PHI",
+    "teamID": "23"
+  },
+  "Johni Broome": {
+    "playerID": "941249520139",
+    "team": "PHI",
+    "teamID": "23"
+  },
+  "Andre Drummond": {
+    "playerID": "28668759882",
+    "team": "PHI",
+    "teamID": "23"
+  },
+  "VJ Edgecombe": {
+    "playerID": "947441331189",
+    "team": "PHI",
+    "teamID": "23"
+  },
+  "Justin Edwards": {
+    "playerID": "94354710482",
+    "team": "PHI",
+    "teamID": "23"
+  },
+  "Joel Embiid": {
+    "playerID": "28698011729",
+    "team": "PHI",
+    "teamID": "23"
+  },
+  "Paul George": {
+    "playerID": "28268421152",
+    "team": "PHI",
+    "teamID": "23"
+  },
+  "Quentin Grimes": {
+    "playerID": "94544429047",
+    "team": "PHI",
+    "teamID": "23"
+  },
+  "Kyle Lowry": {
+    "playerID": "28036327222",
+    "team": "PHI",
+    "teamID": "23"
+  },
+  "Tyrese Martin": {
+    "playerID": "28398879047",
+    "team": "PHI",
+    "teamID": "23"
+  },
+  "Tyrese Maxey": {
+    "playerID": "94854409027",
+    "team": "PHI",
+    "teamID": "23"
+  },
+  "Kelly Oubre Jr.": {
+    "playerID": "28628119129",
+    "team": "PHI",
+    "teamID": "23"
+  },
+  "Dalen Terry": {
+    "playerID": "94954916527",
+    "team": "PHI",
+    "teamID": "23"
+  },
+  "Jabari Walker": {
+    "playerID": "94594916527",
+    "team": "PHI",
+    "teamID": "23"
+  },
+  "Trendon Watford": {
+    "playerID": "94684462027",
+    "team": "PHI",
+    "teamID": "23"
+  },
+  "Grayson Allen": {
+    "playerID": "28158179129",
+    "team": "PHO",
+    "teamID": "24"
+  },
+  "Devin Booker": {
+    "playerID": "28898319129",
+    "team": "PHO",
+    "teamID": "24"
+  },
+  "Koby Brea": {
+    "playerID": "94584955527",
+    "team": "PHO",
+    "teamID": "24"
+  },
+  "Dillon Brooks": {
+    "playerID": "28468335129",
+    "team": "PHO",
+    "teamID": "24"
+  },
+  "Amir Coffey": {
+    "playerID": "28138596399",
+    "team": "PHO",
+    "teamID": "24"
+  },
+  "Ryan Dunn": {
+    "playerID": "944547401869",
+    "team": "PHO",
+    "teamID": "24"
+  },
+  "Rasheer Fleming": {
+    "playerID": "948340711869",
+    "team": "PHO",
+    "teamID": "24"
+  },
+  "Collin Gillespie": {
+    "playerID": "28498807869",
+    "team": "PHO",
+    "teamID": "24"
+  },
+  "Jordan Goodwin": {
+    "playerID": "28438647869",
+    "team": "PHO",
+    "teamID": "24"
+  },
+  "Jalen Green": {
+    "playerID": "945049794339",
+    "team": "PHO",
+    "teamID": "24"
+  },
+  "Haywood Highsmith": {
+    "playerID": "28188383547",
+    "team": "PHO",
+    "teamID": "24"
+  },
+  "CJ Huntley": {
+    "playerID": "94714965527",
+    "team": "PHO",
+    "teamID": "24"
+  },
+  "Oso Ighodaro": {
+    "playerID": "94074926527",
+    "team": "PHO",
+    "teamID": "24"
+  },
+  "Isaiah Livers": {
+    "playerID": "28668639869",
+    "team": "PHO",
+    "teamID": "24"
+  },
+  "Khaman Maluach": {
+    "playerID": "940743311189",
+    "team": "PHO",
+    "teamID": "24"
+  },
+  "Royce O'Neale": {
+    "playerID": "28538790482",
+    "team": "PHO",
+    "teamID": "24"
+  },
+  "Mark Williams": {
+    "playerID": "94384226527",
+    "team": "PHO",
+    "teamID": "24"
+  },
+  "Deni Avdija": {
+    "playerID": "94014298027",
+    "team": "POR",
+    "teamID": "25"
+  },
+  "Toumani Camara": {
+    "playerID": "94894402027",
+    "team": "POR",
+    "teamID": "25"
+  },
+  "Sidy Cissoko": {
+    "playerID": "940640968489",
+    "team": "POR",
+    "teamID": "25"
+  },
+  "Donovan Clingan": {
+    "playerID": "944340671869",
+    "team": "POR",
+    "teamID": "25"
+  },
+  "Jerami Grant": {
+    "playerID": "28778011729",
+    "team": "POR",
+    "teamID": "25"
+  },
+  "Scoot Henderson": {
+    "playerID": "942040414489",
+    "team": "POR",
+    "teamID": "25"
+  },
+  "Jrue Holiday": {
+    "playerID": "28518491632",
+    "team": "POR",
+    "teamID": "25"
+  },
+  "Vit Krejci": {
+    "playerID": "941044811139",
+    "team": "POR",
+    "teamID": "25"
+  },
+  "Damian Lillard": {
+    "playerID": "28428469882",
+    "team": "POR",
+    "teamID": "25"
+  },
+  "Caleb Love": {
+    "playerID": "94684255527",
+    "team": "POR",
+    "teamID": "25"
+  },
+  "Kris Murray": {
+    "playerID": "94564426527",
+    "team": "POR",
+    "teamID": "25"
+  },
+  "Shaedon Sharpe": {
+    "playerID": "946247778639",
+    "team": "POR",
+    "teamID": "25"
+  },
+  "Matisse Thybulle": {
+    "playerID": "28108517499",
+    "team": "POR",
+    "teamID": "25"
+  },
+  "Blake Wesley": {
+    "playerID": "940947755539",
+    "team": "POR",
+    "teamID": "25"
+  },
+  "Robert Williams III": {
+    "playerID": "28508516399",
+    "team": "POR",
+    "teamID": "25"
+  },
+  "Yang Hansen": {
+    "playerID": "940941859589",
+    "team": "POR",
+    "teamID": "25"
+  },
+  "Chris Youngblood": {
+    "playerID": "94204996527",
+    "team": "POR",
+    "teamID": "25"
+  },
+  "Harrison Barnes": {
+    "playerID": "28268959882",
+    "team": "SA",
+    "teamID": "27"
+  },
+  "Bismack Biyombo": {
+    "playerID": "28398922762",
+    "team": "SA",
+    "teamID": "27"
+  },
+  "Carter Bryant": {
+    "playerID": "947241811189",
+    "team": "SA",
+    "teamID": "27"
+  },
+  "Stephon Castle": {
+    "playerID": "948940097989",
+    "team": "SA",
+    "teamID": "27"
+  },
+  "Julian Champagnie": {
+    "playerID": "94364202027",
+    "team": "SA",
+    "teamID": "27"
+  },
+  "De'Aaron Fox": {
+    "playerID": "28828541179",
+    "team": "SA",
+    "teamID": "27"
+  },
+  "Dylan Harper": {
+    "playerID": "943243251189",
+    "team": "SA",
+    "teamID": "27"
+  },
+  "Harrison Ingram": {
+    "playerID": "949649735539",
+    "team": "SA",
+    "teamID": "27"
+  },
+  "Keldon Johnson": {
+    "playerID": "28158849047",
+    "team": "SA",
+    "teamID": "27"
+  },
+  "Luke Kornet": {
+    "playerID": "28768121429",
+    "team": "SA",
+    "teamID": "27"
+  },
+  "Jordan McLaughlin": {
+    "playerID": "28248347129",
+    "team": "SA",
+    "teamID": "27"
+  },
+  "Emanuel Miller": {
+    "playerID": "94724428027",
+    "team": "SA",
+    "teamID": "27"
+  },
+  "Kelly Olynyk": {
+    "playerID": "28188235349",
+    "team": "SA",
+    "teamID": "27"
+  },
+  "Mason Plumlee": {
+    "playerID": "28688435349",
+    "team": "SA",
+    "teamID": "27"
+  },
+  "Devin Vassell": {
+    "playerID": "94844402047",
+    "team": "SA",
+    "teamID": "27"
+  },
+  "Lindy Waters III": {
+    "playerID": "28938576399",
+    "team": "SA",
+    "teamID": "27"
+  },
+  "Victor Wembanyama": {
+    "playerID": "943740414489",
+    "team": "SA",
+    "teamID": "27"
+  },
+  "Scottie Barnes": {
+    "playerID": "94084226527",
+    "team": "TOR",
+    "teamID": "28"
+  },
+  "RJ Barrett": {
+    "playerID": "94994422047",
+    "team": "TOR",
+    "teamID": "28"
+  },
+  "Jamison Battle": {
+    "playerID": "94324272027",
+    "team": "TOR",
+    "teamID": "28"
+  },
+  "Gradey Dick": {
+    "playerID": "949147271869",
+    "team": "TOR",
+    "teamID": "28"
+  },
+  "Chucky Hepburn": {
+    "playerID": "946647565539",
+    "team": "TOR",
+    "teamID": "28"
+  },
+  "Brandon Ingram": {
+    "playerID": "28748519499",
+    "team": "TOR",
+    "teamID": "28"
+  },
+  "Trayce Jackson-Davis": {
+    "playerID": "94904432027",
+    "team": "TOR",
+    "teamID": "28"
+  },
+  "Sandro Mamukelashvili": {
+    "playerID": "28128827869",
+    "team": "TOR",
+    "teamID": "28"
+  },
+  "Alijah Martin": {
+    "playerID": "94694296527",
+    "team": "TOR",
+    "teamID": "28"
+  },
+  "Jonathan Mogbo": {
+    "playerID": "949842011869",
+    "team": "TOR",
+    "teamID": "28"
+  },
+  "Collin Murray-Boyles": {
+    "playerID": "943441227989",
+    "team": "TOR",
+    "teamID": "28"
+  },
+  "Jakob Poeltl": {
+    "playerID": "28928147129",
+    "team": "TOR",
+    "teamID": "28"
+  },
+  "Immanuel Quickley": {
+    "playerID": "28388872047",
+    "team": "TOR",
+    "teamID": "28"
+  },
+  "Jamal Shead": {
+    "playerID": "943649040139",
+    "team": "TOR",
+    "teamID": "28"
+  },
+  "Garrett Temple": {
+    "playerID": "28026396452",
+    "team": "TOR",
+    "teamID": "28"
+  },
+  "Ja'Kobe Walter": {
+    "playerID": "945240097989",
+    "team": "TOR",
+    "teamID": "28"
+  },
+  "Hugo Gonzalez": {
+    "playerID": "9.45643238189e+11",
+    "longName_tank01": "Hugo  Gonzalez",
+    "team": "",
+    "teamID": ""
+  },
+  "Ronald Holland II": {
+    "playerID": "9.42541715989e+11",
+    "longName_tank01": "Ron Holland",
+    "team": "",
+    "teamID": ""
+  },
+  "Jabari Smith Jr.": {
+    "playerID": "9.48147935539e+11",
+    "longName_tank01": "Jabari Smith",
+    "team": "",
+    "teamID": ""
+  },
+  "Trey Jemison III": {
+    "playerID": "2.8498852047e+10",
+    "longName_tank01": "Trey Jemison",
+    "team": "",
+    "teamID": ""
+  },
+  "Moritz Wagner": {
+    "playerID": "2.8838569499e+10",
+    "longName_tank01": "Moe Wagner",
+    "team": "",
+    "teamID": ""
+  },
+  "Dominick Barlow": {
+    "playerID": "9.48647045669e+11",
+    "longName_tank01": "Dom Barlow",
+    "team": "",
+    "teamID": ""
+  },
+  "David Jones Garcia": {
+    "playerID": "9.41742772339e+11",
+    "longName_tank01": "David Jones",
+    "team": "",
+    "teamID": ""
+  },
+  "A.J. Lawson": {
+    "playerID": "9.4724422047e+10",
+    "longName_tank01": "AJ Lawson",
+    "team": "",
+    "teamID": ""
+  }
+}
