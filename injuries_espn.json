@@ -1,6 +1,6 @@
 {
-  "updated_at": "20/04/2026 11:17 UTC",
-  "count": 4,
+  "updated_at": "20/04/2026 16:54 UTC",
+  "count": 6,
   "injuries": [
     {
       "name": "Onyeka Okongwu",
@@ -24,11 +24,25 @@
       "return_date": "Apr 20"
     },
     {
+      "name": "Mark Williams",
+      "team": "",
+      "status": "Day-To-Day",
+      "description": "Apr 20: Williams (foot) won't play in Sunday's game against Oklahoma City, Clemente Almanza of USA Today reports.",
+      "return_date": "Apr 22"
+    },
+    {
       "name": "Jordan Goodwin",
       "team": "",
       "status": "Day-To-Day",
       "description": "Apr 19: Goodwin has been ruled out for the rest of Game 1 against the Thunder on Sunday due to left calf soreness, Duane Rankin of The Arizona Republic reports.",
       "return_date": "Apr 22"
+    },
+    {
+      "name": "Jordan McLaughlin",
+      "team": "",
+      "status": "Day-To-Day",
+      "description": "Apr 20: McLaughlin (ankle) is out for Sunday's Game 1 against the Trail Blazers.",
+      "return_date": "Apr 21"
     }
   ]
 }
