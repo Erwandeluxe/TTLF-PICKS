@@ -85,7 +85,7 @@ def main():
         "injuries": injuries
     }
     with open("injuries_espn.json", "w", encoding="utf-8") as f:
-    json.dump(output, f, ensure_ascii=False, indent=2)
+        json.dump(output, f, ensure_ascii=False, indent=2)
     print(f"Done. {len(injuries)} blessé(s) dans notre liste.")
 
 if __name__ == "__main__":
