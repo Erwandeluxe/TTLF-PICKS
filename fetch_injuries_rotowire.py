@@ -47,13 +47,13 @@ def fetch_rotowire_injuries():
             print(f"API JSON trouvée : {len(data)} entrées")
             results = []
             for p in data:
-                results.append({
-                    "name":        p.get("player", ""),
-                    "team":        p.get("team", ""),
-                    "status":      p.get("injury_status", ""),
-                    "description": p.get("injury", ""),
-                    "return_date": p.get("return_date", ""),
-                })
+results.append({
+    "name":        p.get("player", ""),
+    "team":        p.get("team", ""),
+    "status":      p.get("status", ""),
+    "description": p.get("injury", ""),
+    "return_date": "",
+})
             return results
     except Exception as e:
         print(f"API JSON échouée : {e}")
