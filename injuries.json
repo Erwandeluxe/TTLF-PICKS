@@ -1,34 +1,34 @@
 {
-  "updated_at": "19/04/2026 21:33 UTC",
+  "updated_at": "20/04/2026 05:29 UTC",
   "count": 4,
   "injuries": [
     {
-      "name": "Franz Wagner",
+      "name": "Onyeka Okongwu",
       "team": "",
       "status": "Day-To-Day",
-      "description": "Apr 6: Wagner (rest) is out for Monday against the Pistons.",
-      "return_date": "08/04/2026"
+      "description": "Apr 19: Okongwu is questionable for Monday's Game 2 against the Knicks due to right knee inflammation.",
+      "return_date": "Apr 20"
     },
     {
-      "name": "James Harden",
+      "name": "Anthony Edwards",
       "team": "",
       "status": "Day-To-Day",
-      "description": "Apr 6: Harden (personal) is out for Monday's game against the Grizzlies.",
-      "return_date": "08/04/2026"
+      "description": "Apr 19: Edwards (knee) is listed as questionable for Monday's game against the Nuggets.",
+      "return_date": "Apr 20"
     },
     {
-      "name": "Matisse Thybulle",
+      "name": "OG Anunoby",
       "team": "",
       "status": "Day-To-Day",
-      "description": "Apr 11: Thybulle (ankle) is probable for Sunday's game against the Kings.",
-      "return_date": "12/04/2026"
+      "description": "Apr 19: Anunoby (ankle) is listed as probable for Monday's game against the Hawks.",
+      "return_date": "Apr 20"
     },
     {
-      "name": "Dyson Daniels",
+      "name": "Jordan Goodwin",
       "team": "",
       "status": "Day-To-Day",
-      "description": "Apr 11: Daniels is listed as questionable for Sunday's regular-season finale against the Heat due to a left great toe sprain.",
-      "return_date": "12/04/2026"
+      "description": "Apr 19: Goodwin has been ruled out for the rest of Game 1 against the Thunder on Sunday due to left calf soreness, Duane Rankin of The Arizona Republic reports.",
+      "return_date": "Apr 22"
     }
   ]
 }
