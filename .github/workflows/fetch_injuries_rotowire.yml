@@ -1,7 +1,6 @@
 name: Fetch Injuries RotoWire
 
 on:
-  workflow_dispatch:
   schedule:
     - cron: '0 5 * * *'    # 07h00 France
     - cron: '0 10 * * *'   # 12h00 France
