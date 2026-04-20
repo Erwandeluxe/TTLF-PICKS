@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import unicodedata
+import re
 from datetime import datetime
 
 PLAYER_NAMES = [
@@ -33,31 +34,35 @@ NAMES_NORMALIZED = {normalize(n): n for n in PLAYER_NAMES}
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
     "Accept-Language": "en-US,en;q=0.9",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 }
 
 def fetch_rotowire_injuries():
-    url = "https://www.rotowire.com/basketball/injury-report.php"
-    r = requests.get(url, headers=HEADERS, timeout=20)
-    r.raise_for_status()
+    # Essai 1 : API JSON directe RotoWire
+    api_url = "https://www.rotowire.com/basketball/tables/injury-report.php?team=ALL&pos=ALL"
+    try:
+        r = requests.get(api_url, headers=HEADERS, timeout=20)
+        if r.status_code == 200 and r.text.strip().startswith('['):
+            data = r.json()
+            print(f"API JSON trouvée : {len(data)} entrées")
+            results = []
+            for p in data:
+                results.append({
+                    "name":        p.get("player", ""),
+                    "team":        p.get("team", ""),
+                    "status":      p.get("injury_status", ""),
+                    "description": p.get("injury", ""),
+                    "return_date": p.get("return_date", ""),
+                })
+            return results
+    except Exception as e:
+        print(f"API JSON échouée : {e}")
+
+    # Essai 2 : scraping HTML classique
+    r = requests.get("https://www.rotowire.com/basketball/injury-report.php", headers=HEADERS, timeout=20)
     soup = BeautifulSoup(r.text, "html.parser")
-
-    # Debug : affiche les 2000 premiers caractères du HTML pour identifier les sélecteurs
-    print(r.text[:2000])
-
-    results = []
-    # Essai sur les lignes de tableau classiques
-    for row in soup.select("tr"):
-        cols = row.find_all("td")
-        if len(cols) < 4:
-            continue
-        results.append({
-            "name":        cols[0].get_text(strip=True),
-            "team":        cols[1].get_text(strip=True),
-            "status":      cols[2].get_text(strip=True),
-            "description": cols[3].get_text(strip=True),
-            "return_date": cols[4].get_text(strip=True) if len(cols) > 4 else "",
-        })
-    return results
+    print(r.text[1000:3000])  # debug portion du milieu
+    return []
 
 def main():
     print("Fetching RotoWire injury list...")
