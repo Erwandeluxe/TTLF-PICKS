@@ -38,30 +38,24 @@ HEADERS = {
 }
 
 def fetch_rotowire_injuries():
-    # Essai 1 : API JSON directe RotoWire
     api_url = "https://www.rotowire.com/basketball/tables/injury-report.php?team=ALL&pos=ALL"
     try:
         r = requests.get(api_url, headers=HEADERS, timeout=20)
-        if r.status_code == 200 and r.text.strip().startswith('['):
+        if r.status_code == 200:
             data = r.json()
             print(f"API JSON trouvée : {len(data)} entrées")
             results = []
             for p in data:
-results.append({
-    "name":        p.get("player", ""),
-    "team":        p.get("team", ""),
-    "status":      p.get("status", ""),
-    "description": p.get("injury", ""),
-    "return_date": "",
-})
+                results.append({
+                    "name":        p.get("player", ""),
+                    "team":        p.get("team", ""),
+                    "status":      p.get("status", ""),
+                    "description": p.get("injury", ""),
+                    "return_date": "",
+                })
             return results
     except Exception as e:
         print(f"API JSON échouée : {e}")
-
-    # Essai 2 : scraping HTML classique
-    r = requests.get("https://www.rotowire.com/basketball/injury-report.php", headers=HEADERS, timeout=20)
-    soup = BeautifulSoup(r.text, "html.parser")
-    print(r.text[1000:3000])  # debug portion du milieu
     return []
 
 def main():
