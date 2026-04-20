@@ -24,11 +24,13 @@
   .badge-out{background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;white-space:nowrap}
   .badge-prob{background:#dcfce7;color:#166534;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;white-space:nowrap}
   .badge-other{background:#e5e7eb;color:#374151;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;white-space:nowrap}
+  .badge-ofs{background:#ede9fe;color:#5b21b6;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;white-space:nowrap}
   .desc{font-size:12px;color:var(--muted);max-width:360px;white-space:normal}
   .loader{text-align:center;padding:30px;color:var(--muted);font-size:14px}
   .empty{text-align:center;padding:40px;color:var(--muted);font-size:14px}
   button{min-height:40px;padding:8px 16px;border:0;border-radius:10px;background:var(--primary);color:#fff;font-size:14px;font-weight:700;cursor:pointer;transition:background .15s}
   button:hover{background:var(--primary-2)}
+  .team-sep td{background:#f1f5f9;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:6px 10px;border-bottom:1px solid var(--line)}
 </style>
 </head>
 <body>
@@ -52,9 +54,9 @@
   <div class="table-wrap">
     <table>
       <thead>
-        <tr><th>Joueur</th><th>Équipe</th><th>Statut</th><th>Blessure</th><th>Détail</th></tr>
+        <tr><th>Joueur</th><th>Équipe</th><th>Statut</th><th>Blessure</th></tr>
       </thead>
-      <tbody id="injuryRows"><tr><td colspan="5" class="loader">Chargement…</td></tr></tbody>
+      <tbody id="injuryRows"><tr><td colspan="4" class="loader">Chargement…</td></tr></tbody>
     </table>
   </div>
 </div>
@@ -62,33 +64,52 @@
 <script>
 const INJURIES_URL = 'https://raw.githubusercontent.com/Erwandeluxe/TTLF-PICKS/main/injuries_rotowire.json';
 
+function statusBadge(status) {
+  const s = status || '?';
+  let cls = 'badge-other';
+  if (/out for season/i.test(s)) cls = 'badge-ofs';
+  else if (/out/i.test(s)) cls = 'badge-out';
+  else if (/day.to.day/i.test(s)) cls = 'badge-dtd';
+  else if (/probable/i.test(s)) cls = 'badge-prob';
+  return `<span class="${cls}">${s}</span>`;
+}
+
 async function loadInjuries() {
   const tbody = document.getElementById('injuryRows');
-  tbody.innerHTML = '<tr><td colspan="5" class="loader">Chargement…</td></tr>';
+  tbody.innerHTML = '<tr><td colspan="4" class="loader">Chargement…</td></tr>';
   try {
     const res = await fetch(INJURIES_URL + '?t=' + Date.now());
     const data = await res.json();
     document.getElementById('updatedAt').textContent = 'Mis à jour : ' + (data.updated_at || '—');
     if (!data.injuries || data.injuries.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="5" class="empty">✅ Aucun blessé dans votre liste actuellement.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="4" class="empty">✅ Aucun blessé dans votre liste actuellement.</td></tr>';
       return;
     }
-    tbody.innerHTML = data.injuries.map(p => {
-      const status = p.status || '?';
-      let cls = 'badge-other';
-      if (/out/i.test(status)) cls = 'badge-out';
-      else if (/day.to.day/i.test(status)) cls = 'badge-dtd';
-      else if (/probable/i.test(status)) cls = 'badge-prob';
-      return `<tr>
+
+    // Tri par équipe puis par nom
+    const sorted = [...data.injuries].sort((a, b) => {
+      const teamCmp = (a.team || '').localeCompare(b.team || '');
+      return teamCmp !== 0 ? teamCmp : (a.name || '').localeCompare(b.name || '');
+    });
+
+    // Groupement par équipe avec séparateur
+    let html = '';
+    let currentTeam = null;
+    for (const p of sorted) {
+      if (p.team !== currentTeam) {
+        currentTeam = p.team;
+        html += `<tr class="team-sep"><td colspan="4">${currentTeam || '—'}</td></tr>`;
+      }
+      html += `<tr>
         <td><strong>${p.name}</strong></td>
         <td>${p.team || '—'}</td>
-        <td><span class="${cls}">${status}</span></td>
-        <td>${p.description || '—'}</td>
-        <td class="desc">${p.return_date || '—'}</td>
+        <td>${statusBadge(p.status)}</td>
+        <td class="desc">${p.description || '—'}</td>
       </tr>`;
-    }).join('');
+    }
+    tbody.innerHTML = html;
   } catch(e) {
-    tbody.innerHTML = '<tr><td colspan="5" style="color:#dc2626;padding:20px">❌ Impossible de charger les données.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="4" style="color:#dc2626;padding:20px">❌ Impossible de charger les données.</td></tr>';
   }
 }
 
