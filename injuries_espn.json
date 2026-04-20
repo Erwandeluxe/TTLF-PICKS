@@ -1,19 +1,12 @@
 {
-  "updated_at": "20/04/2026 19:01 UTC",
-  "count": 6,
+  "updated_at": "20/04/2026 21:49 UTC",
+  "count": 5,
   "injuries": [
     {
       "name": "Onyeka Okongwu",
       "team": "",
       "status": "Day-To-Day",
       "description": "Apr 19: Okongwu is questionable for Monday's Game 2 against the Knicks due to right knee inflammation.",
-      "return_date": "Apr 20"
-    },
-    {
-      "name": "Anthony Edwards",
-      "team": "",
-      "status": "Day-To-Day",
-      "description": "Apr 19: Edwards (knee) is listed as questionable for Monday's game against the Nuggets.",
       "return_date": "Apr 20"
     },
     {
