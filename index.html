@@ -16,6 +16,8 @@
   .splash-box p{color:var(--muted);font-size:14px;margin:0 0 32px;line-height:1.6}
   .splash-box button{width:100%;min-height:48px;background:var(--primary);color:#fff;border:0;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;transition:background .15s}
   .splash-box button:hover{background:var(--primary-2)}
+  .splash-box .btn-injury{margin-top:12px;background:#fff;color:var(--primary);border:2px solid var(--primary)}
+  .splash-box .btn-injury:hover{background:#f0fdf9}
 
   /* APP */
   #app{display:none}
@@ -72,6 +74,7 @@
     <h1>🏀 TTFL Picks</h1>
     <p>Bienvenue sur l'outil de suivi des picks TTFL Playoffs 2026.<br>Réservé aux membres de l'équipe.</p>
     <button onclick="enterApp()">Accéder →</button>
+    <button class="btn-injury" onclick="window.location.href='injuries.html'">🚑 Injury Report</button>
   </div>
 </div>
 
@@ -226,7 +229,6 @@ const PLAYERS = {
   'TORONTO RAPTORS':['A.J. LAWSON','ALIJAH MARTIN','BRANDON INGRAM','CHUCKY HEPBURN','COLLIN MURRAY-BOYLES','GARRETT TEMPLE','GRADEY DICK','IMMANUEL QUICKLEY',"JA'KOBE WALTER",'JAKOB POELTL','JAMAL SHEAD','JAMISON BATTLE','JONATHAN MOGBO','RJ BARRETT','SANDRO MAMUKELASHVILI','SCOTTIE BARNES','TRAYCE JACKSON-DAVIS']
 };
 
-// Splash → App
 function enterApp() {
   document.getElementById('splashScreen').style.display = 'none';
   document.getElementById('app').style.display = 'block';
@@ -301,26 +303,18 @@ function renderTable() {
 }
 
 function renderRecap() {
-  // Déterminer les rounds qui ont au moins 1 pick
   const usedRounds = ROUNDS_ORDER.filter(r => allPicks.some(p => p.round === r));
-
-  // Header
   const head = document.getElementById('recapHead');
   head.innerHTML = '<tr><th class="member-col">Joueur</th>' +
     usedRounds.map(r => `<th>${r}<br><span style="font-weight:400;font-size:10px">${ROUNDS_MAP[r]}</span></th>`).join('') +
     '</tr>';
-
-  // Body : une ligne par membre
   const body = document.getElementById('recapBody');
   if (!usedRounds.length) {
     body.innerHTML = '<tr><td colspan="2" style="color:#6b7280;padding:20px">Aucun pick enregistré.</td></tr>';
     return;
   }
-
-  // Index picks : member+round → pick
   const idx = {};
   allPicks.forEach(p => { idx[p.member + '|' + p.round] = p; });
-
   body.innerHTML = MEMBERS.map(m => {
     const cells = usedRounds.map(r => {
       const p = idx[m + '|' + r];
