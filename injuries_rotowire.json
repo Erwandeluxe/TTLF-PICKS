@@ -1,6 +1,6 @@
 {
-  "updated_at": "20/04/2026 21:50 UTC",
-  "count": 20,
+  "updated_at": "20/04/2026 22:28 UTC",
+  "count": 19,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -89,15 +89,8 @@
     {
       "name": "Jordan McLaughlin",
       "team": "SAS",
-      "status": "Questionable",
+      "status": "Out",
       "description": "Ankle",
-      "return_date": ""
-    },
-    {
-      "name": "Onyeka Okongwu",
-      "team": "ATL",
-      "status": "Questionable",
-      "description": "Knee",
       "return_date": ""
     },
     {
