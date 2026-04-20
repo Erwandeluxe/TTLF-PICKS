@@ -40,28 +40,29 @@ def fetch_rotowire_injuries():
     r = requests.get(url, headers=HEADERS, timeout=20)
     r.raise_for_status()
     soup = BeautifulSoup(r.text, "html.parser")
+
+    # Debug : affiche les 2000 premiers caractères du HTML pour identifier les sélecteurs
+    print(r.text[:2000])
+
     results = []
-    for row in soup.select("div.injury-report-table__body div.injury-report-table__row"):
-        name_el   = row.select_one(".injury-report-table__player-name")
-        team_el   = row.select_one(".injury-report-table__team")
-        status_el = row.select_one(".injury-report-table__status")
-        injury_el = row.select_one(".injury-report-table__injury")
-        detail_el = row.select_one(".injury-report-table__detail")
-        if not name_el:
+    # Essai sur les lignes de tableau classiques
+    for row in soup.select("tr"):
+        cols = row.find_all("td")
+        if len(cols) < 4:
             continue
         results.append({
-            "name":        name_el.get_text(strip=True),
-            "team":        team_el.get_text(strip=True) if team_el else "",
-            "status":      status_el.get_text(strip=True) if status_el else "",
-            "description": injury_el.get_text(strip=True) if injury_el else "",
-            "return_date": detail_el.get_text(strip=True) if detail_el else "",
+            "name":        cols[0].get_text(strip=True),
+            "team":        cols[1].get_text(strip=True),
+            "status":      cols[2].get_text(strip=True),
+            "description": cols[3].get_text(strip=True),
+            "return_date": cols[4].get_text(strip=True) if len(cols) > 4 else "",
         })
     return results
 
 def main():
     print("Fetching RotoWire injury list...")
     body = fetch_rotowire_injuries()
-    print(f"Total blessés RotoWire : {len(body)}")
+    print(f"Total lignes trouvées : {len(body)}")
 
     injuries = []
     for entry in body:
@@ -76,7 +77,7 @@ def main():
             "description": entry["description"],
             "return_date": entry["return_date"],
         })
-        print(f"  → {original_name} ({entry['status']})")
+        print(f"  -> {original_name} ({entry['status']})")
 
     output = {
         "updated_at": datetime.utcnow().strftime("%d/%m/%Y %H:%M UTC"),
@@ -85,7 +86,7 @@ def main():
     }
     with open("injuries_rotowire.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
-    print(f"Done. {len(injuries)} blessé(s) dans notre liste.")
+    print(f"Done. {len(injuries)} blesse(s) dans notre liste.")
 
 if __name__ == "__main__":
     main()
