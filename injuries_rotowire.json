@@ -1,5 +1,153 @@
 {
-  "updated_at": "20/04/2026 06:28 UTC",
-  "count": 0,
-  "injuries": []
+  "updated_at": "20/04/2026 07:08 UTC",
+  "count": 21,
+  "injuries": [
+    {
+      "name": "Steven Adams",
+      "team": "HOU",
+      "status": "",
+      "description": "Ankle",
+      "return_date": ""
+    },
+    {
+      "name": "OG Anunoby",
+      "team": "NYK",
+      "status": "",
+      "description": "Ankle",
+      "return_date": ""
+    },
+    {
+      "name": "Thomas Bryant",
+      "team": "CLE",
+      "status": "",
+      "description": "Calf",
+      "return_date": ""
+    },
+    {
+      "name": "Luka Doncic",
+      "team": "LAL",
+      "status": "",
+      "description": "Hamstring",
+      "return_date": ""
+    },
+    {
+      "name": "Kevin Durant",
+      "team": "HOU",
+      "status": "",
+      "description": "Knee",
+      "return_date": ""
+    },
+    {
+      "name": "Anthony Edwards",
+      "team": "MIN",
+      "status": "",
+      "description": "Knee",
+      "return_date": ""
+    },
+    {
+      "name": "Joel Embiid",
+      "team": "PHI",
+      "status": "",
+      "description": "Abdomen",
+      "return_date": ""
+    },
+    {
+      "name": "Jordan Goodwin",
+      "team": "PHX",
+      "status": "",
+      "description": "Calf",
+      "return_date": ""
+    },
+    {
+      "name": "Chucky Hepburn",
+      "team": "TOR",
+      "status": "",
+      "description": "Knee",
+      "return_date": ""
+    },
+    {
+      "name": "Jonathan Isaac",
+      "team": "ORL",
+      "status": "",
+      "description": "Knee",
+      "return_date": ""
+    },
+    {
+      "name": "David Jones Garcia",
+      "team": "SAS",
+      "status": "",
+      "description": "Ankle",
+      "return_date": ""
+    },
+    {
+      "name": "Jock Landale",
+      "team": "ATL",
+      "status": "",
+      "description": "Ankle",
+      "return_date": ""
+    },
+    {
+      "name": "Damian Lillard",
+      "team": "POR",
+      "status": "",
+      "description": "Achilles",
+      "return_date": ""
+    },
+    {
+      "name": "Jordan McLaughlin",
+      "team": "SAS",
+      "status": "",
+      "description": "Ankle",
+      "return_date": ""
+    },
+    {
+      "name": "Onyeka Okongwu",
+      "team": "ATL",
+      "status": "",
+      "description": "Knee",
+      "return_date": ""
+    },
+    {
+      "name": "Immanuel Quickley",
+      "team": "TOR",
+      "status": "",
+      "description": "Hamstring",
+      "return_date": ""
+    },
+    {
+      "name": "Austin Reaves",
+      "team": "LAL",
+      "status": "",
+      "description": "Oblique",
+      "return_date": ""
+    },
+    {
+      "name": "Thomas Sorber",
+      "team": "OKC",
+      "status": "",
+      "description": "Knee",
+      "return_date": ""
+    },
+    {
+      "name": "Fred VanVleet",
+      "team": "HOU",
+      "status": "",
+      "description": "Knee",
+      "return_date": ""
+    },
+    {
+      "name": "Peyton Watson",
+      "team": "DEN",
+      "status": "",
+      "description": "Hamstring",
+      "return_date": ""
+    },
+    {
+      "name": "Mark Williams",
+      "team": "PHX",
+      "status": "",
+      "description": "Foot",
+      "return_date": ""
+    }
+  ]
 }
