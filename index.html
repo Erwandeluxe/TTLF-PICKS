@@ -81,7 +81,7 @@
 <!-- APP -->
 <div id="app">
   <h1>🏀 TTFL Picks</h1>
-  <div class="sub">Saisie et visualisation des picks par date</div>
+  <div class="sub">Saisie et visualisation des picks par date &nbsp;·&nbsp; <a href="#" onclick="goHome();return false;" style="color:var(--primary);font-weight:700;text-decoration:none;">← Accueil</a></div>
 
   <div class="grid">
     <!-- SAISIE -->
@@ -163,12 +163,12 @@
           <tbody id="rows"><tr><td colspan="5" class="loader">Chargement…</td></tr></tbody>
         </table>
       </div>
-      <div class="small" id="count"></div>
+      <p class="small" id="count"></p>
     </section>
   </div>
 
-  <!-- TABLEAU RÉCAP CROISÉ -->
-  <div class="recap-section card" style="margin-top:20px">
+  <!-- RÉCAP CROISÉ -->
+  <div class="recap-section">
     <h2>📊 Récapitulatif des picks</h2>
     <div class="recap-wrap">
       <table class="recap-table">
@@ -180,7 +180,7 @@
 </div>
 
 <script>
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwYVm1fp_y2aliWr_GYC9z4ykN5GiseeV6G38pBrGn6s3N-po9YJS_6dNRJJ1jraFG8/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx35wn6TzMZ7kL18dHpB9tgXGbqH2bINWx__RpR9QMORwALe4s7kw1dRD3cvqrKFxs/exec';
 
 const MEMBERS = ['ARNOKNICKS','BRAINLESSD0G','CAPTAINCLEM69','ERWAN','ERWAN2LUX','MOEPMOEP19','THEOFFSWITCH','THIBDEF','VALDO3','VVR3535'];
 
@@ -189,14 +189,6 @@ const ROUNDS_MAP = {
   'R01-005':'22/04','R01-006':'23/04','R01-007':'24/04','R01-008':'25/04',
   'R01-009':'26/04','R01-010':'27/04','R01-011':'28/04','R01-012':'29/04',
   'R01-013':'30/04','R01-014':'01/05','R01-015':'02/05','R01-016':'03/05'
-};
-const ROUNDS_ORDER = Object.keys(ROUNDS_MAP);
-
-const ROUNDS_FULL = {
-  'R01-001':'18/04/2026','R01-002':'19/04/2026','R01-003':'20/04/2026','R01-004':'21/04/2026',
-  'R01-005':'22/04/2026','R01-006':'23/04/2026','R01-007':'24/04/2026','R01-008':'25/04/2026',
-  'R01-009':'26/04/2026','R01-010':'27/04/2026','R01-011':'28/04/2026','R01-012':'29/04/2026',
-  'R01-013':'30/04/2026','R01-014':'01/05/2026','R01-015':'02/05/2026','R01-016':'03/05/2026'
 };
 
 const TEAM_COLORS = {
@@ -233,6 +225,11 @@ function enterApp() {
   document.getElementById('splashScreen').style.display = 'none';
   document.getElementById('app').style.display = 'block';
   loadPicks();
+}
+
+function goHome() {
+  document.getElementById('app').style.display = 'none';
+  document.getElementById('splashScreen').style.display = 'flex';
 }
 
 function formatDate(d) {
@@ -278,13 +275,14 @@ function updatePlayersList() {
   list.forEach(p => { const o = document.createElement('option'); o.value = o.textContent = p; sel.appendChild(o); });
 }
 
+const ROUNDS_ORDER = Object.keys(ROUNDS_MAP);
 let allPicks = [];
 
 function renderTable() {
   const fr = document.getElementById('filterRound').value;
   const fm = document.getElementById('filterMember').value;
   let data = allPicks.filter(x => (!fr || x.round === fr) && (!fm || x.member === fm));
-  data.sort((a,b) => (ROUNDS_ORDER.indexOf(a.round) - ROUNDS_ORDER.indexOf(b.round)) || a.member.localeCompare(b.member,'fr'));
+  data.sort((a,b) => (ROUNDS_ORDER.indexOf(b.round) - ROUNDS_ORDER.indexOf(a.round)) || a.member.localeCompare(b.member,'fr'));
   const tbody = document.getElementById('rows');
   if (!data.length) {
     tbody.innerHTML = '<tr><td colspan="5" style="color:#6b7280;padding:20px">Aucun pick pour ce filtre.</td></tr>';
@@ -342,15 +340,15 @@ async function loadPicks() {
 async function post(action, payload) {
   const res = await fetch(SCRIPT_URL, {
     method: 'POST',
-    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-    body: JSON.stringify({ action, payload })
+    body: JSON.stringify({ action, ...payload })
   });
-  return await res.json();
+  return res.json();
 }
 
 document.getElementById('team').addEventListener('change', updatePlayersList);
 document.getElementById('filterRound').addEventListener('change', renderTable);
 document.getElementById('filterMember').addEventListener('change', renderTable);
+
 document.getElementById('resetBtn').addEventListener('click', () => {
   document.getElementById('filterRound').value = '';
   document.getElementById('filterMember').value = '';
@@ -362,9 +360,8 @@ document.getElementById('saveBtn').addEventListener('click', async () => {
   const round  = document.getElementById('round').value;
   const team   = document.getElementById('team').value;
   const player = document.getElementById('player').value;
-  if (!member || !round || !team || !player) { setStatus('Complète les 4 champs.', 'err'); return; }
-  setStatus('Enregistrement…', 'ok');
-  const out = await post('savePick', { member, round, date: ROUNDS_FULL[round], team, player });
+  if (!member || !round || !team || !player) { setStatus('Tous les champs sont requis.', 'err'); return; }
+  const out = await post('savePick', { member, round, team, player });
   if (out.error) { setStatus('Erreur : ' + out.error, 'err'); return; }
   await loadPicks();
   setStatus('✅ Pick enregistré !', 'ok');
