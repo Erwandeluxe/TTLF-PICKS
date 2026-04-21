@@ -1,20 +1,13 @@
 {
-  "updated_at": "20/04/2026 22:27 UTC",
-  "count": 5,
+  "updated_at": "21/04/2026 06:56 UTC",
+  "count": 3,
   "injuries": [
     {
-      "name": "Onyeka Okongwu",
+      "name": "Ron Harper Jr.",
       "team": "",
       "status": "Day-To-Day",
-      "description": "Apr 19: Okongwu is questionable for Monday's Game 2 against the Knicks due to right knee inflammation.",
-      "return_date": "Apr 20"
-    },
-    {
-      "name": "OG Anunoby",
-      "team": "",
-      "status": "Day-To-Day",
-      "description": "Apr 19: Anunoby (ankle) is listed as probable for Monday's game against the Hawks.",
-      "return_date": "Apr 20"
+      "description": "Apr 20: Harper is probable for Game 2 on Tuesday versus the 76ers due to a right ankle sprain, per Taylor Snow of the Celtics' official site.",
+      "return_date": "Apr 21"
     },
     {
       "name": "Mark Williams",
@@ -29,13 +22,6 @@
       "status": "Day-To-Day",
       "description": "Apr 19: Goodwin has been ruled out for the rest of Game 1 against the Thunder on Sunday due to left calf soreness, Duane Rankin of The Arizona Republic reports.",
       "return_date": "Apr 22"
-    },
-    {
-      "name": "Jordan McLaughlin",
-      "team": "",
-      "status": "Day-To-Day",
-      "description": "Apr 20: McLaughlin (ankle) is out for Sunday's Game 1 against the Trail Blazers.",
-      "return_date": "Apr 21"
     }
   ]
 }
