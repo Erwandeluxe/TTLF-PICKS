@@ -1,5 +1,5 @@
 {
-  "updated_at": "22/04/2026 11:05 UTC",
+  "updated_at": "22/04/2026 16:54 UTC",
   "count": 21,
   "injuries": [
     {
@@ -61,7 +61,7 @@
     {
       "name": "Jonathan Isaac",
       "team": "ORL",
-      "status": "Doubtful",
+      "status": "Out",
       "description": "Knee",
       "return_date": ""
     },
