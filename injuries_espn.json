@@ -1,48 +1,5 @@
 {
-  "updated_at": "22/04/2026 19:09 UTC",
-  "count": 6,
-  "injuries": [
-    {
-      "name": "Jake LaRavia",
-      "team": "",
-      "status": "Day-To-Day",
-      "description": "Apr 22: LaRavia exited Tuesday's 101-94 Game 2 win over the Rockets in the fourth quarter and did not return due to an apparent right leg issue, finishing with zero points (0-2 FG, 0-1 3Pt), two rebounds and one block across 16 minutes.",
-      "return_date": "Apr 24"
-    },
-    {
-      "name": "Jordan Goodwin",
-      "team": "",
-      "status": "Day-To-Day",
-      "description": "Apr 21: Goodwin (calf) is listed as questionable for Game 2 against the Thunder on Wednesday.",
-      "return_date": "Apr 22"
-    },
-    {
-      "name": "Mark Williams",
-      "team": "",
-      "status": "Day-To-Day",
-      "description": "Apr 21: Head coach Jordan Ott expects Williams (foot) to be listed as questionable for Game 2 on Wednesday versus the Thunder, per Duane Rankin of The Arizona Republic.",
-      "return_date": "Apr 22"
-    },
-    {
-      "name": "Victor Wembanyama",
-      "team": "",
-      "status": "Day-To-Day",
-      "description": "Apr 21: Wembanyama has been diagnosed with a concussion and will undergo further testing Wednesday, Shams Charania of ESPN reports.",
-      "return_date": "Apr 24"
-    },
-    {
-      "name": "Jordan McLaughlin",
-      "team": "",
-      "status": "Day-To-Day",
-      "description": "Apr 21: McLaughlin (ankle) has been ruled out for Tuesday's Game 2 against the Trail Blazers.",
-      "return_date": "Apr 24"
-    },
-    {
-      "name": "Harrison Barnes",
-      "team": "",
-      "status": "Day-To-Day",
-      "description": "Apr 21: Barnes exited Tuesday's 106-103 Game 2 loss to the Trail Blazers in the fourth quarter and did not return due to an apparent left wrist injury, finishing with four points (1-3 FG, 0-1 3Pt, 2-2 FT) and one rebound in 15 minutes.",
-      "return_date": "Apr 24"
-    }
-  ]
+  "updated_at": "22/04/2026 21:51 UTC",
+  "count": 0,
+  "injuries": []
 }
