@@ -1,6 +1,6 @@
 {
-  "updated_at": "22/04/2026 19:23 UTC",
-  "count": 21,
+  "updated_at": "22/04/2026 21:53 UTC",
+  "count": 23,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -35,6 +35,13 @@
       "team": "LAL",
       "status": "Out",
       "description": "Hamstring",
+      "return_date": ""
+    },
+    {
+      "name": "Anthony Edwards",
+      "team": "MIN",
+      "status": "Questionable",
+      "description": "Knee",
       "return_date": ""
     },
     {
@@ -126,6 +133,13 @@
       "team": "HOU",
       "status": "Out",
       "description": "Knee",
+      "return_date": ""
+    },
+    {
+      "name": "Ja'Kobe Walter",
+      "team": "TOR",
+      "status": "Questionable",
+      "description": "Illness",
       "return_date": ""
     },
     {
