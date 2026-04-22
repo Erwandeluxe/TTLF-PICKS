@@ -1,6 +1,6 @@
 {
-  "updated_at": "22/04/2026 21:53 UTC",
-  "count": 23,
+  "updated_at": "22/04/2026 22:30 UTC",
+  "count": 24,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -55,6 +55,13 @@
       "name": "Jordan Goodwin",
       "team": "PHX",
       "status": "Questionable",
+      "description": "Calf",
+      "return_date": ""
+    },
+    {
+      "name": "Aaron Gordon",
+      "team": "DEN",
+      "status": "Probable",
       "description": "Calf",
       "return_date": ""
     },
@@ -145,7 +152,7 @@
     {
       "name": "Peyton Watson",
       "team": "DEN",
-      "status": "Doubtful",
+      "status": "Out",
       "description": "Hamstring",
       "return_date": ""
     },
