@@ -1,12 +1,26 @@
 {
-  "updated_at": "21/04/2026 21:48 UTC",
-  "count": 18,
+  "updated_at": "22/04/2026 06:01 UTC",
+  "count": 21,
   "injuries": [
     {
       "name": "Steven Adams",
       "team": "HOU",
       "status": "Out For Season",
       "description": "Ankle",
+      "return_date": ""
+    },
+    {
+      "name": "Grayson Allen",
+      "team": "PHX",
+      "status": "Questionable",
+      "description": "Hamstring",
+      "return_date": ""
+    },
+    {
+      "name": "Harrison Barnes",
+      "team": "SAS",
+      "status": "Questionable",
+      "description": "Wrist",
       "return_date": ""
     },
     {
@@ -24,16 +38,9 @@
       "return_date": ""
     },
     {
-      "name": "Kevin Durant",
-      "team": "HOU",
-      "status": "Questionable",
-      "description": "Knee",
-      "return_date": ""
-    },
-    {
       "name": "Joel Embiid",
       "team": "PHI",
-      "status": "Out",
+      "status": "Doubtful",
       "description": "Abdomen",
       "return_date": ""
     },
@@ -73,6 +80,13 @@
       "return_date": ""
     },
     {
+      "name": "Jake LaRavia",
+      "team": "LAL",
+      "status": "Questionable",
+      "description": "Leg",
+      "return_date": ""
+    },
+    {
       "name": "Damian Lillard",
       "team": "POR",
       "status": "Out For Season",
@@ -82,7 +96,7 @@
     {
       "name": "Jordan McLaughlin",
       "team": "SAS",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Ankle",
       "return_date": ""
     },
@@ -119,6 +133,13 @@
       "team": "DEN",
       "status": "Doubtful",
       "description": "Hamstring",
+      "return_date": ""
+    },
+    {
+      "name": "Victor Wembanyama",
+      "team": "SAS",
+      "status": "Questionable",
+      "description": "Concussion",
       "return_date": ""
     },
     {
