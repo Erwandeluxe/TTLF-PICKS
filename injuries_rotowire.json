@@ -1,6 +1,6 @@
 {
-  "updated_at": "23/04/2026 11:08 UTC",
-  "count": 24,
+  "updated_at": "23/04/2026 17:15 UTC",
+  "count": 23,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -10,17 +10,17 @@
       "return_date": ""
     },
     {
-      "name": "Harrison Barnes",
-      "team": "SAS",
-      "status": "Questionable",
-      "description": "Wrist",
+      "name": "Thomas Bryant",
+      "team": "CLE",
+      "status": "Probable",
+      "description": "Calf",
       "return_date": ""
     },
     {
-      "name": "Thomas Bryant",
-      "team": "CLE",
+      "name": "Jaylen Clark",
+      "team": "MIN",
       "status": "Questionable",
-      "description": "Calf",
+      "description": "Illness",
       "return_date": ""
     },
     {
@@ -133,13 +133,6 @@
       "team": "HOU",
       "status": "Out",
       "description": "Knee",
-      "return_date": ""
-    },
-    {
-      "name": "Ja'Kobe Walter",
-      "team": "TOR",
-      "status": "Questionable",
-      "description": "Illness",
       "return_date": ""
     },
     {
