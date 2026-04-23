@@ -1,5 +1,5 @@
 {
-  "updated_at": "22/04/2026 22:30 UTC",
+  "updated_at": "23/04/2026 06:56 UTC",
   "count": 24,
   "injuries": [
     {
@@ -7,13 +7,6 @@
       "team": "HOU",
       "status": "Out For Season",
       "description": "Ankle",
-      "return_date": ""
-    },
-    {
-      "name": "Grayson Allen",
-      "team": "PHX",
-      "status": "Questionable",
-      "description": "Hamstring",
       "return_date": ""
     },
     {
@@ -75,7 +68,7 @@
     {
       "name": "Jonathan Isaac",
       "team": "ORL",
-      "status": "Out",
+      "status": "Doubtful",
       "description": "Knee",
       "return_date": ""
     },
@@ -168,6 +161,13 @@
       "team": "PHX",
       "status": "Questionable",
       "description": "Foot",
+      "return_date": ""
+    },
+    {
+      "name": "Jalen Williams",
+      "team": "OKC",
+      "status": "Questionable",
+      "description": "Hamstring",
       "return_date": ""
     }
   ]
