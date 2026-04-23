@@ -1,6 +1,6 @@
 {
-  "updated_at": "23/04/2026 21:49 UTC",
-  "count": 24,
+  "updated_at": "23/04/2026 22:26 UTC",
+  "count": 23,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -19,7 +19,7 @@
     {
       "name": "Jaylen Clark",
       "team": "MIN",
-      "status": "Questionable",
+      "status": "Out",
       "description": "Illness",
       "return_date": ""
     },
@@ -61,7 +61,7 @@
     {
       "name": "Aaron Gordon",
       "team": "DEN",
-      "status": "Questionable",
+      "status": "Out",
       "description": "Calf",
       "return_date": ""
     },
@@ -94,13 +94,6 @@
       "return_date": ""
     },
     {
-      "name": "Jake LaRavia",
-      "team": "LAL",
-      "status": "Questionable",
-      "description": "Ankle",
-      "return_date": ""
-    },
-    {
       "name": "Damian Lillard",
       "team": "POR",
       "status": "Out For Season",
@@ -117,14 +110,14 @@
     {
       "name": "Immanuel Quickley",
       "team": "TOR",
-      "status": "Questionable",
+      "status": "Out",
       "description": "Hamstring",
       "return_date": ""
     },
     {
       "name": "Austin Reaves",
       "team": "LAL",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Oblique",
       "return_date": ""
     },
