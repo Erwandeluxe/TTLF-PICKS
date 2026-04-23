@@ -1,6 +1,6 @@
 {
-  "updated_at": "23/04/2026 19:21 UTC",
-  "count": 23,
+  "updated_at": "23/04/2026 21:49 UTC",
+  "count": 24,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -28,6 +28,13 @@
       "team": "LAL",
       "status": "Out",
       "description": "Hamstring",
+      "return_date": ""
+    },
+    {
+      "name": "Kevin Durant",
+      "team": "HOU",
+      "status": "Questionable",
+      "description": "Ankle",
       "return_date": ""
     },
     {
@@ -159,7 +166,7 @@
     {
       "name": "Jalen Williams",
       "team": "OKC",
-      "status": "Questionable",
+      "status": "Out",
       "description": "Hamstring",
       "return_date": ""
     }
