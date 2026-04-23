@@ -1,5 +1,5 @@
 {
-  "updated_at": "23/04/2026 17:15 UTC",
+  "updated_at": "23/04/2026 19:21 UTC",
   "count": 23,
   "injuries": [
     {
@@ -54,7 +54,7 @@
     {
       "name": "Aaron Gordon",
       "team": "DEN",
-      "status": "Probable",
+      "status": "Questionable",
       "description": "Calf",
       "return_date": ""
     },
@@ -90,7 +90,7 @@
       "name": "Jake LaRavia",
       "team": "LAL",
       "status": "Questionable",
-      "description": "Leg",
+      "description": "Ankle",
       "return_date": ""
     },
     {
