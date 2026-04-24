@@ -1,0 +1,31 @@
+name: Update Bracket
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * *'  # 08h00 FR (UTC+2)
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install requests
+
+      - name: Run script
+        run: python scripts/update_bracket.py
+
+      - name: Commit & Push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add bracket.json
+          git diff --cached --quiet || git commit -m "Update bracket $(date +'%d/%m/%Y %H:%M')"
+          git push
