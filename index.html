@@ -64,6 +64,17 @@
   .empty-cell{color:#d1d5db;font-size:18px;text-align:center}
 
   @media(max-width:800px){.grid,.toolbar{grid-template-columns:1fr}}
+
+  /* BRACKET */
+  .bracket-section{margin-top:16px}
+  .bracket-section h2{font-size:18px;margin:0 0 12px}
+  .bracket-conf{margin-bottom:16px}
+  .bracket-conf-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:8px}
+  .bracket-series{display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap}
+  .bracket-team{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700;white-space:nowrap;color:#fff}
+  .bracket-score{font-size:13px;font-weight:700;color:var(--text);padding:2px 6px;background:#f1f5f9;border-radius:6px;white-space:nowrap}
+  .bracket-vs{font-size:11px;color:var(--muted)}
+  .bracket-updated{font-size:11px;color:var(--muted);margin-top:8px}
 </style>
 </head>
 <body>
@@ -165,6 +176,79 @@
       </div>
       <div class="small" id="count"></div>
     </section>
+  </div>
+
+
+  <!-- BRACKET -->
+  <div class="bracket-section card" style="margin-top:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+      <h2 style="margin:0;font-size:18px">🏆 Playoffs NBA 2026</h2>
+      <span class="bracket-updated" id="bracketUpdated"></span>
+    </div>
+
+    <div class="bracket-conf">
+      <div class="bracket-conf-title">🌍 Conférence Est</div>
+
+      <div class="bracket-series">
+        <span class="bracket-team" style="background:#860038">(1) CLEVELAND</span>
+        <span class="bracket-vs">vs</span>
+        <span class="bracket-team" style="background:#CE1141">(8) TORONTO</span>
+        <span class="bracket-score" id="s-cle-tor">3-0</span>
+      </div>
+
+      <div class="bracket-series">
+        <span class="bracket-team" style="background:#007A33">(2) BOSTON</span>
+        <span class="bracket-vs">vs</span>
+        <span class="bracket-team" style="background:#006BB6">(7) PHILADELPHIA</span>
+        <span class="bracket-score" id="s-bos-phi">1-1</span>
+      </div>
+
+      <div class="bracket-series">
+        <span class="bracket-team" style="background:#C8102E">(3) ATLANTA</span>
+        <span class="bracket-vs">vs</span>
+        <span class="bracket-team" style="background:#006BB6">(6) NEW YORK</span>
+        <span class="bracket-score" id="s-atl-nyk">2-1</span>
+      </div>
+
+      <div class="bracket-series">
+        <span class="bracket-team" style="background:#C8102E">(4) DETROIT</span>
+        <span class="bracket-vs">vs</span>
+        <span class="bracket-team" style="background:#0077C0">(5) ORLANDO</span>
+        <span class="bracket-score" id="s-det-orl">1-1</span>
+      </div>
+    </div>
+
+    <div class="bracket-conf">
+      <div class="bracket-conf-title">🌎 Conférence Ouest</div>
+
+      <div class="bracket-series">
+        <span class="bracket-team" style="background:#007AC1">(1) OKC</span>
+        <span class="bracket-vs">vs</span>
+        <span class="bracket-team" style="background:#1D1160">(8) PHOENIX</span>
+        <span class="bracket-score" id="s-okc-phx">2-0</span>
+      </div>
+
+      <div class="bracket-series">
+        <span class="bracket-team" style="background:#552583">(2) L.A. LAKERS</span>
+        <span class="bracket-vs">vs</span>
+        <span class="bracket-team" style="background:#CE1141">(7) HOUSTON</span>
+        <span class="bracket-score" id="s-lal-hou">2-0</span>
+      </div>
+
+      <div class="bracket-series">
+        <span class="bracket-team" style="background:#0C2340">(3) MINNESOTA</span>
+        <span class="bracket-vs">vs</span>
+        <span class="bracket-team" style="background:#0E2240">(6) DENVER</span>
+        <span class="bracket-score" id="s-min-den">2-1</span>
+      </div>
+
+      <div class="bracket-series">
+        <span class="bracket-team" style="background:#E03A3E">(4) PORTLAND</span>
+        <span class="bracket-vs">vs</span>
+        <span class="bracket-team" style="background:#C4CED4;color:#000">(5) SAN ANTONIO</span>
+        <span class="bracket-score" id="s-por-sas">2-0</span>
+      </div>
+    </div>
   </div>
 
   <!-- TABLEAU RÉCAP CROISÉ -->
@@ -384,6 +468,30 @@ document.getElementById('reloadBtn').addEventListener('click', async () => {
   await loadPicks();
   setStatus('🔄 Données actualisées.', 'ok');
 });
+
+// BRACKET — mise à jour quotidienne 8h00 FR (via cache JSON GitHub)
+const BRACKET_URL = 'https://raw.githubusercontent.com/Erwandeluxe/TTLF-PICKS/main/bracket.json';
+
+async function loadBracket() {
+  try {
+    const res = await fetch(BRACKET_URL + '?t=' + new Date().toISOString().slice(0,10));
+    const data = await res.json();
+    if (data.series) {
+      data.series.forEach(s => {
+        const el = document.getElementById('s-' + s.id);
+        if (el) el.textContent = s.score;
+      });
+    }
+    if (data.updated_at) {
+      document.getElementById('bracketUpdated').textContent = 'Mis à jour : ' + data.updated_at;
+    }
+  } catch(e) {
+    // silencieux — les scores codés en dur restent affichés
+  }
+}
+
+loadBracket();
+
 </script>
 </body>
 </html>
