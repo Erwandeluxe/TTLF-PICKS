@@ -1,6 +1,6 @@
 {
-  "updated_at": "23/04/2026 22:26 UTC",
-  "count": 23,
+  "updated_at": "24/04/2026 07:00 UTC",
+  "count": 22,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -10,16 +10,9 @@
       "return_date": ""
     },
     {
-      "name": "Thomas Bryant",
-      "team": "CLE",
-      "status": "Probable",
-      "description": "Calf",
-      "return_date": ""
-    },
-    {
       "name": "Jaylen Clark",
       "team": "MIN",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Illness",
       "return_date": ""
     },
@@ -41,7 +34,7 @@
       "name": "Anthony Edwards",
       "team": "MIN",
       "status": "Questionable",
-      "description": "Knee",
+      "description": "Undisclosed",
       "return_date": ""
     },
     {
@@ -61,7 +54,7 @@
     {
       "name": "Aaron Gordon",
       "team": "DEN",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Calf",
       "return_date": ""
     },
@@ -103,7 +96,7 @@
     {
       "name": "Jordan McLaughlin",
       "team": "SAS",
-      "status": "Questionable",
+      "status": "Out",
       "description": "Ankle",
       "return_date": ""
     },
