@@ -1,13 +1,13 @@
 {
   "updated_at": "24/04/2026 08:00",
   "series": [
-    {"id": "cle-tor", "score": "3-0"},
-    {"id": "bos-phi", "score": "1-1"},
-    {"id": "atl-nyk", "score": "2-1"},
     {"id": "det-orl", "score": "1-1"},
-    {"id": "okc-phx", "score": "2-0"},
-    {"id": "lal-hou", "score": "2-0"},
-    {"id": "min-den", "score": "2-1"},
-    {"id": "por-sas", "score": "2-0"}
+    {"id": "bos-phi", "score": "1-1"},
+    {"id": "nyk-atl", "score": "ATL 2-1"},
+    {"id": "cle-tor", "score": "CLE 2-1"},
+    {"id": "okc-phx", "score": "OKC 2-0"},
+    {"id": "sas-por", "score": "1-1"},
+    {"id": "den-min", "score": "MIN 2-1"},
+    {"id": "lal-hou", "score": "LAL 2-0"}
   ]
 }
