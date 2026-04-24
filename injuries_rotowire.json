@@ -1,6 +1,6 @@
 {
-  "updated_at": "24/04/2026 19:03 UTC",
-  "count": 22,
+  "updated_at": "24/04/2026 21:50 UTC",
+  "count": 21,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -31,16 +31,9 @@
       "return_date": ""
     },
     {
-      "name": "Anthony Edwards",
-      "team": "MIN",
-      "status": "Questionable",
-      "description": "Undisclosed",
-      "return_date": ""
-    },
-    {
       "name": "Joel Embiid",
       "team": "PHI",
-      "status": "Doubtful",
+      "status": "Out",
       "description": "Abdomen",
       "return_date": ""
     },
@@ -145,7 +138,7 @@
     {
       "name": "Mark Williams",
       "team": "PHX",
-      "status": "Questionable",
+      "status": "Out",
       "description": "Foot",
       "return_date": ""
     },
