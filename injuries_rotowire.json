@@ -1,12 +1,19 @@
 {
-  "updated_at": "24/04/2026 22:26 UTC",
-  "count": 20,
+  "updated_at": "25/04/2026 06:16 UTC",
+  "count": 22,
   "injuries": [
     {
       "name": "Steven Adams",
       "team": "HOU",
       "status": "Out For Season",
       "description": "Ankle",
+      "return_date": ""
+    },
+    {
+      "name": "Grayson Allen",
+      "team": "PHX",
+      "status": "Questionable",
+      "description": "Hamstring",
       "return_date": ""
     },
     {
@@ -26,7 +33,7 @@
     {
       "name": "Joel Embiid",
       "team": "PHI",
-      "status": "Out",
+      "status": "Doubtful",
       "description": "Abdomen",
       "return_date": ""
     },
@@ -59,6 +66,13 @@
       "return_date": ""
     },
     {
+      "name": "Isaiah Joe",
+      "team": "OKC",
+      "status": "Doubtful",
+      "description": "Personal",
+      "return_date": ""
+    },
+    {
       "name": "David Jones Garcia",
       "team": "SAS",
       "status": "Out For Season",
@@ -82,7 +96,7 @@
     {
       "name": "Jordan McLaughlin",
       "team": "SAS",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Ankle",
       "return_date": ""
     },
