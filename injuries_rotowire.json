@@ -1,5 +1,5 @@
 {
-  "updated_at": "25/04/2026 10:43 UTC",
+  "updated_at": "25/04/2026 16:36 UTC",
   "count": 22,
   "injuries": [
     {
@@ -33,7 +33,7 @@
     {
       "name": "Joel Embiid",
       "team": "PHI",
-      "status": "Doubtful",
+      "status": "Questionable",
       "description": "Abdomen",
       "return_date": ""
     },
@@ -61,7 +61,7 @@
     {
       "name": "Jonathan Isaac",
       "team": "ORL",
-      "status": "Doubtful",
+      "status": "Out",
       "description": "Knee",
       "return_date": ""
     },
