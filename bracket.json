@@ -1,13 +1,17 @@
 {
-  "updated_at": "24/04/2026 08:00",
+  "updated_at": "25/04/2026 07:49",
   "series": [
-    {"id": "det-orl", "score": "1-1"},
-    {"id": "bos-phi", "score": "1-1"},
-    {"id": "nyk-atl", "score": "ATL 2-1"},
-    {"id": "cle-tor", "score": "CLE 2-1"},
-    {"id": "okc-phx", "score": "OKC 2-0"},
-    {"id": "sas-por", "score": "1-1"},
-    {"id": "den-min", "score": "MIN 2-1"},
-    {"id": "lal-hou", "score": "LAL 2-0"}
+    {
+      "id": "bos-phi",
+      "score": "BOS 1-0"
+    },
+    {
+      "id": "lal-hou",
+      "score": "LAL 1-0"
+    },
+    {
+      "id": "sas-por",
+      "score": "SA 1-0"
+    }
   ]
 }
