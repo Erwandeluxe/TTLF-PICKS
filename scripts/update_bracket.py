@@ -1,70 +1,53 @@
 import requests, json
 from datetime import datetime
+from collections import defaultdict
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
 
-# Mapping ESPN team abbreviation → ID bracket HTML
-TEAM_MAP = {
-    "DET": "det", "ORL": "orl",
-    "BOS": "bos", "PHI": "phi",
-    "NYK": "nyk", "ATL": "atl",
-    "CLE": "cle", "TOR": "tor",
-    "OKC": "okc", "PHX": "phx",
-    "SA":  "sas", "POR": "por",
-    "DEN": "den", "MIN": "min",
-    "LAL": "lal", "HOU": "hou",
+SERIES_PAIRS = {
+    "det-orl": ("DET", "ORL"),
+    "bos-phi": ("BOS", "PHI"),
+    "nyk-atl": ("NY",  "ATL"),
+    "cle-tor": ("CLE", "TOR"),
+    "okc-phx": ("OKC", "PHX"),
+    "sas-por": ("SA",  "POR"),
+    "den-min": ("DEN", "MIN"),
+    "lal-hou": ("LAL", "HOU"),
 }
 
-SERIES_IDS = {
-    frozenset(["DET","ORL"]): "det-orl",
-    frozenset(["BOS","PHI"]): "bos-phi",
-    frozenset(["NYK","ATL"]): "nyk-atl",
-    frozenset(["CLE","TOR"]): "cle-tor",
-    frozenset(["OKC","PHX"]): "okc-phx",
-    frozenset(["SA","POR"]):  "sas-por",
-    frozenset(["DEN","MIN"]): "den-min",
-    frozenset(["LAL","HOU"]): "lal-hou",
-}
-
-def get_series():
-    # Récupère tous les matchs playoffs ESPN
+def get_wins():
     r = requests.get(
-        "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?seasontype=3&limit=50",
+        "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard"
+        "?seasontype=3&limit=100&dates=20260418-20260530",
         headers=HEADERS, timeout=15
     )
     r.raise_for_status()
     events = r.json().get("events", [])
 
-    wins = {}  # serie_id -> {abbr: wins}
-    for event in events:
-        comp = event["competitions"][0]
-        teams = comp["competitors"]
-        abbrs = [t["team"]["abbreviation"] for t in teams]
-        key = frozenset(abbrs)
-        sid = SERIES_IDS.get(key)
-        if not sid:
+    wins = defaultdict(int)
+    for e in events:
+        comp = e["competitions"][0]
+        if not comp.get("status", {}).get("type", {}).get("completed", False):
             continue
-        if sid not in wins:
-            wins[sid] = {a: 0 for a in abbrs}
-        # winner
-        for t in teams:
+        for t in comp["competitors"]:
             if t.get("winner"):
-                wins[sid][t["team"]["abbreviation"]] = wins[sid].get(t["team"]["abbreviation"], 0) + 1
+                wins[t["team"]["abbreviation"]] += 1
+    return wins
 
-    series = []
-    for sid, w in wins.items():
-        items = sorted(w.items(), key=lambda x: -x[1])
-        if len(items) == 2:
-            a1, w1 = items[0]
-            a2, w2 = items[1]
-            score = f"{a1} {w1}-{w2}" if w1 != w2 else f"{w1}-{w2}"
-        else:
-            score = "—"
-        series.append({"id": sid, "score": score})
+wins = get_wins()
 
-    return series
+series = []
+for sid, (t1, t2) in SERIES_PAIRS.items():
+    w1 = wins.get(t1, 0)
+    w2 = wins.get(t2, 0)
+    if w1 > w2:
+        score = f"{t1} {w1}-{w2}"
+    elif w2 > w1:
+        score = f"{t2} {w2}-{w1}"
+    else:
+        score = f"{w1}-{w2}"
+    series.append({"id": sid, "score": score})
 
-series = get_series()
 output = {
     "updated_at": datetime.now().strftime("%d/%m/%Y %H:%M"),
     "series": series
