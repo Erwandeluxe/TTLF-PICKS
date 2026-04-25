@@ -1,19 +1,12 @@
 {
-  "updated_at": "25/04/2026 16:36 UTC",
-  "count": 22,
+  "updated_at": "25/04/2026 19:02 UTC",
+  "count": 21,
   "injuries": [
     {
       "name": "Steven Adams",
       "team": "HOU",
       "status": "Out For Season",
       "description": "Ankle",
-      "return_date": ""
-    },
-    {
-      "name": "Grayson Allen",
-      "team": "PHX",
-      "status": "Questionable",
-      "description": "Hamstring",
       "return_date": ""
     },
     {
@@ -40,7 +33,7 @@
     {
       "name": "Jordan Goodwin",
       "team": "PHX",
-      "status": "Questionable",
+      "status": "Out",
       "description": "Calf",
       "return_date": ""
     },
@@ -68,7 +61,7 @@
     {
       "name": "Isaiah Joe",
       "team": "OKC",
-      "status": "Doubtful",
+      "status": "Out",
       "description": "Personal",
       "return_date": ""
     },
