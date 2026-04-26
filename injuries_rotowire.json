@@ -1,6 +1,6 @@
 {
-  "updated_at": "26/04/2026 16:37 UTC",
-  "count": 23,
+  "updated_at": "26/04/2026 19:04 UTC",
+  "count": 21,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -101,13 +101,6 @@
       "return_date": ""
     },
     {
-      "name": "Jordan McLaughlin",
-      "team": "SAS",
-      "status": "Questionable",
-      "description": "Ankle",
-      "return_date": ""
-    },
-    {
       "name": "Immanuel Quickley",
       "team": "TOR",
       "status": "Out",
@@ -140,13 +133,6 @@
       "team": "DEN",
       "status": "Doubtful",
       "description": "Hamstring",
-      "return_date": ""
-    },
-    {
-      "name": "Victor Wembanyama",
-      "team": "SAS",
-      "status": "Questionable",
-      "description": "Concussion",
       "return_date": ""
     },
     {
