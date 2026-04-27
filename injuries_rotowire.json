@@ -1,5 +1,5 @@
 {
-  "updated_at": "27/04/2026 11:43 UTC",
+  "updated_at": "27/04/2026 17:18 UTC",
   "count": 20,
   "injuries": [
     {
@@ -103,7 +103,7 @@
     {
       "name": "Austin Reaves",
       "team": "LAL",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Oblique",
       "return_date": ""
     },
