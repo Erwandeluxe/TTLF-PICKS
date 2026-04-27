@@ -1,6 +1,6 @@
 {
-  "updated_at": "26/04/2026 22:19 UTC",
-  "count": 21,
+  "updated_at": "27/04/2026 07:30 UTC",
+  "count": 20,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -26,7 +26,7 @@
     {
       "name": "Kevin Durant",
       "team": "HOU",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Ankle",
       "return_date": ""
     },
@@ -38,15 +38,15 @@
       "return_date": ""
     },
     {
-      "name": "Joel Embiid",
-      "team": "PHI",
+      "name": "Jordan Goodwin",
+      "team": "PHX",
       "status": "Questionable",
-      "description": "Abdomen",
+      "description": "Calf",
       "return_date": ""
     },
     {
-      "name": "Jordan Goodwin",
-      "team": "PHX",
+      "name": "Aaron Gordon",
+      "team": "DEN",
       "status": "Questionable",
       "description": "Calf",
       "return_date": ""
@@ -70,13 +70,6 @@
       "team": "ORL",
       "status": "Doubtful",
       "description": "Knee",
-      "return_date": ""
-    },
-    {
-      "name": "Isaiah Joe",
-      "team": "OKC",
-      "status": "Questionable",
-      "description": "Personal",
       "return_date": ""
     },
     {
@@ -110,7 +103,7 @@
     {
       "name": "Austin Reaves",
       "team": "LAL",
-      "status": "Questionable",
+      "status": "Out",
       "description": "Oblique",
       "return_date": ""
     },
@@ -131,13 +124,6 @@
     {
       "name": "Peyton Watson",
       "team": "DEN",
-      "status": "Doubtful",
-      "description": "Hamstring",
-      "return_date": ""
-    },
-    {
-      "name": "Jalen Williams",
-      "team": "OKC",
       "status": "Out",
       "description": "Hamstring",
       "return_date": ""
@@ -147,6 +133,13 @@
       "team": "PHX",
       "status": "Out",
       "description": "Foot",
+      "return_date": ""
+    },
+    {
+      "name": "Jalen Williams",
+      "team": "OKC",
+      "status": "Out",
+      "description": "Hamstring",
       "return_date": ""
     }
   ]
