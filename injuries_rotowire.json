@@ -1,6 +1,6 @@
 {
-  "updated_at": "27/04/2026 19:41 UTC",
-  "count": 20,
+  "updated_at": "27/04/2026 22:32 UTC",
+  "count": 21,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -38,6 +38,13 @@
       "return_date": ""
     },
     {
+      "name": "Joel Embiid",
+      "team": "PHI",
+      "status": "Probable",
+      "description": "Abdomen",
+      "return_date": ""
+    },
+    {
       "name": "Jordan Goodwin",
       "team": "PHX",
       "status": "Questionable",
@@ -68,7 +75,7 @@
     {
       "name": "Jonathan Isaac",
       "team": "ORL",
-      "status": "Doubtful",
+      "status": "Out",
       "description": "Knee",
       "return_date": ""
     },
