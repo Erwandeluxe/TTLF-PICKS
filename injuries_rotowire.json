@@ -1,5 +1,5 @@
 {
-  "updated_at": "27/04/2026 22:32 UTC",
+  "updated_at": "28/04/2026 07:27 UTC",
   "count": 21,
   "injuries": [
     {
@@ -47,7 +47,7 @@
     {
       "name": "Jordan Goodwin",
       "team": "PHX",
-      "status": "Questionable",
+      "status": "Out",
       "description": "Calf",
       "return_date": ""
     },
@@ -63,13 +63,6 @@
       "team": "TOR",
       "status": "Out For Season",
       "description": "Knee",
-      "return_date": ""
-    },
-    {
-      "name": "Kevin Huerter",
-      "team": "DET",
-      "status": "Questionable",
-      "description": "Hip",
       "return_date": ""
     },
     {
@@ -126,6 +119,13 @@
       "team": "HOU",
       "status": "Out",
       "description": "Knee",
+      "return_date": ""
+    },
+    {
+      "name": "Franz Wagner",
+      "team": "ORL",
+      "status": "Questionable",
+      "description": "Calf",
       "return_date": ""
     },
     {
