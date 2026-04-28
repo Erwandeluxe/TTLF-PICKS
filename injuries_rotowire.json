@@ -1,6 +1,6 @@
 {
-  "updated_at": "28/04/2026 22:00 UTC",
-  "count": 22,
+  "updated_at": "28/04/2026 22:38 UTC",
+  "count": 21,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -35,13 +35,6 @@
       "team": "MIN",
       "status": "Out",
       "description": "Knee",
-      "return_date": ""
-    },
-    {
-      "name": "Joel Embiid",
-      "team": "PHI",
-      "status": "Probable",
-      "description": "Abdomen",
       "return_date": ""
     },
     {
