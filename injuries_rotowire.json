@@ -1,6 +1,6 @@
 {
-  "updated_at": "28/04/2026 19:49 UTC",
-  "count": 21,
+  "updated_at": "28/04/2026 22:00 UTC",
+  "count": 22,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -63,6 +63,13 @@
       "team": "TOR",
       "status": "Out For Season",
       "description": "Knee",
+      "return_date": ""
+    },
+    {
+      "name": "Kevin Huerter",
+      "team": "DET",
+      "status": "Questionable",
+      "description": "Thigh",
       "return_date": ""
     },
     {
