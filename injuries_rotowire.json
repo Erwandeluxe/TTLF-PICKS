@@ -1,5 +1,5 @@
 {
-  "updated_at": "28/04/2026 11:44 UTC",
+  "updated_at": "28/04/2026 17:44 UTC",
   "count": 21,
   "injuries": [
     {
@@ -26,7 +26,7 @@
     {
       "name": "Kevin Durant",
       "team": "HOU",
-      "status": "Questionable",
+      "status": "Doubtful",
       "description": "Ankle",
       "return_date": ""
     },
@@ -68,7 +68,7 @@
     {
       "name": "Jonathan Isaac",
       "team": "ORL",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Knee",
       "return_date": ""
     },
@@ -131,7 +131,7 @@
     {
       "name": "Peyton Watson",
       "team": "DEN",
-      "status": "Out",
+      "status": "Doubtful",
       "description": "Hamstring",
       "return_date": ""
     },
@@ -145,7 +145,7 @@
     {
       "name": "Jalen Williams",
       "team": "OKC",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Hamstring",
       "return_date": ""
     }
