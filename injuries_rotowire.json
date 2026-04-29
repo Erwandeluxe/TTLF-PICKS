@@ -1,6 +1,6 @@
 {
-  "updated_at": "29/04/2026 19:45 UTC",
-  "count": 21,
+  "updated_at": "29/04/2026 22:00 UTC",
+  "count": 24,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -38,6 +38,13 @@
       "return_date": ""
     },
     {
+      "name": "Joel Embiid",
+      "team": "PHI",
+      "status": "Probable",
+      "description": "Abdomen",
+      "return_date": ""
+    },
+    {
       "name": "Jordan Goodwin",
       "team": "PHX",
       "status": "Out",
@@ -49,6 +56,13 @@
       "team": "DEN",
       "status": "Questionable",
       "description": "Calf",
+      "return_date": ""
+    },
+    {
+      "name": "Josh Hart",
+      "team": "NYK",
+      "status": "Questionable",
+      "description": "Back",
       "return_date": ""
     },
     {
@@ -66,9 +80,16 @@
       "return_date": ""
     },
     {
+      "name": "Bones Hyland",
+      "team": "MIN",
+      "status": "Questionable",
+      "description": "Knee",
+      "return_date": ""
+    },
+    {
       "name": "Jonathan Isaac",
       "team": "ORL",
-      "status": "Doubtful",
+      "status": "Out",
       "description": "Knee",
       "return_date": ""
     },
@@ -124,14 +145,14 @@
     {
       "name": "Franz Wagner",
       "team": "ORL",
-      "status": "Questionable",
+      "status": "Out",
       "description": "Calf",
       "return_date": ""
     },
     {
       "name": "Peyton Watson",
       "team": "DEN",
-      "status": "Doubtful",
+      "status": "Out",
       "description": "Hamstring",
       "return_date": ""
     },
