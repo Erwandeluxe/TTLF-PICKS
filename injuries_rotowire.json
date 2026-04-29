@@ -1,5 +1,5 @@
 {
-  "updated_at": "28/04/2026 22:38 UTC",
+  "updated_at": "29/04/2026 07:16 UTC",
   "count": 21,
   "injuries": [
     {
@@ -26,7 +26,7 @@
     {
       "name": "Kevin Durant",
       "team": "HOU",
-      "status": "Doubtful",
+      "status": "Out",
       "description": "Ankle",
       "return_date": ""
     },
