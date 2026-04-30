@@ -1,9 +1,9 @@
 {
-  "updated_at": "29/04/2026 08:13",
+  "updated_at": "30/04/2026 08:18",
   "series": [
     {
       "id": "det-orl",
-      "score": "ORL 3-1"
+      "score": "ORL 3-2"
     },
     {
       "id": "bos-phi",
@@ -15,7 +15,7 @@
     },
     {
       "id": "cle-tor",
-      "score": "2-2"
+      "score": "CLE 3-2"
     },
     {
       "id": "okc-phx",
@@ -31,7 +31,7 @@
     },
     {
       "id": "lal-hou",
-      "score": "LAL 3-1"
+      "score": "LAL 3-2"
     }
   ]
 }
