@@ -1,5 +1,5 @@
 {
-  "updated_at": "30/04/2026 11:27 UTC",
+  "updated_at": "30/04/2026 17:15 UTC",
   "count": 24,
   "injuries": [
     {
@@ -24,9 +24,16 @@
       "return_date": ""
     },
     {
+      "name": "Ayo Dosunmu",
+      "team": "MIN",
+      "status": "Questionable",
+      "description": "Calf",
+      "return_date": ""
+    },
+    {
       "name": "Kevin Durant",
       "team": "HOU",
-      "status": "Doubtful",
+      "status": "Out",
       "description": "Ankle",
       "return_date": ""
     },
@@ -77,13 +84,6 @@
       "team": "DET",
       "status": "Questionable",
       "description": "Thigh",
-      "return_date": ""
-    },
-    {
-      "name": "Bones Hyland",
-      "team": "MIN",
-      "status": "Questionable",
-      "description": "Knee",
       "return_date": ""
     },
     {
