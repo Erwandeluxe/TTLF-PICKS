@@ -1,12 +1,19 @@
 {
-  "updated_at": "30/04/2026 21:57 UTC",
-  "count": 24,
+  "updated_at": "30/04/2026 22:34 UTC",
+  "count": 25,
   "injuries": [
     {
       "name": "Steven Adams",
       "team": "HOU",
       "status": "Out For Season",
       "description": "Ankle",
+      "return_date": ""
+    },
+    {
+      "name": "Kyle Anderson",
+      "team": "MIN",
+      "status": "Questionable",
+      "description": "Illness",
       "return_date": ""
     },
     {
