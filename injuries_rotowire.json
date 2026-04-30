@@ -1,5 +1,5 @@
 {
-  "updated_at": "29/04/2026 22:38 UTC",
+  "updated_at": "30/04/2026 07:24 UTC",
   "count": 24,
   "injuries": [
     {
@@ -26,7 +26,7 @@
     {
       "name": "Kevin Durant",
       "team": "HOU",
-      "status": "Out",
+      "status": "Doubtful",
       "description": "Ankle",
       "return_date": ""
     },
@@ -75,7 +75,7 @@
     {
       "name": "Kevin Huerter",
       "team": "DET",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Thigh",
       "return_date": ""
     },
@@ -87,9 +87,16 @@
       "return_date": ""
     },
     {
+      "name": "Brandon Ingram",
+      "team": "TOR",
+      "status": "Questionable",
+      "description": "Heel",
+      "return_date": ""
+    },
+    {
       "name": "Jonathan Isaac",
       "team": "ORL",
-      "status": "Out",
+      "status": "Doubtful",
       "description": "Knee",
       "return_date": ""
     },
@@ -122,13 +129,6 @@
       "return_date": ""
     },
     {
-      "name": "Austin Reaves",
-      "team": "LAL",
-      "status": "Questionable",
-      "description": "Oblique",
-      "return_date": ""
-    },
-    {
       "name": "Thomas Sorber",
       "team": "OKC",
       "status": "Out For Season",
@@ -145,7 +145,7 @@
     {
       "name": "Franz Wagner",
       "team": "ORL",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Calf",
       "return_date": ""
     },
