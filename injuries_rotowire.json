@@ -1,6 +1,6 @@
 {
-  "updated_at": "01/05/2026 21:55 UTC",
-  "count": 25,
+  "updated_at": "01/05/2026 22:34 UTC",
+  "count": 24,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -73,13 +73,6 @@
       "return_date": ""
     },
     {
-      "name": "Tobias Harris",
-      "team": "DET",
-      "status": "Questionable",
-      "description": "Ankle",
-      "return_date": ""
-    },
-    {
       "name": "Chucky Hepburn",
       "team": "TOR",
       "status": "Out For Season",
@@ -89,7 +82,7 @@
     {
       "name": "Kevin Huerter",
       "team": "DET",
-      "status": "Questionable",
+      "status": "Out",
       "description": "Thigh",
       "return_date": ""
     },
