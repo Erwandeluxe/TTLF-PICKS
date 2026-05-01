@@ -1,5 +1,5 @@
 {
-  "updated_at": "01/05/2026 07:22 UTC",
+  "updated_at": "01/05/2026 11:05 UTC",
   "count": 24,
   "injuries": [
     {
@@ -12,7 +12,7 @@
     {
       "name": "Kyle Anderson",
       "team": "MIN",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Illness",
       "return_date": ""
     },
@@ -33,7 +33,7 @@
     {
       "name": "Ayo Dosunmu",
       "team": "MIN",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Calf",
       "return_date": ""
     },
@@ -61,7 +61,7 @@
     {
       "name": "Aaron Gordon",
       "team": "DEN",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Calf",
       "return_date": ""
     },
