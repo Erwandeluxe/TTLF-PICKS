@@ -1,5 +1,5 @@
 {
-  "updated_at": "01/05/2026 11:05 UTC",
+  "updated_at": "01/05/2026 16:53 UTC",
   "count": 24,
   "injuries": [
     {
@@ -40,7 +40,7 @@
     {
       "name": "Kevin Durant",
       "team": "HOU",
-      "status": "Doubtful",
+      "status": "Out",
       "description": "Ankle",
       "return_date": ""
     },
@@ -61,7 +61,7 @@
     {
       "name": "Aaron Gordon",
       "team": "DEN",
-      "status": "Questionable",
+      "status": "Out",
       "description": "Calf",
       "return_date": ""
     },
@@ -89,7 +89,7 @@
     {
       "name": "Brandon Ingram",
       "team": "TOR",
-      "status": "Questionable",
+      "status": "Doubtful",
       "description": "Heel",
       "return_date": ""
     },
@@ -117,7 +117,7 @@
     {
       "name": "Damian Lillard",
       "team": "POR",
-      "status": "Out For Season",
+      "status": "Out",
       "description": "Achilles",
       "return_date": ""
     },
