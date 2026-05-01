@@ -1,6 +1,6 @@
 {
-  "updated_at": "01/05/2026 19:20 UTC",
-  "count": 24,
+  "updated_at": "01/05/2026 21:55 UTC",
+  "count": 25,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -52,6 +52,13 @@
       "return_date": ""
     },
     {
+      "name": "Joel Embiid",
+      "team": "PHI",
+      "status": "Probable",
+      "description": "Abdomen",
+      "return_date": ""
+    },
+    {
       "name": "Jordan Goodwin",
       "team": "PHX",
       "status": "Out",
@@ -89,14 +96,14 @@
     {
       "name": "Brandon Ingram",
       "team": "TOR",
-      "status": "Doubtful",
+      "status": "Out",
       "description": "Heel",
       "return_date": ""
     },
     {
       "name": "Jonathan Isaac",
       "team": "ORL",
-      "status": "Doubtful",
+      "status": "Out",
       "description": "Knee",
       "return_date": ""
     },
