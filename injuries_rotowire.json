@@ -1,5 +1,5 @@
 {
-  "updated_at": "01/05/2026 22:34 UTC",
+  "updated_at": "02/05/2026 06:57 UTC",
   "count": 24,
   "injuries": [
     {
@@ -26,7 +26,7 @@
     {
       "name": "Luka Doncic",
       "team": "LAL",
-      "status": "Out",
+      "status": "Doubtful",
       "description": "Hamstring",
       "return_date": ""
     },
@@ -82,21 +82,21 @@
     {
       "name": "Kevin Huerter",
       "team": "DET",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Thigh",
       "return_date": ""
     },
     {
       "name": "Brandon Ingram",
       "team": "TOR",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Heel",
       "return_date": ""
     },
     {
       "name": "Jonathan Isaac",
       "team": "ORL",
-      "status": "Out",
+      "status": "Doubtful",
       "description": "Knee",
       "return_date": ""
     },
@@ -145,7 +145,7 @@
     {
       "name": "Franz Wagner",
       "team": "ORL",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Calf",
       "return_date": ""
     },
