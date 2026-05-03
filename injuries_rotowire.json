@@ -1,5 +1,5 @@
 {
-  "updated_at": "03/05/2026 10:54 UTC",
+  "updated_at": "03/05/2026 16:43 UTC",
   "count": 24,
   "injuries": [
     {
@@ -82,7 +82,7 @@
     {
       "name": "Brandon Ingram",
       "team": "TOR",
-      "status": "Questionable",
+      "status": "Doubtful",
       "description": "Heel",
       "return_date": ""
     },
