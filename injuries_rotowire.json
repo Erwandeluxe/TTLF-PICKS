@@ -1,6 +1,6 @@
 {
-  "updated_at": "02/05/2026 22:22 UTC",
-  "count": 26,
+  "updated_at": "03/05/2026 07:13 UTC",
+  "count": 24,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -49,20 +49,6 @@
       "team": "MIN",
       "status": "Out",
       "description": "Knee",
-      "return_date": ""
-    },
-    {
-      "name": "Joel Embiid",
-      "team": "PHI",
-      "status": "Probable",
-      "description": "Abdomen",
-      "return_date": ""
-    },
-    {
-      "name": "Paul George",
-      "team": "PHI",
-      "status": "Probable",
-      "description": "Illness",
       "return_date": ""
     },
     {
