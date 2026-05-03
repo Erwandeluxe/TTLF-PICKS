@@ -1,5 +1,5 @@
 {
-  "updated_at": "03/05/2026 16:43 UTC",
+  "updated_at": "03/05/2026 19:09 UTC",
   "count": 24,
   "injuries": [
     {
@@ -75,7 +75,7 @@
     {
       "name": "Kevin Huerter",
       "team": "DET",
-      "status": "Questionable",
+      "status": "Out",
       "description": "Thigh",
       "return_date": ""
     },
@@ -89,7 +89,7 @@
     {
       "name": "Jonathan Isaac",
       "team": "ORL",
-      "status": "Doubtful",
+      "status": "Out",
       "description": "Knee",
       "return_date": ""
     },
