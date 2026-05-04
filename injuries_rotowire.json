@@ -1,5 +1,5 @@
 {
-  "updated_at": "04/05/2026 17:26 UTC",
+  "updated_at": "04/05/2026 19:49 UTC",
   "count": 26,
   "injuries": [
     {
@@ -33,7 +33,7 @@
     {
       "name": "Ayo Dosunmu",
       "team": "MIN",
-      "status": "Questionable",
+      "status": "Out",
       "description": "Calf",
       "return_date": ""
     },
@@ -47,7 +47,7 @@
     {
       "name": "Anthony Edwards",
       "team": "MIN",
-      "status": "Questionable",
+      "status": "Probable",
       "description": "Knee",
       "return_date": ""
     },
@@ -131,7 +131,7 @@
     {
       "name": "Jeremy Sochan",
       "team": "NYK",
-      "status": "Probable",
+      "status": "Questionable",
       "description": "Hamstring",
       "return_date": ""
     },
@@ -180,7 +180,7 @@
     {
       "name": "Jalen Williams",
       "team": "OKC",
-      "status": "Questionable",
+      "status": "Out",
       "description": "Hamstring",
       "return_date": ""
     }
