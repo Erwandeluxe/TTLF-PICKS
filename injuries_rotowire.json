@@ -1,5 +1,5 @@
 {
-  "updated_at": "04/05/2026 11:48 UTC",
+  "updated_at": "04/05/2026 17:26 UTC",
   "count": 26,
   "injuries": [
     {
@@ -75,7 +75,7 @@
     {
       "name": "Chucky Hepburn",
       "team": "TOR",
-      "status": "Out For Season",
+      "status": "Out",
       "description": "Knee",
       "return_date": ""
     },
