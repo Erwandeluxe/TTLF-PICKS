@@ -1,6 +1,6 @@
 {
-  "updated_at": "05/05/2026 19:43 UTC",
-  "count": 23,
+  "updated_at": "05/05/2026 22:01 UTC",
+  "count": 25,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -41,6 +41,20 @@
       "name": "Kevin Durant",
       "team": "HOU",
       "status": "Out",
+      "description": "Ankle",
+      "return_date": ""
+    },
+    {
+      "name": "Anthony Edwards",
+      "team": "MIN",
+      "status": "Questionable",
+      "description": "Knee",
+      "return_date": ""
+    },
+    {
+      "name": "Joel Embiid",
+      "team": "PHI",
+      "status": "Probable",
       "description": "Ankle",
       "return_date": ""
     },
