@@ -1,5 +1,5 @@
 {
-  "updated_at": "05/05/2026 22:01 UTC",
+  "updated_at": "05/05/2026 22:36 UTC",
   "count": 25,
   "injuries": [
     {
@@ -82,7 +82,7 @@
     {
       "name": "Kevin Huerter",
       "team": "DET",
-      "status": "Questionable",
+      "status": "Out",
       "description": "Thigh",
       "return_date": ""
     },
