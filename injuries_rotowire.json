@@ -1,6 +1,6 @@
 {
-  "updated_at": "04/05/2026 22:38 UTC",
-  "count": 26,
+  "updated_at": "05/05/2026 07:12 UTC",
+  "count": 23,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -33,7 +33,7 @@
     {
       "name": "Ayo Dosunmu",
       "team": "MIN",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Calf",
       "return_date": ""
     },
@@ -42,20 +42,6 @@
       "team": "HOU",
       "status": "Out",
       "description": "Ankle",
-      "return_date": ""
-    },
-    {
-      "name": "Anthony Edwards",
-      "team": "MIN",
-      "status": "Probable",
-      "description": "Knee",
-      "return_date": ""
-    },
-    {
-      "name": "Joel Embiid",
-      "team": "PHI",
-      "status": "Probable",
-      "description": "Hip",
       "return_date": ""
     },
     {
@@ -129,13 +115,6 @@
       "return_date": ""
     },
     {
-      "name": "Jeremy Sochan",
-      "team": "NYK",
-      "status": "Questionable",
-      "description": "Hamstring",
-      "return_date": ""
-    },
-    {
       "name": "Thomas Sorber",
       "team": "OKC",
       "status": "Out For Season",
@@ -180,7 +159,7 @@
     {
       "name": "Jalen Williams",
       "team": "OKC",
-      "status": "Out",
+      "status": "Doubtful",
       "description": "Hamstring",
       "return_date": ""
     }
