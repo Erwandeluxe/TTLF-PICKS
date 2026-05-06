@@ -1,6 +1,6 @@
 {
-  "updated_at": "05/05/2026 22:36 UTC",
-  "count": 25,
+  "updated_at": "06/05/2026 07:31 UTC",
+  "count": 27,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -82,7 +82,7 @@
     {
       "name": "Kevin Huerter",
       "team": "DET",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Thigh",
       "return_date": ""
     },
@@ -122,6 +122,13 @@
       "return_date": ""
     },
     {
+      "name": "Sam Merrill",
+      "team": "CLE",
+      "status": "Questionable",
+      "description": "Hamstring",
+      "return_date": ""
+    },
+    {
       "name": "Immanuel Quickley",
       "team": "TOR",
       "status": "Out",
@@ -140,6 +147,13 @@
       "team": "BOS",
       "status": "Out",
       "description": "Knee",
+      "return_date": ""
+    },
+    {
+      "name": "Jarred Vanderbilt",
+      "team": "LAL",
+      "status": "Doubtful",
+      "description": "Finger",
       "return_date": ""
     },
     {
@@ -173,7 +187,7 @@
     {
       "name": "Jalen Williams",
       "team": "OKC",
-      "status": "Out",
+      "status": "Doubtful",
       "description": "Hamstring",
       "return_date": ""
     }
