@@ -1,6 +1,6 @@
 {
-  "updated_at": "06/05/2026 19:54 UTC",
-  "count": 26,
+  "updated_at": "06/05/2026 22:33 UTC",
+  "count": 28,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -75,7 +75,7 @@
     {
       "name": "Kevin Huerter",
       "team": "DET",
-      "status": "Questionable",
+      "status": "Doubtful",
       "description": "Thigh",
       "return_date": ""
     },
@@ -98,6 +98,13 @@
       "team": "SAS",
       "status": "Out For Season",
       "description": "Ankle",
+      "return_date": ""
+    },
+    {
+      "name": "Luke Kennard",
+      "team": "LAL",
+      "status": "Questionable",
+      "description": "Neck",
       "return_date": ""
     },
     {
@@ -129,6 +136,13 @@
       "return_date": ""
     },
     {
+      "name": "Mitchell Robinson",
+      "team": "NYK",
+      "status": "Questionable",
+      "description": "Illness",
+      "return_date": ""
+    },
+    {
       "name": "Thomas Sorber",
       "team": "OKC",
       "status": "Out For Season",
@@ -145,7 +159,7 @@
     {
       "name": "Jarred Vanderbilt",
       "team": "LAL",
-      "status": "Questionable",
+      "status": "Doubtful",
       "description": "Finger",
       "return_date": ""
     },
@@ -180,7 +194,7 @@
     {
       "name": "Jalen Williams",
       "team": "OKC",
-      "status": "Doubtful",
+      "status": "Out",
       "description": "Hamstring",
       "return_date": ""
     }
