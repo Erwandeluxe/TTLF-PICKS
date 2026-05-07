@@ -1,6 +1,6 @@
 {
-  "updated_at": "07/05/2026 22:00 UTC",
-  "count": 29,
+  "updated_at": "07/05/2026 22:42 UTC",
+  "count": 30,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -45,6 +45,13 @@
       "return_date": ""
     },
     {
+      "name": "Anthony Edwards",
+      "team": "MIN",
+      "status": "Questionable",
+      "description": "Knee",
+      "return_date": ""
+    },
+    {
       "name": "Joel Embiid",
       "team": "PHI",
       "status": "Questionable",
@@ -82,7 +89,7 @@
     {
       "name": "Kevin Huerter",
       "team": "DET",
-      "status": "Doubtful",
+      "status": "Out",
       "description": "Thigh",
       "return_date": ""
     },
@@ -131,7 +138,7 @@
     {
       "name": "Sam Merrill",
       "team": "CLE",
-      "status": "Questionable",
+      "status": "Out",
       "description": "Hamstring",
       "return_date": ""
     },
