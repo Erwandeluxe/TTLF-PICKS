@@ -1,5 +1,5 @@
 {
-  "updated_at": "06/05/2026 22:33 UTC",
+  "updated_at": "07/05/2026 07:37 UTC",
   "count": 28,
   "injuries": [
     {
@@ -10,10 +10,10 @@
       "return_date": ""
     },
     {
-      "name": "Carter Bryant",
-      "team": "SAS",
+      "name": "OG Anunoby",
+      "team": "NYK",
       "status": "Questionable",
-      "description": "Foot",
+      "description": "Leg",
       "return_date": ""
     },
     {
@@ -31,6 +31,13 @@
       "return_date": ""
     },
     {
+      "name": "Ayo Dosunmu",
+      "team": "MIN",
+      "status": "Questionable",
+      "description": "Heel",
+      "return_date": ""
+    },
+    {
       "name": "Kevin Durant",
       "team": "HOU",
       "status": "Out",
@@ -38,16 +45,9 @@
       "return_date": ""
     },
     {
-      "name": "Anthony Edwards",
-      "team": "MIN",
-      "status": "Questionable",
-      "description": "Knee",
-      "return_date": ""
-    },
-    {
       "name": "Joel Embiid",
       "team": "PHI",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Ankle",
       "return_date": ""
     },
