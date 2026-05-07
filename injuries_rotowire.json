@@ -1,6 +1,6 @@
 {
-  "updated_at": "07/05/2026 19:48 UTC",
-  "count": 28,
+  "updated_at": "07/05/2026 22:00 UTC",
+  "count": 29,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -63,6 +63,13 @@
       "team": "DEN",
       "status": "Out",
       "description": "Calf",
+      "return_date": ""
+    },
+    {
+      "name": "Josh Hart",
+      "team": "NYK",
+      "status": "Questionable",
+      "description": "Thumb",
       "return_date": ""
     },
     {
@@ -138,7 +145,7 @@
     {
       "name": "Mitchell Robinson",
       "team": "NYK",
-      "status": "Questionable",
+      "status": "Probable",
       "description": "Illness",
       "return_date": ""
     },
