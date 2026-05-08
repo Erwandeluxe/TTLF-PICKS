@@ -1,6 +1,6 @@
 {
-  "updated_at": "08/05/2026 19:27 UTC",
-  "count": 29,
+  "updated_at": "08/05/2026 21:59 UTC",
+  "count": 27,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -12,7 +12,7 @@
     {
       "name": "OG Anunoby",
       "team": "NYK",
-      "status": "Questionable",
+      "status": "Out",
       "description": "Hamstring",
       "return_date": ""
     },
@@ -73,13 +73,6 @@
       "return_date": ""
     },
     {
-      "name": "Josh Hart",
-      "team": "NYK",
-      "status": "Probable",
-      "description": "Thumb",
-      "return_date": ""
-    },
-    {
       "name": "Chucky Hepburn",
       "team": "TOR",
       "status": "Out",
@@ -89,7 +82,7 @@
     {
       "name": "Kevin Huerter",
       "team": "DET",
-      "status": "Questionable",
+      "status": "Doubtful",
       "description": "Thigh",
       "return_date": ""
     },
@@ -140,13 +133,6 @@
       "team": "TOR",
       "status": "Out",
       "description": "Hamstring",
-      "return_date": ""
-    },
-    {
-      "name": "Mitchell Robinson",
-      "team": "NYK",
-      "status": "Probable",
-      "description": "Illness",
       "return_date": ""
     },
     {
