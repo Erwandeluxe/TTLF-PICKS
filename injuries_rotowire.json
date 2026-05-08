@@ -1,6 +1,6 @@
 {
-  "updated_at": "07/05/2026 22:42 UTC",
-  "count": 30,
+  "updated_at": "08/05/2026 06:28 UTC",
+  "count": 29,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -115,13 +115,6 @@
       "return_date": ""
     },
     {
-      "name": "Luke Kennard",
-      "team": "LAL",
-      "status": "Questionable",
-      "description": "Neck",
-      "return_date": ""
-    },
-    {
       "name": "Jock Landale",
       "team": "ATL",
       "status": "Out",
@@ -173,7 +166,7 @@
     {
       "name": "Jarred Vanderbilt",
       "team": "LAL",
-      "status": "Doubtful",
+      "status": "Out",
       "description": "Finger",
       "return_date": ""
     },
