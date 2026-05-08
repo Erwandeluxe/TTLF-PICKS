@@ -1,5 +1,5 @@
 {
-  "updated_at": "08/05/2026 11:15 UTC",
+  "updated_at": "08/05/2026 17:11 UTC",
   "count": 29,
   "injuries": [
     {
@@ -26,7 +26,7 @@
     {
       "name": "Luka Doncic",
       "team": "LAL",
-      "status": "Out",
+      "status": "Doubtful",
       "description": "Hamstring",
       "return_date": ""
     },
@@ -75,7 +75,7 @@
     {
       "name": "Josh Hart",
       "team": "NYK",
-      "status": "Questionable",
+      "status": "Probable",
       "description": "Thumb",
       "return_date": ""
     },
@@ -89,7 +89,7 @@
     {
       "name": "Kevin Huerter",
       "team": "DET",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Thigh",
       "return_date": ""
     },
@@ -131,7 +131,7 @@
     {
       "name": "Sam Merrill",
       "team": "CLE",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Hamstring",
       "return_date": ""
     },
@@ -166,7 +166,7 @@
     {
       "name": "Jarred Vanderbilt",
       "team": "LAL",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Finger",
       "return_date": ""
     },
@@ -201,7 +201,7 @@
     {
       "name": "Jalen Williams",
       "team": "OKC",
-      "status": "Out",
+      "status": "Doubtful",
       "description": "Hamstring",
       "return_date": ""
     }
