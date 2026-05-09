@@ -1,5 +1,5 @@
 {
-  "updated_at": "09/05/2026 21:47 UTC",
+  "updated_at": "09/05/2026 22:25 UTC",
   "count": 24,
   "injuries": [
     {
@@ -68,7 +68,7 @@
     {
       "name": "Kevin Huerter",
       "team": "DET",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Thigh",
       "return_date": ""
     },
@@ -166,7 +166,7 @@
     {
       "name": "Jalen Williams",
       "team": "OKC",
-      "status": "Doubtful",
+      "status": "Out",
       "description": "Hamstring",
       "return_date": ""
     }
