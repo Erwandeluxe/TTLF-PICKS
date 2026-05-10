@@ -1,6 +1,6 @@
 {
-  "updated_at": "09/05/2026 22:25 UTC",
-  "count": 24,
+  "updated_at": "10/05/2026 07:21 UTC",
+  "count": 23,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -126,13 +126,6 @@
       "team": "BOS",
       "status": "Out",
       "description": "Knee",
-      "return_date": ""
-    },
-    {
-      "name": "Jarred Vanderbilt",
-      "team": "LAL",
-      "status": "Questionable",
-      "description": "Finger",
       "return_date": ""
     },
     {
