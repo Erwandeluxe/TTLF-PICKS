@@ -1,5 +1,5 @@
 {
-  "updated_at": "10/05/2026 10:59 UTC",
+  "updated_at": "10/05/2026 16:50 UTC",
   "count": 23,
   "injuries": [
     {
@@ -159,7 +159,7 @@
     {
       "name": "Jalen Williams",
       "team": "OKC",
-      "status": "Out",
+      "status": "Doubtful",
       "description": "Hamstring",
       "return_date": ""
     }
