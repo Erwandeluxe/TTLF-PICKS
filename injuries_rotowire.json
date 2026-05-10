@@ -1,6 +1,6 @@
 {
-  "updated_at": "10/05/2026 19:13 UTC",
-  "count": 22,
+  "updated_at": "10/05/2026 21:50 UTC",
+  "count": 23,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -91,6 +91,13 @@
       "team": "ATL",
       "status": "Out",
       "description": "Ankle",
+      "return_date": ""
+    },
+    {
+      "name": "Caris LeVert",
+      "team": "DET",
+      "status": "Questionable",
+      "description": "Heel",
       "return_date": ""
     },
     {
