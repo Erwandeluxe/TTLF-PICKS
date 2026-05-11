@@ -1,6 +1,6 @@
 {
-  "updated_at": "11/05/2026 12:38 UTC",
-  "count": 23,
+  "updated_at": "11/05/2026 17:51 UTC",
+  "count": 24,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -14,6 +14,13 @@
       "team": "NYK",
       "status": "Questionable",
       "description": "Hamstring",
+      "return_date": ""
+    },
+    {
+      "name": "Thomas Bryant",
+      "team": "CLE",
+      "status": "Questionable",
+      "description": "Back",
       "return_date": ""
     },
     {
