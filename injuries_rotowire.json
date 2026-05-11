@@ -1,6 +1,6 @@
 {
-  "updated_at": "11/05/2026 19:56 UTC",
-  "count": 24,
+  "updated_at": "11/05/2026 22:09 UTC",
+  "count": 25,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -41,6 +41,13 @@
       "name": "Kevin Durant",
       "team": "HOU",
       "status": "Out",
+      "description": "Ankle",
+      "return_date": ""
+    },
+    {
+      "name": "De'Aaron Fox",
+      "team": "SAS",
+      "status": "Questionable",
       "description": "Ankle",
       "return_date": ""
     },
