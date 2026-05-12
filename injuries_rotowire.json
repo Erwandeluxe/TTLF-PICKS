@@ -1,6 +1,6 @@
 {
-  "updated_at": "12/05/2026 11:55 UTC",
-  "count": 23,
+  "updated_at": "12/05/2026 17:56 UTC",
+  "count": 24,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -56,6 +56,13 @@
       "team": "DEN",
       "status": "Out",
       "description": "Calf",
+      "return_date": ""
+    },
+    {
+      "name": "Dylan Harper",
+      "team": "SAS",
+      "status": "Questionable",
+      "description": "Knee",
       "return_date": ""
     },
     {
