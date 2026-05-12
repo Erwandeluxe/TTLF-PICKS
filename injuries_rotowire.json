@@ -1,6 +1,6 @@
 {
-  "updated_at": "12/05/2026 20:01 UTC",
-  "count": 24,
+  "updated_at": "12/05/2026 22:12 UTC",
+  "count": 26,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -108,6 +108,13 @@
       "return_date": ""
     },
     {
+      "name": "Caris LeVert",
+      "team": "DET",
+      "status": "Questionable",
+      "description": "Heel",
+      "return_date": ""
+    },
+    {
       "name": "Damian Lillard",
       "team": "POR",
       "status": "Out",
@@ -119,6 +126,13 @@
       "team": "TOR",
       "status": "Out",
       "description": "Hamstring",
+      "return_date": ""
+    },
+    {
+      "name": "Duncan Robinson",
+      "team": "DET",
+      "status": "Questionable",
+      "description": "Back",
       "return_date": ""
     },
     {
