@@ -1,6 +1,6 @@
 {
-  "updated_at": "11/05/2026 22:38 UTC",
-  "count": 25,
+  "updated_at": "12/05/2026 07:38 UTC",
+  "count": 23,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -14,13 +14,6 @@
       "team": "NYK",
       "status": "Questionable",
       "description": "Hamstring",
-      "return_date": ""
-    },
-    {
-      "name": "Thomas Bryant",
-      "team": "CLE",
-      "status": "Questionable",
-      "description": "Back",
       "return_date": ""
     },
     {
@@ -108,13 +101,6 @@
       "return_date": ""
     },
     {
-      "name": "Caris LeVert",
-      "team": "DET",
-      "status": "Questionable",
-      "description": "Heel",
-      "return_date": ""
-    },
-    {
       "name": "Damian Lillard",
       "team": "POR",
       "status": "Out",
@@ -173,7 +159,7 @@
     {
       "name": "Jalen Williams",
       "team": "OKC",
-      "status": "Out",
+      "status": "Questionable",
       "description": "Hamstring",
       "return_date": ""
     }
