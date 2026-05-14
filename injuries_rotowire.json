@@ -1,6 +1,6 @@
 {
-  "updated_at": "14/05/2026 19:53 UTC",
-  "count": 22,
+  "updated_at": "14/05/2026 22:13 UTC",
+  "count": 24,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -59,6 +59,13 @@
       "return_date": ""
     },
     {
+      "name": "Kevin Huerter",
+      "team": "DET",
+      "status": "Questionable",
+      "description": "Thigh",
+      "return_date": ""
+    },
+    {
       "name": "Brandon Ingram",
       "team": "TOR",
       "status": "Out",
@@ -84,6 +91,13 @@
       "team": "ATL",
       "status": "Out",
       "description": "Ankle",
+      "return_date": ""
+    },
+    {
+      "name": "Caris LeVert",
+      "team": "DET",
+      "status": "Questionable",
+      "description": "Heel",
       "return_date": ""
     },
     {
