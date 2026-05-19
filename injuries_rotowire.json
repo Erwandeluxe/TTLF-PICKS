@@ -1,6 +1,6 @@
 {
-  "updated_at": "18/05/2026 22:38 UTC",
-  "count": 22,
+  "updated_at": "19/05/2026 08:21 UTC",
+  "count": 21,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -84,13 +84,6 @@
       "team": "SAS",
       "status": "Out For Season",
       "description": "Ankle",
-      "return_date": ""
-    },
-    {
-      "name": "Luke Kornet",
-      "team": "SAS",
-      "status": "Questionable",
-      "description": "Foot",
       "return_date": ""
     },
     {
