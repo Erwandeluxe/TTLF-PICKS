@@ -1,6 +1,6 @@
 {
-  "updated_at": "20/05/2026 22:58 UTC",
-  "count": 20,
+  "updated_at": "21/05/2026 08:27 UTC",
+  "count": 22,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -49,6 +49,13 @@
       "team": "DEN",
       "status": "Out",
       "description": "Calf",
+      "return_date": ""
+    },
+    {
+      "name": "Dylan Harper",
+      "team": "SAS",
+      "status": "Questionable",
+      "description": "Leg",
       "return_date": ""
     },
     {
@@ -140,6 +147,13 @@
       "team": "PHX",
       "status": "Out",
       "description": "Foot",
+      "return_date": ""
+    },
+    {
+      "name": "Jalen Williams",
+      "team": "OKC",
+      "status": "Questionable",
+      "description": "Hamstring",
       "return_date": ""
     }
   ]
