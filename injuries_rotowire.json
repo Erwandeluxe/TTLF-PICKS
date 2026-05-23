@@ -1,5 +1,5 @@
 {
-  "updated_at": "23/05/2026 21:57 UTC",
+  "updated_at": "23/05/2026 22:35 UTC",
   "count": 23,
   "injuries": [
     {
@@ -103,8 +103,8 @@
     {
       "name": "Ajay Mitchell",
       "team": "OKC",
-      "status": "Questionable",
-      "description": "Undisclosed",
+      "status": "Out",
+      "description": "Calf",
       "return_date": ""
     },
     {
