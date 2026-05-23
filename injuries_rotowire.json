@@ -1,6 +1,6 @@
 {
-  "updated_at": "22/05/2026 22:39 UTC",
-  "count": 22,
+  "updated_at": "23/05/2026 07:26 UTC",
+  "count": 21,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -31,13 +31,6 @@
       "return_date": ""
     },
     {
-      "name": "De'Aaron Fox",
-      "team": "SAS",
-      "status": "Questionable",
-      "description": "Ankle",
-      "return_date": ""
-    },
-    {
       "name": "Jordan Goodwin",
       "team": "PHX",
       "status": "Out",
@@ -49,13 +42,6 @@
       "team": "DEN",
       "status": "Out",
       "description": "Calf",
-      "return_date": ""
-    },
-    {
-      "name": "Dylan Harper",
-      "team": "SAS",
-      "status": "Questionable",
-      "description": "Hip",
       "return_date": ""
     },
     {
@@ -98,6 +84,13 @@
       "team": "POR",
       "status": "Out",
       "description": "Achilles",
+      "return_date": ""
+    },
+    {
+      "name": "Ajay Mitchell",
+      "team": "OKC",
+      "status": "Questionable",
+      "description": "Undisclosed",
       "return_date": ""
     },
     {
