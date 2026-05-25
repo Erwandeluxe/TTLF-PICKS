@@ -1,6 +1,6 @@
 {
-  "updated_at": "25/05/2026 19:49 UTC",
-  "count": 21,
+  "updated_at": "25/05/2026 22:09 UTC",
+  "count": 22,
   "injuries": [
     {
       "name": "Steven Adams",
@@ -98,6 +98,13 @@
       "team": "TOR",
       "status": "Out",
       "description": "Hamstring",
+      "return_date": ""
+    },
+    {
+      "name": "Dennis Schroder",
+      "team": "CLE",
+      "status": "Questionable",
+      "description": "Illness",
       "return_date": ""
     },
     {
