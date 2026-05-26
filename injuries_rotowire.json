@@ -1,5 +1,5 @@
 {
-  "updated_at": "25/05/2026 22:39 UTC",
+  "updated_at": "26/05/2026 08:26 UTC",
   "count": 22,
   "injuries": [
     {
@@ -103,7 +103,7 @@
     {
       "name": "Dennis Schroder",
       "team": "CLE",
-      "status": "Questionable",
+      "status": "Out",
       "description": "Illness",
       "return_date": ""
     },
